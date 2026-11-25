@@ -7,6 +7,13 @@
       "rarity": "",
       "sourceId": "529626c4-3bf7-4974-b1aa-8c58773409eb",
       "updatedAt": "2026-11-25T22:55:58.590Z"
+    },
+    "iron_horse_armor:128": {
+      "name": "Рюкзак Plush",
+      "price": 230,
+      "rarity": "Season",
+      "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+      "updatedAt": "2026-11-25T23:06:00.195Z"
     }
   }
 }
