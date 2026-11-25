@@ -10,10 +10,32 @@
     },
     "iron_horse_armor:128": {
       "name": "Рюкзак Plush",
-      "price": 230,
+      "price": 230000,
       "rarity": "Season",
       "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
-      "updatedAt": "2026-11-25T23:06:00.195Z"
+      "updatedAt": "2026-11-25T23:34:25.917Z"
     }
+  },
+  "history": {
+    "iron_horse_armor:128": [
+      {
+        "at": "2026-11-25T23:34:25.917Z",
+        "action": "edit",
+        "before": {
+          "name": "Рюкзак Plush",
+          "price": 230,
+          "rarity": "Season",
+          "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+          "updatedAt": "2026-11-25T23:06:00.195Z"
+        },
+        "after": {
+          "name": "Рюкзак Plush",
+          "price": 230000,
+          "rarity": "Season",
+          "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+          "updatedAt": "2026-11-25T23:34:25.917Z"
+        }
+      }
+    ]
   }
 }
