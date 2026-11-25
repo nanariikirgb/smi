@@ -1,4 +1,12 @@
 {
   "version": 1,
-  "items": {}
+  "items": {
+    "golden_horse_armor:3": {
+      "name": "Фонарик",
+      "price": null,
+      "rarity": "",
+      "sourceId": "529626c4-3bf7-4974-b1aa-8c58773409eb",
+      "updatedAt": "2026-11-25T22:55:58.590Z"
+    }
+  }
 }
