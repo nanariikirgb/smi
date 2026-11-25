@@ -15,7 +15,7 @@ module.exports=async function(req,res){
   }
   if(!await m.authenticated(req))return fail(401,'Войдите в админ-панель');
   if(req.method==='POST'&&action==='logout'){await m.logout(req,res);return res.json({ok:true})}
-  if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset))}
+  if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset,req.query.mode==='history'?'history':'pending'))}
   if(req.method==='GET'&&action==='preview'){
    const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');
    const p=await m.redis('GET',m.K('png:'+id));if(!p)return fail(404,'Изображение отсутствует');
@@ -33,7 +33,7 @@ module.exports=async function(req,res){
      if(name.length<2||name.length>100||rarity.length>50||(price!==null&&(!Number.isSafeInteger(price)||price<0||price>1000000000000)))return fail(400,'Проверьте название, цену и редкость');
      const entry=await m.publish(row,{name,price,rarity});
      decision={status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity};
-    }else decision={status:'rejected',reason:m.clean(data.reason).slice(0,400)};
+    }else {const entry=await m.previouslyPublished(row);decision=entry?{status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity}:{status:'rejected',reason:m.clean(data.reason).slice(0,400)}};
     return res.json({ok:true,row:await m.finish(row,decision,token)});
    }finally{await m.unlock(id,token)}
   }
