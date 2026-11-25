@@ -9,7 +9,7 @@ module.exports=async function(req,res){
   if(origin!==allowed&&origin!==sameOrigin)return res.status(403).json({error:'Недопустимый источник запроса'});
   if(req.method==='OPTIONS')return res.status(204).end();
   if(req.method!=='POST')return res.status(405).json({error:'Требуется POST'});
-  if(!moderation.configured())return res.status(503).json({error:'Хранилище предложений ещё не настроено'});
+  if(!moderation.configured()&&!process.env.DISCORD_WEBHOOK_URL)return res.status(503).json({error:'Отправка ещё не настроена'});
   if(Number(req.headers['content-length']||0)>1000000)return res.status(413).json({error:'Слишком большой запрос'});
   let data=req.body;try{if(typeof data==='string')data=JSON.parse(data)}catch{return res.status(400).json({error:'Некорректный запрос'})}
   const {name,comment='',key,model,category,preview,honey=''}=data||{};
@@ -19,11 +19,11 @@ module.exports=async function(req,res){
   const now=Date.now(),ip=String(req.headers['x-forwarded-for']||req.socket?.remoteAddress||'unknown').split(',')[0].trim();
   for(const [k,v] of buckets)if(now-v.start>60000)buckets.delete(k);
   const bucket=buckets.get(ip)||{start:now,count:0};if(bucket.count>=3)return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});bucket.count++;buckets.set(ip,bucket);
-  let saved;try{if(!await moderation.limit('submit:'+moderation.ip(req),3,60)||!await moderation.limit('submit-global',120,3600))return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});saved=await moderation.submit({name,comment,key,model,category,preview});}catch{return res.status(503).json({error:'Не удалось сохранить заявку. Попробуйте позже.'})}
-  if(saved.duplicate)return res.status(200).json({ok:true,id:saved.id,duplicate:true});
+  let saved=null;if(moderation.configured()){try{if(!await moderation.limit('submit:'+moderation.ip(req),3,60)||!await moderation.limit('submit-global',120,3600))return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});saved=await moderation.submit({name,comment,key,model,category,preview});}catch{return res.status(503).json({error:'Не удалось сохранить заявку. Попробуйте позже.'})}
+  if(saved.duplicate)return res.status(200).json({ok:true,id:saved.id,duplicate:true});}
   if(!process.env.DISCORD_WEBHOOK_URL)return res.status(200).json({ok:true,id:saved.id,notified:false});
   const safe=s=>String(s).replace(/[\u0000-\u001f\u007f]/g,' ').trim();
-  const payload={allowed_mentions:{parse:[]},embeds:[{title:'Новое предложение названия',color:11839487,fields:[{name:'Предложенное название',value:safe(name)},{name:'Категория',value:safe(category)||'—',inline:true},{name:'Материал / CMD',value:safe(key),inline:true},{name:'Модель',value:safe(model)||'—'},...(comment.trim()?[{name:'Комментарий',value:safe(comment)}]:[])],image:{url:'attachment://model.png'},footer:{text:'Заявка '+saved.id},timestamp:new Date().toISOString()}]};
+  const payload={allowed_mentions:{parse:[]},embeds:[{title:'Новое предложение названия',color:11839487,fields:[{name:'Предложенное название',value:safe(name)},{name:'Категория',value:safe(category)||'—',inline:true},{name:'Материал / CMD',value:safe(key),inline:true},{name:'Модель',value:safe(model)||'—'},...(comment.trim()?[{name:'Комментарий',value:safe(comment)}]:[])],image:{url:'attachment://model.png'},...(saved?{footer:{text:'Заявка '+saved.id}}:{}),timestamp:new Date().toISOString()}]};
   const form=new FormData();form.append('payload_json',JSON.stringify(payload));form.append('files[0]',new Blob([png],{type:'image/png'}),'model.png');
-  try{const url=new URL(process.env.DISCORD_WEBHOOK_URL);if(url.protocol!=='https:'||url.hostname!=='discord.com'||!/^\/api\/webhooks\/\d+\/[A-Za-z0-9_-]+$/.test(url.pathname))throw Error('Invalid webhook configuration');url.searchParams.set('wait','true');const response=await fetch(url,{method:'POST',body:form,signal:AbortSignal.timeout(10000)});return res.status(200).json({ok:true,id:saved.id,notified:response.ok})}catch{return res.status(200).json({ok:true,id:saved.id,notified:false})}
+  try{const url=new URL(process.env.DISCORD_WEBHOOK_URL);if(url.protocol!=='https:'||url.hostname!=='discord.com'||!/^\/api\/webhooks\/\d+\/[A-Za-z0-9_-]+$/.test(url.pathname))throw Error('Invalid webhook configuration');url.searchParams.set('wait','true');const response=await fetch(url,{method:'POST',body:form,signal:AbortSignal.timeout(10000)});if(saved)return res.status(200).json({ok:true,id:saved.id,notified:response.ok});if(!response.ok)return res.status(response.status===429?429:502).json({error:'Discord не принял предложение'});return res.status(200).json({ok:true,legacy:true})}catch{return saved?res.status(200).json({ok:true,id:saved.id,notified:false}):res.status(502).json({error:'Не удалось отправить предложение'})}
 };
