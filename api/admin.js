@@ -15,6 +15,14 @@ module.exports=async function(req,res){
   }
   if(!await m.authenticated(req))return fail(401,'Войдите в админ-панель');
   if(req.method==='POST'&&action==='logout'){await m.logout(req,res);return res.json({ok:true})}
+  if(req.method==='GET'&&action==='session')return res.json({ok:true});
+  if(req.method==='GET'&&action==='catalog'){const db=await m.community();return res.json({items:db.items})}
+  if(req.method==='GET'&&action==='item-history'){const key=req.query.key;if(!m.keyOk(key))return fail(400,'Неверная модель');const db=await m.community();return res.json({history:db.history[key]||[],current:db.items[key]||null})}
+  if(req.method==='POST'&&action==='edit-catalog'){
+   if(Number(req.headers['content-length']||0)>100000)return fail(413,'Слишком большой запрос');
+   if(!await m.limit('catalog-edit:'+m.ip(req),30,60))return fail(429,'Слишком много изменений');
+   const result=await m.editCatalog(data);return res.json({ok:true,...result});
+  }
   if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset,req.query.mode==='history'?'history':'pending'))}
   if(req.method==='GET'&&action==='preview'){
    const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');
@@ -38,5 +46,5 @@ module.exports=async function(req,res){
    }finally{await m.unlock(id,token)}
   }
   return fail(405,'Неизвестное действие');
- }catch(e){console.error('Moderation error',e.message);return fail(500,e.message||'Ошибка сервера')}
+ }catch(e){console.error('Moderation error',e.message);return fail(e.status||500,e.message||'Ошибка сервера')}
 };
