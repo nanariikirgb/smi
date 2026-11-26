@@ -23,6 +23,13 @@ module.exports=async function(req,res){
    if(!Number.isSafeInteger(offset))return fail(400,'Некорректная страница');
    return res.json(await gameItems.list(offset,req.query.mode));
   }
+  if(req.method==='POST'&&action==='game-delete-all'){
+   if(!await m.limit('game-delete-all',3,60))return fail(429,'Повторите через минуту');
+   const result=await gameItems.deleteAll();
+   let notification={ok:true};
+   if(result.deleted)try{notification=await discord.send(discord.gameDeleteLog(result),{log:true})}catch{notification={ok:false};console.warn('Bulk delete log delivery failed')}
+   return res.json({ok:true,...result,logNotified:notification.ok});
+  }
   if(req.method==='POST'&&action==='game-approve-all'){
    if(!await m.limit('game-approve-all',3,60))return fail(429,'Повторите через минуту');
    const result=await gameItems.approveAll();
