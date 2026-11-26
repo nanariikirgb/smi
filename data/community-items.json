@@ -221,6 +221,13 @@
       "name": "Унитаз",
       "sourceId": "game-6f6024a29989bb52f0e5a364bc5b3485221588203116bfbd1b73fbfb2dd5d5d1",
       "updatedAt": "2026-11-26T21:57:13.070Z"
+    },
+    "golden_horse_armor:399": {
+      "name": "Лошадь",
+      "rarity": "Limited",
+      "price": 150000,
+      "sourceId": "game-64ed435a6594d1f2ab771dc0f96e87a549624516cd6803df8107f4d14a76ee08",
+      "updatedAt": "2026-11-26T21:57:17.003Z"
     }
   },
   "history": {
@@ -704,6 +711,20 @@
           "name": "Унитаз",
           "sourceId": "game-6f6024a29989bb52f0e5a364bc5b3485221588203116bfbd1b73fbfb2dd5d5d1",
           "updatedAt": "2026-11-26T21:57:13.070Z"
+        }
+      }
+    ],
+    "golden_horse_armor:399": [
+      {
+        "at": "2026-11-26T21:57:17.003Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Лошадь",
+          "rarity": "Limited",
+          "price": 150000,
+          "sourceId": "game-64ed435a6594d1f2ab771dc0f96e87a549624516cd6803df8107f4d14a76ee08",
+          "updatedAt": "2026-11-26T21:57:17.003Z"
         }
       }
     ]
