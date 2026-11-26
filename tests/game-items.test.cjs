@@ -133,58 +133,34 @@ test('game observations and moderation share the existing catalogue and Redis', 
     assert.equal((await list()).total, 0);
   });
 
-  await t.test('a mixed batch checks static and editable names and writes only new suggestions', async () => {
-    const items = [
-      item(633, { material: 'golden_chestplate' }), // data/custom-items.json
-      item(10, { material: 'emerald' }),           // vehicle-stats
-      item(80, { material: 'sugar' }),             // reward with a single name
-      item(99),                                    // latest editable entry
-      item(1), item(2),
-    ];
-    const [first, repeat] = (await Promise.all([upload(items), upload(items)]))
-      .sort((a, b) => b.body.queued - a.body.queued);
-    assert.equal(first.statusCode, 200, JSON.stringify(first.body));
-    assert.deepEqual(first.body, { ok: true, processed: 6, known: 4, queued: 2, duplicates: 0 });
-    assert.deepEqual(repeat.body, { ok: true, processed: 6, known: 4, queued: 0, duplicates: 2 });
-    const batchedWrites = calls.filter(cmd => {
-      const body = JSON.stringify(cmd);
-      return cmd[0] === 'EVAL' && body.includes(item(1).name) && body.includes(item(2).name);
-    });
-    assert.equal(batchedWrites.length, 2);
-    assert.equal((await list()).total, 2);
-    assert.equal((await moderate('list', { cookie })).body.total, 0);
-    assert.equal(revision, 1);
+  await t.test('concurrent batches publish once, skip known names and appear in history', async () => {
+    const items = [item(633, {material:'golden_chestplate'}), item(10, {material:'emerald'}),
+      item(80, {material:'sugar'}), item(99), item(1), item(2)];
+    const replies = await Promise.all([upload(items), upload(items)]);
+    for (const r of replies) {
+      assert.equal(r.statusCode, 200);
+      assert.equal(r.body.processed, 6);
+    }
+    assert.equal(revision, 2);
+    assert.equal(community.items['paper:99'].name, 'Известная модель');
+    assert.equal(community.items['paper:1'].name, item(1).name);
+    assert.equal(community.items['paper:2'].name, item(2).name);
+    assert.equal((await list()).total, 0);
+    assert.equal((await list('history')).total, 2);
+    assert.ok((await list('history')).rows.every(row => row.automatic));
+    await upload([item(1, {name:'Другое название'})]);
+    assert.equal(revision, 2);
   });
 
-  await t.test('retry survives a failed request and a lost response after a Redis commit', async () => {
+  await t.test('lost acknowledgement keeps the published batch idempotent', async () => {
     redisOffline = true;
-    assert.ok((await upload([item(4)])).statusCode >= 500);
+    assert.equal((await upload([item(4)])).statusCode, 503);
     redisOffline = false;
     loseCommitResponse = true;
-    assert.ok((await upload([item(4)])).statusCode >= 500);
+    assert.equal((await upload([item(4)])).statusCode, 503);
     assert.equal(loseCommitResponse, false);
-    const retry = await upload([item(4)]);
-    assert.deepEqual(retry.body, { ok: true, processed: 1, known: 0, queued: 0, duplicates: 1 });
-    assert.equal((await list()).total, 3);
-  });
-
-  await t.test('moderator approval publishes once and rejection stays deduplicated', async () => {
-    const { rows } = await list();
-    const decision = (action, data) => moderate(action, { cookie, body: data, method: 'POST' });
-    const approveId = rows.find(row => row.name === item(1).name).id;
-    const rejectId = rows.find(row => row.name === item(2).name).id;
-    const result = await decision('game-approve', { id: approveId, name: 'Проверенный образец', price: 100, rarity: 'Rare' });
-    assert.equal(result.statusCode, 200, JSON.stringify(result.body));
-    assert.equal(result.body.row.status, 'approved');
-    assert.equal(community.items['paper:1'].name, 'Проверенный образец');
-    assert.equal(community.items['paper:1'].price, 100);
-    assert.equal(revision, 2);
-    assert.ok((await upload([item(1)])).body.known === 1);
-    assert.equal((await decision('game-reject', { id: rejectId, reason: 'Неточное название' })).body.row.status, 'rejected');
-    assert.equal((await upload([item(2)])).body.duplicates, 1);
-    assert.equal(community.items['paper:2'], undefined);
-    assert.equal(revision, 2);
-    assert.equal((await list('history')).total, 2);
-    assert.equal((await list()).total, 1);
+    assert.equal((await upload([item(4)])).body.processed, 1);
+    assert.equal(revision, 3);
+    assert.equal((await list('history')).total, 3);
   });
 });
