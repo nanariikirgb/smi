@@ -518,6 +518,11 @@
       "name": "Печенье \"Антихрист\"",
       "sourceId": "game-a8eb625aaf14b39bced6e3257a4e61a38bafe051fdceeadca379ef42cd7ef8bf",
       "updatedAt": "2026-11-26T22:06:43.831Z"
+    },
+    "apple:6": {
+      "name": "Мясная нарезка",
+      "sourceId": "game-a6962cbba34db274fc8a7ef39ece24f36ddc1fae7b6459e4542b647f57490933",
+      "updatedAt": "2026-11-26T22:06:46.816Z"
     }
   },
   "history": {
@@ -1685,6 +1690,18 @@
           "name": "Печенье \"Антихрист\"",
           "sourceId": "game-a8eb625aaf14b39bced6e3257a4e61a38bafe051fdceeadca379ef42cd7ef8bf",
           "updatedAt": "2026-11-26T22:06:43.831Z"
+        }
+      }
+    ],
+    "apple:6": [
+      {
+        "at": "2026-11-26T22:06:46.816Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Мясная нарезка",
+          "sourceId": "game-a6962cbba34db274fc8a7ef39ece24f36ddc1fae7b6459e4542b647f57490933",
+          "updatedAt": "2026-11-26T22:06:46.816Z"
         }
       }
     ]
