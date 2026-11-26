@@ -396,6 +396,11 @@
       "name": "Клубника",
       "sourceId": "game-dface33fe0d965e20a41208c1c0bb86ef9e15173053882b10a3c9765f562e1a9",
       "updatedAt": "2026-11-26T22:05:40.209Z"
+    },
+    "golden_carrot:26": {
+      "name": "Сырная пицца",
+      "sourceId": "game-df9a3b928ae27a879926932eb1824c82f01e3137f319c37df9a803a355f8819d",
+      "updatedAt": "2026-11-26T22:05:49.333Z"
     }
   },
   "history": {
@@ -1273,6 +1278,18 @@
           "name": "Клубника",
           "sourceId": "game-dface33fe0d965e20a41208c1c0bb86ef9e15173053882b10a3c9765f562e1a9",
           "updatedAt": "2026-11-26T22:05:40.209Z"
+        }
+      }
+    ],
+    "golden_carrot:26": [
+      {
+        "at": "2026-11-26T22:05:49.333Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Сырная пицца",
+          "sourceId": "game-df9a3b928ae27a879926932eb1824c82f01e3137f319c37df9a803a355f8819d",
+          "updatedAt": "2026-11-26T22:05:49.333Z"
         }
       }
     ]
