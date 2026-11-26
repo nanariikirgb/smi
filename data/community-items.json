@@ -351,6 +351,13 @@
       "rarity": "Uncommon",
       "sourceId": "game-47c4a54262bc85d26d302eacd883f13f41b7048fa869768b54d1f6da7357593b",
       "updatedAt": "2026-11-26T21:59:31.924Z"
+    },
+    "diamond_horse_armor:1004": {
+      "name": "Колпак Боба",
+      "rarity": "Season",
+      "price": 80000,
+      "sourceId": "game-4aafe3fb009a5133569cc926644dac7b5fa280e1bf1225045c353c1fd82c1fbe",
+      "updatedAt": "2026-11-26T21:59:34.139Z"
     }
   },
   "history": {
@@ -1134,6 +1141,20 @@
           "rarity": "Uncommon",
           "sourceId": "game-47c4a54262bc85d26d302eacd883f13f41b7048fa869768b54d1f6da7357593b",
           "updatedAt": "2026-11-26T21:59:31.924Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:1004": [
+      {
+        "at": "2026-11-26T21:59:34.139Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Колпак Боба",
+          "rarity": "Season",
+          "price": 80000,
+          "sourceId": "game-4aafe3fb009a5133569cc926644dac7b5fa280e1bf1225045c353c1fd82c1fbe",
+          "updatedAt": "2026-11-26T21:59:34.139Z"
         }
       }
     ]
