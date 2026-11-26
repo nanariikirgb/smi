@@ -1,6 +1,7 @@
 const crypto = require('node:crypto');
 const moderation = require('../lib/moderation');
 const gameItems = require('../lib/game-items');
+const discord = require('../lib/discord');
 
 const maxBytes = 32 * 1024;
 const digest = value => crypto.createHash('sha256').update(value).digest();
@@ -38,7 +39,12 @@ module.exports = async function(req, res) {
       res.setHeader('Retry-After', '60');
       return fail(429, 'Лимит пакетов. Повторите через минуту.');
     }
-    return res.json(await gameItems.ingest(items));
+    const result = await gameItems.ingest(items);
+    let notification = {ok:false};
+    try {
+      notification = await discord.send(discord.gameIngestLog(result), {log:true});
+    } catch { console.warn('Game cache log delivery failed'); }
+    return res.json({...result, logNotified:notification.ok});
   } catch (e) {
     if (e.status === 429) { res.setHeader('Retry-After','60'); return fail(429,e.message); }
     return fail(503, 'Каталог или хранилище временно недоступны');
