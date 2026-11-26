@@ -530,6 +530,11 @@
       "price": 150000,
       "sourceId": "game-8f640f409c717749799a8e344d55e1414a7b10ec516b1d57419849aae07502e2",
       "updatedAt": "2026-11-26T22:06:51.639Z"
+    },
+    "golden_carrot:149": {
+      "name": "Milka Cookie",
+      "sourceId": "game-7d37c409f38a3a139cc73cd708c7b6501ab2644a6c7e660cf455ab4667fa8480",
+      "updatedAt": "2026-11-26T22:06:54.229Z"
     }
   },
   "history": {
@@ -1723,6 +1728,18 @@
           "price": 150000,
           "sourceId": "game-8f640f409c717749799a8e344d55e1414a7b10ec516b1d57419849aae07502e2",
           "updatedAt": "2026-11-26T22:06:51.639Z"
+        }
+      }
+    ],
+    "golden_carrot:149": [
+      {
+        "at": "2026-11-26T22:06:54.229Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Milka Cookie",
+          "sourceId": "game-7d37c409f38a3a139cc73cd708c7b6501ab2644a6c7e660cf455ab4667fa8480",
+          "updatedAt": "2026-11-26T22:06:54.229Z"
         }
       }
     ]
