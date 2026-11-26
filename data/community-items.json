@@ -466,6 +466,11 @@
       "name": "REDBULL",
       "sourceId": "game-334438ea4ec0d84024f2c5af5a83448aa3ccea6f4b606b0ebd677c50ad552329",
       "updatedAt": "2026-11-26T22:06:15.310Z"
+    },
+    "golden_carrot:13": {
+      "name": "Вишнёвый чизкейк",
+      "sourceId": "game-33b06742d7dffc5ad98ffac0243b013ca9279bab2ebfa2c6db86a2869274173f",
+      "updatedAt": "2026-11-26T22:06:16.653Z"
     }
   },
   "history": {
@@ -1511,6 +1516,18 @@
           "name": "REDBULL",
           "sourceId": "game-334438ea4ec0d84024f2c5af5a83448aa3ccea6f4b606b0ebd677c50ad552329",
           "updatedAt": "2026-11-26T22:06:15.310Z"
+        }
+      }
+    ],
+    "golden_carrot:13": [
+      {
+        "at": "2026-11-26T22:06:16.653Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Вишнёвый чизкейк",
+          "sourceId": "game-33b06742d7dffc5ad98ffac0243b013ca9279bab2ebfa2c6db86a2869274173f",
+          "updatedAt": "2026-11-26T22:06:16.653Z"
         }
       }
     ]
