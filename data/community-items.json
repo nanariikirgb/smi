@@ -209,6 +209,13 @@
       "name": "Пиво",
       "sourceId": "game-9324dfd60a661deb84cc784129e556be39c1501536698d230719a4ef8b2cb82c",
       "updatedAt": "2026-11-26T21:57:00.316Z"
+    },
+    "golden_horse_armor:768": {
+      "name": "Накидка \"Волк\"",
+      "rarity": "Limited",
+      "price": 250000,
+      "sourceId": "game-84e5bb59db1bb091b3aaa5d7ce196a7a1643206c11423e533624de416df91fa7",
+      "updatedAt": "2026-11-26T21:57:03.586Z"
     }
   },
   "history": {
@@ -648,6 +655,20 @@
           "name": "Пиво",
           "sourceId": "game-9324dfd60a661deb84cc784129e556be39c1501536698d230719a4ef8b2cb82c",
           "updatedAt": "2026-11-26T21:57:00.316Z"
+        }
+      }
+    ],
+    "golden_horse_armor:768": [
+      {
+        "at": "2026-11-26T21:57:03.586Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Накидка \"Волк\"",
+          "rarity": "Limited",
+          "price": 250000,
+          "sourceId": "game-84e5bb59db1bb091b3aaa5d7ce196a7a1643206c11423e533624de416df91fa7",
+          "updatedAt": "2026-11-26T21:57:03.586Z"
         }
       }
     ]
