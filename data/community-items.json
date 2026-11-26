@@ -46,6 +46,13 @@
       "rarity": "",
       "sourceId": "7",
       "updatedAt": "2026-11-26T21:28:14.933Z"
+    },
+    "golden_horse_armor:561": {
+      "name": "Накидка \"Гном\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "8",
+      "updatedAt": "2026-11-26T21:28:18.270Z"
     }
   },
   "history": {
@@ -133,6 +140,20 @@
           "rarity": "",
           "sourceId": "7",
           "updatedAt": "2026-11-26T21:28:14.933Z"
+        }
+      }
+    ],
+    "golden_horse_armor:561": [
+      {
+        "at": "2026-11-26T21:28:18.270Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Накидка \"Гном\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "8",
+          "updatedAt": "2026-11-26T21:28:18.270Z"
         }
       }
     ]
