@@ -508,6 +508,11 @@
       "name": "Сыр",
       "sourceId": "game-950f57ef79c4f760e4d4313ba767ab5fead4d71d483c7e2ee110f83d497bc218",
       "updatedAt": "2026-11-26T22:06:35.711Z"
+    },
+    "golden_carrot:14": {
+      "name": "Рёбрышки BBQ",
+      "sourceId": "game-9b9579fc206b64b99aa29241fa03f47e7300f94f5ee7247f3619244efcfdf5a7",
+      "updatedAt": "2026-11-26T22:06:38.780Z"
     }
   },
   "history": {
@@ -1651,6 +1656,18 @@
           "name": "Сыр",
           "sourceId": "game-950f57ef79c4f760e4d4313ba767ab5fead4d71d483c7e2ee110f83d497bc218",
           "updatedAt": "2026-11-26T22:06:35.711Z"
+        }
+      }
+    ],
+    "golden_carrot:14": [
+      {
+        "at": "2026-11-26T22:06:38.780Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Рёбрышки BBQ",
+          "sourceId": "game-9b9579fc206b64b99aa29241fa03f47e7300f94f5ee7247f3619244efcfdf5a7",
+          "updatedAt": "2026-11-26T22:06:38.780Z"
         }
       }
     ]
