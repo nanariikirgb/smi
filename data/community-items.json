@@ -4217,6 +4217,126 @@
       "price": 45000,
       "sourceId": "game-b62506c2f4132f003e466d7ced34325bab0fe3c2a069cbc42da653c84ba7cc08",
       "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "golden_horse_armor:153": {
+      "name": "Часы \"HardSilver\"",
+      "price": 250000,
+      "sourceId": "game-141ae23752c4d257883ebe9b0ae71609d259b99d036e1854c6fb5df3313ca203",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:178": {
+      "name": "Часы \"Marker\"",
+      "price": 260000,
+      "sourceId": "game-14a3c61310be0e88f6b3b73b45bcaffe5467b90cc04041d4f2d58813d6dba5b3",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:125": {
+      "name": "Часы \"Blood\"",
+      "price": 135000,
+      "sourceId": "game-22abf257c17059fe3fc4d0a99443b323961240ecb9df0a0cf9a5056eb48e5baa",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:202": {
+      "name": "Часы \"Затмение\"",
+      "price": 80000,
+      "sourceId": "game-3ed7e0fb4782f62f1543ba6da61a169c5db433606fc099e33312384b9fea9d41",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:183": {
+      "name": "Часы \"Casino\"",
+      "price": 300000,
+      "sourceId": "game-3f70c1de09bf93ac610d7e8761cc791e54df74ebbe6a7b2ecc2dab42054168ac",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:179": {
+      "name": "Часы \"FullSilver\"",
+      "price": 85000,
+      "sourceId": "game-421c289886bdfa6771c2a596cebb1974b96cb33580341b8310f0d93c99ad5960",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:188": {
+      "name": "Часы \"Солнцестояние\"",
+      "price": 260000,
+      "sourceId": "game-483cc3211000960113603c8f6225cc9fa169dde4c4f8fc2be55418881239fda2",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:171": {
+      "name": "Часы \"PinkDiamonds\"",
+      "price": 600000,
+      "sourceId": "game-5d2d40357075f7b6356a6cb609a8ca97641360479c854007f178ef0a5d39d288",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:37": {
+      "name": "Часы \"Wave\"",
+      "price": 300000,
+      "sourceId": "game-7360618b93562e1899601e125ee4c7f219b7fb23dd5283186916bb0d3c1eeb65",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:143": {
+      "name": "Часы \"Gucci\"",
+      "price": 500000,
+      "sourceId": "game-73c148cfecfa5e171849e01bfebb68a650d5473c7b97019395b2975f16962efa",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:45": {
+      "name": "Часы \"Mehanick\"",
+      "price": 75000,
+      "sourceId": "game-8ad717f7d7c3e8ababb0e1891b09e5c0f43b7ff6c1146820f283b2bc57d85576",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:166": {
+      "name": "AppleWatch",
+      "price": 550000,
+      "sourceId": "game-9dbb8e18f38088f3a03eccd98ba61f9fc86687aab87b4527daa0f313b5338743",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:41": {
+      "name": "Часы \"Stimul\"",
+      "price": 95000,
+      "sourceId": "game-ab2b1e128d6d02740e66772afe0f2ff15ccca8ccda5cb88d3ad04a1b169f6bf7",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:224": {
+      "name": "Умные часы \"Xiaomi\"",
+      "price": 350000,
+      "sourceId": "game-bcbebf33c9c17512aeb2637fe5ce4e674075c8745c34c62958ee05e7e2e7853d",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:19": {
+      "name": "Часы \"Louis Vuitton\"",
+      "price": 500000,
+      "sourceId": "game-bffbf784c56d637e1382532c928a2c09b97448f3922f8dee7a73e5dc34226c91",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:181": {
+      "name": "Часы \"Бежев\"",
+      "price": 70000,
+      "sourceId": "game-d47bd8131ff80b89dd1100f3b685213165a39f3db1dd0393a10f98719d32ee0d",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:156": {
+      "name": "Часы \"RedGold\"",
+      "price": 275000,
+      "sourceId": "game-d512e40c5afa11f807e16792cb268ccdd9f98cdb6bac45df658d9de50ff3abcb",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:184": {
+      "name": "Часы \"FullGold\"",
+      "price": 250000,
+      "sourceId": "game-e7b9164d0de54797df1bc13bd48f30765b236174286330665b8ae2392c4cd9c9",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:161": {
+      "name": "Часы \"Grand\"",
+      "price": 100000,
+      "sourceId": "game-ecd61f3391c385a41948d84b8b3fa33d28c74ce44036b18f1a88e73f96a546ba",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
+    },
+    "golden_horse_armor:97": {
+      "name": "Часы \"Азарт\"",
+      "price": 300000,
+      "sourceId": "game-eda1734973dfbe9ee46a4bff66c3b14ea885558e307a3cf6c9a90f0b7a67cb60",
+      "updatedAt": "2026-11-26T22:40:14.990Z"
     }
   },
   "history": {
@@ -13523,6 +13643,266 @@
           "price": 45000,
           "sourceId": "game-b62506c2f4132f003e466d7ced34325bab0fe3c2a069cbc42da653c84ba7cc08",
           "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "golden_horse_armor:153": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"HardSilver\"",
+          "price": 250000,
+          "sourceId": "game-141ae23752c4d257883ebe9b0ae71609d259b99d036e1854c6fb5df3313ca203",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:178": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Marker\"",
+          "price": 260000,
+          "sourceId": "game-14a3c61310be0e88f6b3b73b45bcaffe5467b90cc04041d4f2d58813d6dba5b3",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:125": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Blood\"",
+          "price": 135000,
+          "sourceId": "game-22abf257c17059fe3fc4d0a99443b323961240ecb9df0a0cf9a5056eb48e5baa",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:202": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Затмение\"",
+          "price": 80000,
+          "sourceId": "game-3ed7e0fb4782f62f1543ba6da61a169c5db433606fc099e33312384b9fea9d41",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:183": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Casino\"",
+          "price": 300000,
+          "sourceId": "game-3f70c1de09bf93ac610d7e8761cc791e54df74ebbe6a7b2ecc2dab42054168ac",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:179": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"FullSilver\"",
+          "price": 85000,
+          "sourceId": "game-421c289886bdfa6771c2a596cebb1974b96cb33580341b8310f0d93c99ad5960",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:188": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Солнцестояние\"",
+          "price": 260000,
+          "sourceId": "game-483cc3211000960113603c8f6225cc9fa169dde4c4f8fc2be55418881239fda2",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:171": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"PinkDiamonds\"",
+          "price": 600000,
+          "sourceId": "game-5d2d40357075f7b6356a6cb609a8ca97641360479c854007f178ef0a5d39d288",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:37": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Wave\"",
+          "price": 300000,
+          "sourceId": "game-7360618b93562e1899601e125ee4c7f219b7fb23dd5283186916bb0d3c1eeb65",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:143": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Gucci\"",
+          "price": 500000,
+          "sourceId": "game-73c148cfecfa5e171849e01bfebb68a650d5473c7b97019395b2975f16962efa",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:45": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Mehanick\"",
+          "price": 75000,
+          "sourceId": "game-8ad717f7d7c3e8ababb0e1891b09e5c0f43b7ff6c1146820f283b2bc57d85576",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:166": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "AppleWatch",
+          "price": 550000,
+          "sourceId": "game-9dbb8e18f38088f3a03eccd98ba61f9fc86687aab87b4527daa0f313b5338743",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:41": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Stimul\"",
+          "price": 95000,
+          "sourceId": "game-ab2b1e128d6d02740e66772afe0f2ff15ccca8ccda5cb88d3ad04a1b169f6bf7",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:224": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Умные часы \"Xiaomi\"",
+          "price": 350000,
+          "sourceId": "game-bcbebf33c9c17512aeb2637fe5ce4e674075c8745c34c62958ee05e7e2e7853d",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:19": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Louis Vuitton\"",
+          "price": 500000,
+          "sourceId": "game-bffbf784c56d637e1382532c928a2c09b97448f3922f8dee7a73e5dc34226c91",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:181": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Бежев\"",
+          "price": 70000,
+          "sourceId": "game-d47bd8131ff80b89dd1100f3b685213165a39f3db1dd0393a10f98719d32ee0d",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:156": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"RedGold\"",
+          "price": 275000,
+          "sourceId": "game-d512e40c5afa11f807e16792cb268ccdd9f98cdb6bac45df658d9de50ff3abcb",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:184": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"FullGold\"",
+          "price": 250000,
+          "sourceId": "game-e7b9164d0de54797df1bc13bd48f30765b236174286330665b8ae2392c4cd9c9",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:161": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Grand\"",
+          "price": 100000,
+          "sourceId": "game-ecd61f3391c385a41948d84b8b3fa33d28c74ce44036b18f1a88e73f96a546ba",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
+        }
+      }
+    ],
+    "golden_horse_armor:97": [
+      {
+        "at": "2026-11-26T22:40:14.990Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Часы \"Азарт\"",
+          "price": 300000,
+          "sourceId": "game-eda1734973dfbe9ee46a4bff66c3b14ea885558e307a3cf6c9a90f0b7a67cb60",
+          "updatedAt": "2026-11-26T22:40:14.990Z"
         }
       }
     ]
