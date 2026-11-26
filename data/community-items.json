@@ -216,6 +216,11 @@
       "price": 250000,
       "sourceId": "game-84e5bb59db1bb091b3aaa5d7ce196a7a1643206c11423e533624de416df91fa7",
       "updatedAt": "2026-11-26T21:57:03.586Z"
+    },
+    "ink_sac:5": {
+      "name": "Унитаз",
+      "sourceId": "game-6f6024a29989bb52f0e5a364bc5b3485221588203116bfbd1b73fbfb2dd5d5d1",
+      "updatedAt": "2026-11-26T21:57:13.070Z"
     }
   },
   "history": {
@@ -687,6 +692,18 @@
           "price": 250000,
           "sourceId": "game-84e5bb59db1bb091b3aaa5d7ce196a7a1643206c11423e533624de416df91fa7",
           "updatedAt": "2026-11-26T21:57:03.586Z"
+        }
+      }
+    ],
+    "ink_sac:5": [
+      {
+        "at": "2026-11-26T21:57:13.070Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Унитаз",
+          "sourceId": "game-6f6024a29989bb52f0e5a364bc5b3485221588203116bfbd1b73fbfb2dd5d5d1",
+          "updatedAt": "2026-11-26T21:57:13.070Z"
         }
       }
     ]
