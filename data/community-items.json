@@ -345,6 +345,12 @@
       "price": 150000,
       "sourceId": "game-3f0cea06176b6a58d107c4005dcc72b2e418855786f41c1a32d062a5a807524e",
       "updatedAt": "2026-11-26T21:59:29.552Z"
+    },
+    "iron_horse_armor:46": {
+      "name": "Рюкзак",
+      "rarity": "Uncommon",
+      "sourceId": "game-47c4a54262bc85d26d302eacd883f13f41b7048fa869768b54d1f6da7357593b",
+      "updatedAt": "2026-11-26T21:59:31.924Z"
     }
   },
   "history": {
@@ -1115,6 +1121,19 @@
           "price": 150000,
           "sourceId": "game-3f0cea06176b6a58d107c4005dcc72b2e418855786f41c1a32d062a5a807524e",
           "updatedAt": "2026-11-26T21:59:29.552Z"
+        }
+      }
+    ],
+    "iron_horse_armor:46": [
+      {
+        "at": "2026-11-26T21:59:31.924Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Рюкзак",
+          "rarity": "Uncommon",
+          "sourceId": "game-47c4a54262bc85d26d302eacd883f13f41b7048fa869768b54d1f6da7357593b",
+          "updatedAt": "2026-11-26T21:59:31.924Z"
         }
       }
     ]
