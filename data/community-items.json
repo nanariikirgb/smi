@@ -271,6 +271,13 @@
       "price": 2500000,
       "sourceId": "game-0f648b413776a3fc7caf3f87654f4526df9eab52c14ef345c5d90454f4a2862c",
       "updatedAt": "2026-11-26T21:58:14.499Z"
+    },
+    "flint:633": {
+      "name": "Смычок для скрипки",
+      "rarity": "Common",
+      "price": 15000,
+      "sourceId": "game-081f866b5617834dc184290d05d76385add8aa0ff152e0d059e90f73a18d4cc7",
+      "updatedAt": "2026-11-26T21:58:18.008Z"
     }
   },
   "history": {
@@ -860,6 +867,20 @@
           "price": 2500000,
           "sourceId": "game-0f648b413776a3fc7caf3f87654f4526df9eab52c14ef345c5d90454f4a2862c",
           "updatedAt": "2026-11-26T21:58:14.499Z"
+        }
+      }
+    ],
+    "flint:633": [
+      {
+        "at": "2026-11-26T21:58:18.008Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Смычок для скрипки",
+          "rarity": "Common",
+          "price": 15000,
+          "sourceId": "game-081f866b5617834dc184290d05d76385add8aa0ff152e0d059e90f73a18d4cc7",
+          "updatedAt": "2026-11-26T21:58:18.008Z"
         }
       }
     ]
