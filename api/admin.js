@@ -22,7 +22,7 @@ module.exports=async function(req,res){
   if(req.method==='POST'&&action==='edit-catalog'){
    if(Number(req.headers['content-length']||0)>100000)return fail(413,'Слишком большой запрос');
    if(!await m.limit('catalog-edit:'+m.ip(req),30,60))return fail(429,'Слишком много изменений');
-   const result=await m.editCatalog(data);const notification=await discord.send(discord.editLog(result),{log:true});return res.json({ok:true,...result,logNotified:notification.ok});
+   const result=await m.editCatalog(data);const names=Object.create(null);for(const key of Object.keys(result.updated||{})){const value=data.names?.[key];if(typeof value==='string')names[key]=m.clean(value).slice(0,100)}let notification={ok:false};try{const files=await discord.editPreviews(result,names);notification=await discord.send(discord.editLog(result,files,names),{log:true,files})}catch{console.warn('Catalog edit log delivery failed')}return res.json({ok:true,...result,logNotified:notification.ok});
   }
   if(req.method==='GET'&&action==='submission'){const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');const row=await m.row(id);return row?res.json({row}):fail(404,'Заявка не найдена')}
   if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset,req.query.mode==='history'?'history':'pending'))}
