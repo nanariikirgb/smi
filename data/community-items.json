@@ -184,6 +184,11 @@
       "price": 250000,
       "sourceId": "game-e6828f136ac454d88e6adf6fea0d7d5d900c6c3005f73c720aa6931733f4908d",
       "updatedAt": "2026-11-26T21:56:10.413Z"
+    },
+    "feather:206": {
+      "name": "Стул МОДЕРН",
+      "sourceId": "game-7233485a6e884a63e06ad9ef24e25b56de1630f15750608843e421fd0a051f24",
+      "updatedAt": "2026-11-26T21:56:14.886Z"
     }
   },
   "history": {
@@ -563,6 +568,18 @@
           "price": 250000,
           "sourceId": "game-e6828f136ac454d88e6adf6fea0d7d5d900c6c3005f73c720aa6931733f4908d",
           "updatedAt": "2026-11-26T21:56:10.413Z"
+        }
+      }
+    ],
+    "feather:206": [
+      {
+        "at": "2026-11-26T21:56:14.886Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Стул МОДЕРН",
+          "sourceId": "game-7233485a6e884a63e06ad9ef24e25b56de1630f15750608843e421fd0a051f24",
+          "updatedAt": "2026-11-26T21:56:14.886Z"
         }
       }
     ]
