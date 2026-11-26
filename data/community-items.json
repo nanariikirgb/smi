@@ -379,6 +379,13 @@
       "price": 80000,
       "sourceId": "game-8a9bbd48e1002d63ee45356a7a7148033f32ef8751bec4c2d4b78010628e7eeb",
       "updatedAt": "2026-11-26T21:59:40.022Z"
+    },
+    "diamond_horse_armor:1005": {
+      "name": "Шляпа \"Аксолотль\"",
+      "rarity": "Season",
+      "price": 150000,
+      "sourceId": "game-8b38da84fb732f92c84502c554a3eec8c03d48972c5096c7d7c35cf9bc22f51c",
+      "updatedAt": "2026-11-26T21:59:45.471Z"
     }
   },
   "history": {
@@ -1218,6 +1225,20 @@
           "price": 80000,
           "sourceId": "game-8a9bbd48e1002d63ee45356a7a7148033f32ef8751bec4c2d4b78010628e7eeb",
           "updatedAt": "2026-11-26T21:59:40.022Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:1005": [
+      {
+        "at": "2026-11-26T21:59:45.471Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шляпа \"Аксолотль\"",
+          "rarity": "Season",
+          "price": 150000,
+          "sourceId": "game-8b38da84fb732f92c84502c554a3eec8c03d48972c5096c7d7c35cf9bc22f51c",
+          "updatedAt": "2026-11-26T21:59:45.471Z"
         }
       }
     ]
