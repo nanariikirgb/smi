@@ -15,6 +15,17 @@ if(!cached){
  const page=await browser.newPage();await page.route('https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js',r=>r.fulfill({path:join(root,'node_modules/jszip/dist/jszip.min.js'),contentType:'text/javascript'}));
  page.on('pageerror',e=>console.error('Catalog page error:',e.message));
  await page.goto('http://127.0.0.1:'+server.address().port+'/?buildPreviews=1',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.catalogBuild,null,{timeout:180000});
+ const check=await page.evaluate(()=>{
+  const texture=(overlay=false)=>{const c=document.createElement('canvas');c.width=c.height=4;const ctx=c.getContext('2d');if(!overlay){ctx.fillStyle='#0000ff';ctx.fillRect(0,0,4,4)}else{ctx.fillStyle='#ff0000';ctx.fillRect(2,2,2,2);ctx.fillStyle='rgba(0,255,0,.5)';ctx.fillRect(2,0,2,2)}return c};
+  const face=(textureKey,z)=>({textureKey,p:[[-24,-24,z],[24,-24,z],[24,24,z],[-24,24,z]],uv:[0,0,16,16],rotation:0,depth:z});
+  const rendered=drawNative([face('front',1),face('back',0)],new Map([['front',texture(true)],['back',texture()]]),64,1,0,0,0,1);
+  if(!rendered)throw Error('Native WebGL renderer unavailable');
+  const ctx=rendered.getContext('2d'),pixel=(x,y)=>Array.from(ctx.getImageData(x,y,1,1).data);
+  const hole=pixel(20,32),solid=pixel(44,44),blend=pixel(44,20);
+  if(hole[2]<240||hole[0]>15||solid[0]<240||solid[2]>15||blend[1]<100||blend[2]<100||blend[3]<240)throw Error('Depth/alpha regression: '+JSON.stringify({hole,solid,blend}));
+  return {hole,solid,blend};
+ });
+ console.log('Native WebGL depth and transparency check passed',JSON.stringify(check));
  const info=await page.evaluate(()=>window.catalogBuild.manifest());if(!info.digest||!info.keys.length)throw Error('Catalog build failed');
  const ready=[],failed=[];let done=0;
  for(const key of info.keys){
