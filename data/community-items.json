@@ -513,6 +513,11 @@
       "name": "Рёбрышки BBQ",
       "sourceId": "game-9b9579fc206b64b99aa29241fa03f47e7300f94f5ee7247f3619244efcfdf5a7",
       "updatedAt": "2026-11-26T22:06:38.780Z"
+    },
+    "golden_carrot:157": {
+      "name": "Печенье \"Антихрист\"",
+      "sourceId": "game-a8eb625aaf14b39bced6e3257a4e61a38bafe051fdceeadca379ef42cd7ef8bf",
+      "updatedAt": "2026-11-26T22:06:43.831Z"
     }
   },
   "history": {
@@ -1668,6 +1673,18 @@
           "name": "Рёбрышки BBQ",
           "sourceId": "game-9b9579fc206b64b99aa29241fa03f47e7300f94f5ee7247f3619244efcfdf5a7",
           "updatedAt": "2026-11-26T22:06:38.780Z"
+        }
+      }
+    ],
+    "golden_carrot:157": [
+      {
+        "at": "2026-11-26T22:06:43.831Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Печенье \"Антихрист\"",
+          "sourceId": "game-a8eb625aaf14b39bced6e3257a4e61a38bafe051fdceeadca379ef42cd7ef8bf",
+          "updatedAt": "2026-11-26T22:06:43.831Z"
         }
       }
     ]
