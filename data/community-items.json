@@ -162,6 +162,11 @@
       "name": "CLOUDS",
       "sourceId": "game-3fdaa9056f840f54fba8abc1250b7bb1fd576ab861928103b0307a01a296515b",
       "updatedAt": "2026-11-26T21:55:47.433Z"
+    },
+    "golden_carrot:22": {
+      "name": "Вафли",
+      "sourceId": "game-feb282daa4df52daf3b8c6b6fbebcf558a8de68f54a7962b37d2412b5ff7b766",
+      "updatedAt": "2026-11-26T21:55:56.616Z"
     }
   },
   "history": {
@@ -491,6 +496,18 @@
           "name": "CLOUDS",
           "sourceId": "game-3fdaa9056f840f54fba8abc1250b7bb1fd576ab861928103b0307a01a296515b",
           "updatedAt": "2026-11-26T21:55:47.433Z"
+        }
+      }
+    ],
+    "golden_carrot:22": [
+      {
+        "at": "2026-11-26T21:55:56.616Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Вафли",
+          "sourceId": "game-feb282daa4df52daf3b8c6b6fbebcf558a8de68f54a7962b37d2412b5ff7b766",
+          "updatedAt": "2026-11-26T21:55:56.616Z"
         }
       }
     ]
