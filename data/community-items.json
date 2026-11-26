@@ -486,6 +486,11 @@
       "name": "Воппер",
       "sourceId": "game-de9e6ab674c00abafa7f84840bd7861ea494c9044f5f1aacbad36a7a693a2f11",
       "updatedAt": "2026-11-26T22:06:25.430Z"
+    },
+    "golden_carrot:27": {
+      "name": "Рисовые шарики",
+      "sourceId": "game-c31bd3a3b583ee2b1c53f5b9a4ed70247672cbc9db7aa52934a6443e7b8aeca5",
+      "updatedAt": "2026-11-26T22:06:28.820Z"
     }
   },
   "history": {
@@ -1579,6 +1584,18 @@
           "name": "Воппер",
           "sourceId": "game-de9e6ab674c00abafa7f84840bd7861ea494c9044f5f1aacbad36a7a693a2f11",
           "updatedAt": "2026-11-26T22:06:25.430Z"
+        }
+      }
+    ],
+    "golden_carrot:27": [
+      {
+        "at": "2026-11-26T22:06:28.820Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Рисовые шарики",
+          "sourceId": "game-c31bd3a3b583ee2b1c53f5b9a4ed70247672cbc9db7aa52934a6443e7b8aeca5",
+          "updatedAt": "2026-11-26T22:06:28.820Z"
         }
       }
     ]
