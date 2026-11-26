@@ -25,7 +25,7 @@ public final class ArchiveClient implements ClientModInitializer {
     private static final Pattern PRIVATE = Pattern.compile("[@§]|https?:|www\\.|[0-9]{7}", Pattern.CASE_INSENSITIVE);
     private static final Pattern PRICE = Pattern.compile("Стандартная цена: (?:[0-9]{1,12}|[0-9]{1,3}(?:\\.[0-9]{3}){1,3})\\$",
         Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-    private static final Pattern RARITY = Pattern.compile("\\[(?:Event|Elite|Season|Rare|Legendary)\\]", Pattern.CASE_INSENSITIVE);
+    private static final Pattern RARITY = Pattern.compile("\\[(?:Common|Uncommon|Rare|Epic|Legendary|Secret|Limited|Event|Elite|Season|RPMPass)\\]", Pattern.CASE_INSENSITIVE);
     private static ArchiveClient instance;
 
     record Config(boolean enabled, String serverAddress, String endpoint, String token) {}
