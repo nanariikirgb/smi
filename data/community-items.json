@@ -299,6 +299,11 @@
       "price": 150000,
       "sourceId": "game-ca24cb8120063334b2c366cb212170ea7bfd24c07f4180fe7233daab3faa5902",
       "updatedAt": "2026-11-26T21:59:01.333Z"
+    },
+    "shulker_shell:9": {
+      "name": "IPHONE 13 RS",
+      "sourceId": "game-d1e91737a141db3acf7fb7384b651212aeebea32ec55b4e7587a1e3ec46fe52d",
+      "updatedAt": "2026-11-26T21:59:03.758Z"
     }
   },
   "history": {
@@ -956,6 +961,18 @@
           "price": 150000,
           "sourceId": "game-ca24cb8120063334b2c366cb212170ea7bfd24c07f4180fe7233daab3faa5902",
           "updatedAt": "2026-11-26T21:59:01.333Z"
+        }
+      }
+    ],
+    "shulker_shell:9": [
+      {
+        "at": "2026-11-26T21:59:03.758Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "IPHONE 13 RS",
+          "sourceId": "game-d1e91737a141db3acf7fb7384b651212aeebea32ec55b4e7587a1e3ec46fe52d",
+          "updatedAt": "2026-11-26T21:59:03.758Z"
         }
       }
     ]
