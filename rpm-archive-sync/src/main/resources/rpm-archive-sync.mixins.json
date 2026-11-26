@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "smi.rpm",
+  "compatibilityLevel": "JAVA_17",
+  "client": ["ClientTickMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

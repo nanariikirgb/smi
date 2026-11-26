@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        maven {
+            url = 'https://maven.fabricmc.net/'
+            content {
+                includeGroup 'fabric-loom'
+                includeGroup 'net.fabricmc'
+            }
+        }
+        mavenCentral()
+    }
+}
+rootProject.name = 'rpm-archive-sync'
