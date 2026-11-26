@@ -81,6 +81,13 @@
       "rarity": "",
       "sourceId": "12",
       "updatedAt": "2026-11-26T21:29:15.115Z"
+    },
+    "golden_horse_armor:697": {
+      "name": "Палка \"PickMe\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "13",
+      "updatedAt": "2026-11-26T21:29:18.321Z"
     }
   },
   "history": {
@@ -238,6 +245,20 @@
           "rarity": "",
           "sourceId": "12",
           "updatedAt": "2026-11-26T21:29:15.115Z"
+        }
+      }
+    ],
+    "golden_horse_armor:697": [
+      {
+        "at": "2026-11-26T21:29:18.321Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Палка \"PickMe\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "13",
+          "updatedAt": "2026-11-26T21:29:18.321Z"
         }
       }
     ]
