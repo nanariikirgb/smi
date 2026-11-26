@@ -123,6 +123,13 @@
       "rarity": "Ultimate",
       "sourceId": "18",
       "updatedAt": "2026-11-26T21:46:47.909Z"
+    },
+    "golden_horse_armor:802": {
+      "name": "Катана \"Неткод\"",
+      "price": 2500000,
+      "rarity": "Ultimate",
+      "sourceId": "19",
+      "updatedAt": "2026-11-26T21:46:51.457Z"
     }
   },
   "history": {
@@ -364,6 +371,20 @@
           "rarity": "Ultimate",
           "sourceId": "18",
           "updatedAt": "2026-11-26T21:46:47.909Z"
+        }
+      }
+    ],
+    "golden_horse_armor:802": [
+      {
+        "at": "2026-11-26T21:46:51.457Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Катана \"Неткод\"",
+          "price": 2500000,
+          "rarity": "Ultimate",
+          "sourceId": "19",
+          "updatedAt": "2026-11-26T21:46:51.457Z"
         }
       }
     ]
