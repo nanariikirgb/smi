@@ -456,6 +456,11 @@
       "name": "Сэндвич \"Итальянский капрезе\"",
       "sourceId": "game-0b8f07899f6220e8b72963d0186f6f4b2e8c16cd226a8107a5128562505c5697",
       "updatedAt": "2026-11-26T22:06:11.344Z"
+    },
+    "apple:1": {
+      "name": "Филе рыбы",
+      "sourceId": "game-287dbbce2998179e8119ae0e65115dd097b920424a967ae1debac7c9136dd179",
+      "updatedAt": "2026-11-26T22:06:12.921Z"
     }
   },
   "history": {
@@ -1477,6 +1482,18 @@
           "name": "Сэндвич \"Итальянский капрезе\"",
           "sourceId": "game-0b8f07899f6220e8b72963d0186f6f4b2e8c16cd226a8107a5128562505c5697",
           "updatedAt": "2026-11-26T22:06:11.344Z"
+        }
+      }
+    ],
+    "apple:1": [
+      {
+        "at": "2026-11-26T22:06:12.921Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Филе рыбы",
+          "sourceId": "game-287dbbce2998179e8119ae0e65115dd097b920424a967ae1debac7c9136dd179",
+          "updatedAt": "2026-11-26T22:06:12.921Z"
         }
       }
     ]
