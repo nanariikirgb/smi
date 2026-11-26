@@ -3693,6 +3693,132 @@
       "price": 450000,
       "sourceId": "game-8a7cad15b68fa054255ba119012ebb561fa99745322e6509f03f4bf1e372ae93",
       "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "diamond_horse_armor:74": {
+      "name": "Праздничная шляпа",
+      "price": 60000,
+      "sourceId": "game-0994169b99e5a8dc0854632b3c12da40ec4c0b4735c3979f194b1b7d39f0f4e9",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:492": {
+      "name": "Шляпа \"Нуар\"",
+      "price": 75000,
+      "sourceId": "game-16bc5509f6bd8cd0324ece47911a8d6083baade52d79d6359764076f266872c6",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:407": {
+      "name": "Кашкет водителя",
+      "price": 70000,
+      "sourceId": "game-20445f5c99d5be8ab0a9cbc6c6d7c423c57ef794d816b55234bf4d7a5c6c526b",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:479": {
+      "name": "Японская повязка",
+      "price": 125000,
+      "sourceId": "game-4bc79a0a480ebd2879d03778ef4dfba959e0422c29d9f86e05a94d320b282f6c",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:290": {
+      "name": "Панамка",
+      "price": 75000,
+      "sourceId": "game-4fd483f2859e51b702d7efe496e9d4f7675a05f03f5deaed73a355ff80230821",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:22": {
+      "name": "Красна акубра",
+      "price": 70000,
+      "sourceId": "game-52ec27c9f1e635e7d727cf38ee57ee3baad13bb50ae69aa0745349b4f8af6581",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:18": {
+      "name": "Хомбург",
+      "price": 75000,
+      "sourceId": "game-53523977ebd23b96a816bd5f76aac545be5b205154812073b6711a93c7b63629",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:23": {
+      "name": "Большая шляпа",
+      "price": 120000,
+      "sourceId": "game-5b320695173fbc791c194b603a3b33b19d41a884ad7a675d3f5b37c61792e668",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:471": {
+      "name": "Наушники \"80-е\"",
+      "price": 70000,
+      "sourceId": "game-79a1b1df82aaa4421c8be9a94c4682d4c0d6c31e12085002fcd05f8ebba7a9e5",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:474": {
+      "name": "Повязка \"Sleep\"",
+      "price": 50000,
+      "sourceId": "game-7e2dd76c292798d077eb6ce1da15fa9b7559f284c31747d945565d916040f892",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:432": {
+      "name": "Наушники \"WaveRazer\"",
+      "price": 125000,
+      "sourceId": "game-cb6d35e310bec7d9b56c5b153df8c8839a74f9210a3f8fbe2aa6c650d6fe3cdf",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:295": {
+      "name": "Дамская шляпа",
+      "price": 60000,
+      "sourceId": "game-cd6bd8e9a79cc23aecf23d1557df32e17fe8b8117f431c9fef4de404cddb2835",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:497": {
+      "name": "Пластиковый сканер",
+      "price": 150000,
+      "sourceId": "game-167d85814d4e5b8525660bb3e6fb921a7e02072494ccca2d3c171ca8aa7e69dc",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:50": {
+      "name": "Розовый рогатый кашкет",
+      "price": 200000,
+      "sourceId": "game-1f88b96623265451342dd3560a84798ec6a12cd671e87ed78b0204d06740b22e",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:326": {
+      "name": "Наушники Haven",
+      "price": 170000,
+      "sourceId": "game-314f013bcb7b1024941262aba706c1b6460a44201a4908e1a0f5a7aeaaab0e43",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:261": {
+      "name": "Наушники \"Хрусталь\"",
+      "price": 350000,
+      "sourceId": "game-337bc32abf847e6d853908c7e88f44253c94f800ada5ef5af5365d533d1672b9",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:249": {
+      "name": "Блогерские наушники",
+      "price": 300000,
+      "sourceId": "game-35944458eaf16ed9b904f02812aff38dc351c9f2e0e4799ee011d37038a9c2e1",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:154": {
+      "name": "Детальный сканер",
+      "price": 150000,
+      "sourceId": "game-76b4ec8619d6b98149bb05c10200cd960e80f39ec05b9fee318ac6766b0f2002",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:245": {
+      "name": "Шлем гонщика",
+      "price": 350000,
+      "sourceId": "game-cbd7ecde342d8a43ef72f7114c544c4892e214467a52a9eb008e4b24919203af",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:156": {
+      "name": "Геймерские наушники",
+      "price": 300000,
+      "sourceId": "game-fc55a52fa4e76a4f454f42b8d12e6a38f4a7beb9d2e52760b7129e43a6134c95",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
+    },
+    "diamond_horse_armor:268": {
+      "name": "Ушастые наушники",
+      "price": 450000,
+      "sourceId": "game-2b30a323056c4167b70c9dd174be27ac374ece56cfd9f02ed21c961a2f0b05f3",
+      "updatedAt": "2026-11-26T22:35:49.018Z"
     }
   },
   "history": {
@@ -11825,6 +11951,279 @@
           "price": 450000,
           "sourceId": "game-8a7cad15b68fa054255ba119012ebb561fa99745322e6509f03f4bf1e372ae93",
           "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:74": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Праздничная шляпа",
+          "price": 60000,
+          "sourceId": "game-0994169b99e5a8dc0854632b3c12da40ec4c0b4735c3979f194b1b7d39f0f4e9",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:492": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шляпа \"Нуар\"",
+          "price": 75000,
+          "sourceId": "game-16bc5509f6bd8cd0324ece47911a8d6083baade52d79d6359764076f266872c6",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:407": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кашкет водителя",
+          "price": 70000,
+          "sourceId": "game-20445f5c99d5be8ab0a9cbc6c6d7c423c57ef794d816b55234bf4d7a5c6c526b",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:479": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Японская повязка",
+          "price": 125000,
+          "sourceId": "game-4bc79a0a480ebd2879d03778ef4dfba959e0422c29d9f86e05a94d320b282f6c",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:290": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Панамка",
+          "price": 75000,
+          "sourceId": "game-4fd483f2859e51b702d7efe496e9d4f7675a05f03f5deaed73a355ff80230821",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:22": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Красна акубра",
+          "price": 70000,
+          "sourceId": "game-52ec27c9f1e635e7d727cf38ee57ee3baad13bb50ae69aa0745349b4f8af6581",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:18": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Хомбург",
+          "price": 75000,
+          "sourceId": "game-53523977ebd23b96a816bd5f76aac545be5b205154812073b6711a93c7b63629",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:23": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Большая шляпа",
+          "price": 120000,
+          "sourceId": "game-5b320695173fbc791c194b603a3b33b19d41a884ad7a675d3f5b37c61792e668",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:471": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Наушники \"80-е\"",
+          "price": 70000,
+          "sourceId": "game-79a1b1df82aaa4421c8be9a94c4682d4c0d6c31e12085002fcd05f8ebba7a9e5",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:474": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Повязка \"Sleep\"",
+          "price": 50000,
+          "sourceId": "game-7e2dd76c292798d077eb6ce1da15fa9b7559f284c31747d945565d916040f892",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:432": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Наушники \"WaveRazer\"",
+          "price": 125000,
+          "sourceId": "game-cb6d35e310bec7d9b56c5b153df8c8839a74f9210a3f8fbe2aa6c650d6fe3cdf",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:295": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Дамская шляпа",
+          "price": 60000,
+          "sourceId": "game-cd6bd8e9a79cc23aecf23d1557df32e17fe8b8117f431c9fef4de404cddb2835",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:497": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пластиковый сканер",
+          "price": 150000,
+          "sourceId": "game-167d85814d4e5b8525660bb3e6fb921a7e02072494ccca2d3c171ca8aa7e69dc",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:50": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Розовый рогатый кашкет",
+          "price": 200000,
+          "sourceId": "game-1f88b96623265451342dd3560a84798ec6a12cd671e87ed78b0204d06740b22e",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:326": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Наушники Haven",
+          "price": 170000,
+          "sourceId": "game-314f013bcb7b1024941262aba706c1b6460a44201a4908e1a0f5a7aeaaab0e43",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:261": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Наушники \"Хрусталь\"",
+          "price": 350000,
+          "sourceId": "game-337bc32abf847e6d853908c7e88f44253c94f800ada5ef5af5365d533d1672b9",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:249": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Блогерские наушники",
+          "price": 300000,
+          "sourceId": "game-35944458eaf16ed9b904f02812aff38dc351c9f2e0e4799ee011d37038a9c2e1",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:154": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Детальный сканер",
+          "price": 150000,
+          "sourceId": "game-76b4ec8619d6b98149bb05c10200cd960e80f39ec05b9fee318ac6766b0f2002",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:245": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шлем гонщика",
+          "price": 350000,
+          "sourceId": "game-cbd7ecde342d8a43ef72f7114c544c4892e214467a52a9eb008e4b24919203af",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:156": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Геймерские наушники",
+          "price": 300000,
+          "sourceId": "game-fc55a52fa4e76a4f454f42b8d12e6a38f4a7beb9d2e52760b7129e43a6134c95",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:268": [
+      {
+        "at": "2026-11-26T22:35:49.018Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Ушастые наушники",
+          "price": 450000,
+          "sourceId": "game-2b30a323056c4167b70c9dd174be27ac374ece56cfd9f02ed21c961a2f0b05f3",
+          "updatedAt": "2026-11-26T22:35:49.018Z"
         }
       }
     ]
