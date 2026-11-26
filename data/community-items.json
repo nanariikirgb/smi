@@ -253,6 +253,13 @@
       "rarity": "RPMPass",
       "sourceId": "game-23125ad3be7e581411089fb481adfe87dc60793e8c3c5a3596317e852760dd60",
       "updatedAt": "2026-11-26T21:58:03.519Z"
+    },
+    "golden_chestplate:228": {
+      "name": "Цепь \"EBLAN\"",
+      "rarity": "Rare",
+      "price": 150000,
+      "sourceId": "game-217792f8e356218af51bbbbd3a7922c33910dd16412936c041a39068559968bc",
+      "updatedAt": "2026-11-26T21:58:07.475Z"
     }
   },
   "history": {
@@ -803,6 +810,20 @@
           "rarity": "RPMPass",
           "sourceId": "game-23125ad3be7e581411089fb481adfe87dc60793e8c3c5a3596317e852760dd60",
           "updatedAt": "2026-11-26T21:58:03.519Z"
+        }
+      }
+    ],
+    "golden_chestplate:228": [
+      {
+        "at": "2026-11-26T21:58:07.475Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Цепь \"EBLAN\"",
+          "rarity": "Rare",
+          "price": 150000,
+          "sourceId": "game-217792f8e356218af51bbbbd3a7922c33910dd16412936c041a39068559968bc",
+          "updatedAt": "2026-11-26T21:58:07.475Z"
         }
       }
     ]
