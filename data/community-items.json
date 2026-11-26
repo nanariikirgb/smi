@@ -441,6 +441,11 @@
       "name": "Ролл \"Чёрный Дракон\"",
       "sourceId": "game-58459ccf06bcf1b3518e0f218a4704b5eccef076d0d81d40340cfbff08a98bce",
       "updatedAt": "2026-11-26T22:06:06.408Z"
+    },
+    "golden_carrot:128": {
+      "name": "Маффин \"Шоколадное наслаждение\"",
+      "sourceId": "game-3ebc715ca969088c17e63ed41d74b96ce274ada746f62185bff064782f6d973c",
+      "updatedAt": "2026-11-26T22:06:08.278Z"
     }
   },
   "history": {
@@ -1426,6 +1431,18 @@
           "name": "Ролл \"Чёрный Дракон\"",
           "sourceId": "game-58459ccf06bcf1b3518e0f218a4704b5eccef076d0d81d40340cfbff08a98bce",
           "updatedAt": "2026-11-26T22:06:06.408Z"
+        }
+      }
+    ],
+    "golden_carrot:128": [
+      {
+        "at": "2026-11-26T22:06:08.278Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маффин \"Шоколадное наслаждение\"",
+          "sourceId": "game-3ebc715ca969088c17e63ed41d74b96ce274ada746f62185bff064782f6d973c",
+          "updatedAt": "2026-11-26T22:06:08.278Z"
         }
       }
     ]
