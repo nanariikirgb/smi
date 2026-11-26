@@ -4174,6 +4174,49 @@
       "price": 60000,
       "sourceId": "game-fdfed6f157ea652eed3c4c88056ba96d8089f00f6828161485d8a8e294fc0b8f",
       "updatedAt": "2026-11-26T22:37:06.005Z"
+    },
+    "iron_horse_armor:51": {
+      "price": 20000,
+      "sourceId": "game-14829396597be2ac1d5851b3fc8fb5844424ca14eb0c52bd3aceea928047bd7c",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "iron_horse_armor:8": {
+      "price": 10000,
+      "sourceId": "game-4463d2f2a2c9e5830cc48d6872471a05dfdcb078b02490808c026fd57517fb60",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "iron_horse_armor:40": {
+      "price": 5000,
+      "sourceId": "game-5b187353e28893b017c28c8a25314ee60d807b6bea77e4d999a98244609e7092",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "iron_horse_armor:39": {
+      "price": 10000,
+      "sourceId": "game-60b138c142eabd40d2412bf6bb36e845b1c330b83446a66dd2ad0b1ccba822da",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "diamond_horse_armor:324": {
+      "name": "Рабочий кашкет",
+      "price": 20000,
+      "sourceId": "game-9cbf4b747dbeb0458a84b9bee1ef43329bf7ce19506ab81fe9d162f84f6eb164",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "iron_horse_armor:81": {
+      "price": 10000,
+      "sourceId": "game-c7cfebf05aca4fed027ae752ba38165c06035db88a433a7367afd9b0f94749b0",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "diamond_horse_armor:322": {
+      "name": "Безвкусные очки",
+      "price": 20000,
+      "sourceId": "game-037886552c6864c6b48bdc5003c03e708f6fae7a43179bdf470b9042e428cf40",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
+    },
+    "diamond_horse_armor:320": {
+      "name": "Старые деревянные очки",
+      "price": 45000,
+      "sourceId": "game-b62506c2f4132f003e466d7ced34325bab0fe3c2a069cbc42da653c84ba7cc08",
+      "updatedAt": "2026-11-26T22:38:16.248Z"
     }
   },
   "history": {
@@ -13381,6 +13424,105 @@
           "price": 60000,
           "sourceId": "game-fdfed6f157ea652eed3c4c88056ba96d8089f00f6828161485d8a8e294fc0b8f",
           "updatedAt": "2026-11-26T22:37:06.005Z"
+        }
+      }
+    ],
+    "iron_horse_armor:51": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 20000,
+          "sourceId": "game-14829396597be2ac1d5851b3fc8fb5844424ca14eb0c52bd3aceea928047bd7c",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "iron_horse_armor:8": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 10000,
+          "sourceId": "game-4463d2f2a2c9e5830cc48d6872471a05dfdcb078b02490808c026fd57517fb60",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "iron_horse_armor:40": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 5000,
+          "sourceId": "game-5b187353e28893b017c28c8a25314ee60d807b6bea77e4d999a98244609e7092",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "iron_horse_armor:39": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 10000,
+          "sourceId": "game-60b138c142eabd40d2412bf6bb36e845b1c330b83446a66dd2ad0b1ccba822da",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:324": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Рабочий кашкет",
+          "price": 20000,
+          "sourceId": "game-9cbf4b747dbeb0458a84b9bee1ef43329bf7ce19506ab81fe9d162f84f6eb164",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "iron_horse_armor:81": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 10000,
+          "sourceId": "game-c7cfebf05aca4fed027ae752ba38165c06035db88a433a7367afd9b0f94749b0",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:322": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Безвкусные очки",
+          "price": 20000,
+          "sourceId": "game-037886552c6864c6b48bdc5003c03e708f6fae7a43179bdf470b9042e428cf40",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:320": [
+      {
+        "at": "2026-11-26T22:38:16.248Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Старые деревянные очки",
+          "price": 45000,
+          "sourceId": "game-b62506c2f4132f003e466d7ced34325bab0fe3c2a069cbc42da653c84ba7cc08",
+          "updatedAt": "2026-11-26T22:38:16.248Z"
         }
       }
     ]
