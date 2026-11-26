@@ -503,6 +503,11 @@
       "name": "Вишня",
       "sourceId": "game-db0ddea5f6cdad56102313d8b26181ec5e89a07a1d6363a334010d99c76d24a8",
       "updatedAt": "2026-11-26T22:06:32.262Z"
+    },
+    "apple:8": {
+      "name": "Сыр",
+      "sourceId": "game-950f57ef79c4f760e4d4313ba767ab5fead4d71d483c7e2ee110f83d497bc218",
+      "updatedAt": "2026-11-26T22:06:35.711Z"
     }
   },
   "history": {
@@ -1634,6 +1639,18 @@
           "name": "Вишня",
           "sourceId": "game-db0ddea5f6cdad56102313d8b26181ec5e89a07a1d6363a334010d99c76d24a8",
           "updatedAt": "2026-11-26T22:06:32.262Z"
+        }
+      }
+    ],
+    "apple:8": [
+      {
+        "at": "2026-11-26T22:06:35.711Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Сыр",
+          "sourceId": "game-950f57ef79c4f760e4d4313ba767ab5fead4d71d483c7e2ee110f83d497bc218",
+          "updatedAt": "2026-11-26T22:06:35.711Z"
         }
       }
     ]
