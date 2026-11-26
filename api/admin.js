@@ -1,4 +1,5 @@
 const m=require('../lib/moderation');
+const discord=require('../lib/discord');
 module.exports=async function(req,res){
  res.setHeader('Cache-Control','no-store, private');res.setHeader('X-Content-Type-Options','nosniff');
  const fail=(s,error)=>res.status(s).json({error});
@@ -21,8 +22,9 @@ module.exports=async function(req,res){
   if(req.method==='POST'&&action==='edit-catalog'){
    if(Number(req.headers['content-length']||0)>100000)return fail(413,'Слишком большой запрос');
    if(!await m.limit('catalog-edit:'+m.ip(req),30,60))return fail(429,'Слишком много изменений');
-   const result=await m.editCatalog(data);return res.json({ok:true,...result});
+   const result=await m.editCatalog(data);const notification=await discord.send(discord.editLog(result),{log:true});return res.json({ok:true,...result,logNotified:notification.ok});
   }
+  if(req.method==='GET'&&action==='submission'){const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');const row=await m.row(id);return row?res.json({row}):fail(404,'Заявка не найдена')}
   if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset,req.query.mode==='history'?'history':'pending'))}
   if(req.method==='GET'&&action==='preview'){
    const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');
@@ -42,7 +44,7 @@ module.exports=async function(req,res){
      const entry=await m.publish(row,{name,price,rarity});
      decision={status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity};
     }else {const entry=await m.previouslyPublished(row);decision=entry?{status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity}:{status:'rejected',reason:m.clean(data.reason).slice(0,400)}};
-    return res.json({ok:true,row:await m.finish(row,decision,token)});
+    const finished=await m.finish(row,decision,token);const notification=await discord.send(discord.decisionLog(finished),{log:true});return res.json({ok:true,row:finished,logNotified:notification.ok});
    }finally{await m.unlock(id,token)}
   }
   return fail(405,'Неизвестное действие');
