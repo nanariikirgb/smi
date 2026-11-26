@@ -172,6 +172,11 @@
       "name": "Картошка фри",
       "sourceId": "game-fe6fe4ba60794183142b3ba3a3817e780c30371860d5f9957c0300ba428ac9e6",
       "updatedAt": "2026-11-26T21:55:57.798Z"
+    },
+    "golden_carrot:115": {
+      "name": "Чесночный хлеб",
+      "sourceId": "game-e619949d89f3ba7d9783a7c2388581af5b667ed8dbfedde2ff582767c67f4df6",
+      "updatedAt": "2026-11-26T21:56:01.156Z"
     }
   },
   "history": {
@@ -525,6 +530,18 @@
           "name": "Картошка фри",
           "sourceId": "game-fe6fe4ba60794183142b3ba3a3817e780c30371860d5f9957c0300ba428ac9e6",
           "updatedAt": "2026-11-26T21:55:57.798Z"
+        }
+      }
+    ],
+    "golden_carrot:115": [
+      {
+        "at": "2026-11-26T21:56:01.156Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Чесночный хлеб",
+          "sourceId": "game-e619949d89f3ba7d9783a7c2388581af5b667ed8dbfedde2ff582767c67f4df6",
+          "updatedAt": "2026-11-26T21:56:01.156Z"
         }
       }
     ]
