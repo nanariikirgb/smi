@@ -278,6 +278,13 @@
       "price": 15000,
       "sourceId": "game-081f866b5617834dc184290d05d76385add8aa0ff152e0d059e90f73a18d4cc7",
       "updatedAt": "2026-11-26T21:58:18.008Z"
+    },
+    "diamond_horse_armor:669": {
+      "name": "Бейсболка \"Томпсон\"",
+      "rarity": "RPMPass",
+      "price": 75000,
+      "sourceId": "game-71d83c1a3a158c811f1a5dde338d5c4ea2f2a21dd0215acb952562570b702ef8",
+      "updatedAt": "2026-11-26T21:58:26.420Z"
     }
   },
   "history": {
@@ -881,6 +888,20 @@
           "price": 15000,
           "sourceId": "game-081f866b5617834dc184290d05d76385add8aa0ff152e0d059e90f73a18d4cc7",
           "updatedAt": "2026-11-26T21:58:18.008Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:669": [
+      {
+        "at": "2026-11-26T21:58:26.420Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Бейсболка \"Томпсон\"",
+          "rarity": "RPMPass",
+          "price": 75000,
+          "sourceId": "game-71d83c1a3a158c811f1a5dde338d5c4ea2f2a21dd0215acb952562570b702ef8",
+          "updatedAt": "2026-11-26T21:58:26.420Z"
         }
       }
     ]
