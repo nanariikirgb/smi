@@ -542,6 +542,11 @@
       "price": 70000,
       "sourceId": "game-6caef955aec3e09e27f1bbc94e94336967e9f0062c524cebbdb597ed19bf8c83",
       "updatedAt": "2026-11-26T22:07:08.961Z"
+    },
+    "golden_carrot:158": {
+      "name": "Пицца с саранчой",
+      "sourceId": "game-6c6b3ef7e4f1d8437ba2663b19da0d4507417b2a830d28b400fa13bd8e5a3ff4",
+      "updatedAt": "2026-11-26T22:07:11.988Z"
     }
   },
   "history": {
@@ -1761,6 +1766,18 @@
           "price": 70000,
           "sourceId": "game-6caef955aec3e09e27f1bbc94e94336967e9f0062c524cebbdb597ed19bf8c83",
           "updatedAt": "2026-11-26T22:07:08.961Z"
+        }
+      }
+    ],
+    "golden_carrot:158": [
+      {
+        "at": "2026-11-26T22:07:11.988Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пицца с саранчой",
+          "sourceId": "game-6c6b3ef7e4f1d8437ba2663b19da0d4507417b2a830d28b400fa13bd8e5a3ff4",
+          "updatedAt": "2026-11-26T22:07:11.988Z"
         }
       }
     ]
