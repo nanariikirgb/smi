@@ -317,6 +317,13 @@
       "price": 30000,
       "sourceId": "game-0c1b56c209ad1293299c74910cfe1a01a442b0908ba513fc419f45f6aa947f6a",
       "updatedAt": "2026-11-26T21:59:14.784Z"
+    },
+    "golden_horse_armor:798": {
+      "name": "Костюм \"Пугало\"",
+      "rarity": "Season",
+      "price": 100000,
+      "sourceId": "game-0eac9d662dd892eb2720026bc6d936c17bfc3bccee6d325fcba884908e4233d3",
+      "updatedAt": "2026-11-26T21:59:20.328Z"
     }
   },
   "history": {
@@ -1031,6 +1038,20 @@
           "price": 30000,
           "sourceId": "game-0c1b56c209ad1293299c74910cfe1a01a442b0908ba513fc419f45f6aa947f6a",
           "updatedAt": "2026-11-26T21:59:14.784Z"
+        }
+      }
+    ],
+    "golden_horse_armor:798": [
+      {
+        "at": "2026-11-26T21:59:20.328Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм \"Пугало\"",
+          "rarity": "Season",
+          "price": 100000,
+          "sourceId": "game-0eac9d662dd892eb2720026bc6d936c17bfc3bccee6d325fcba884908e4233d3",
+          "updatedAt": "2026-11-26T21:59:20.328Z"
         }
       }
     ]
