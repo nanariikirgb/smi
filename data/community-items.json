@@ -189,6 +189,11 @@
       "name": "Стул МОДЕРН",
       "sourceId": "game-7233485a6e884a63e06ad9ef24e25b56de1630f15750608843e421fd0a051f24",
       "updatedAt": "2026-11-26T21:56:14.886Z"
+    },
+    "golden_horse_armor:266": {
+      "name": "Heritage No.1",
+      "sourceId": "game-f52ce5ac2d49dae0096be20af9542884dd719af61bf65866e1b423a2e9d359c9",
+      "updatedAt": "2026-11-26T21:56:17.564Z"
     }
   },
   "history": {
@@ -580,6 +585,18 @@
           "name": "Стул МОДЕРН",
           "sourceId": "game-7233485a6e884a63e06ad9ef24e25b56de1630f15750608843e421fd0a051f24",
           "updatedAt": "2026-11-26T21:56:14.886Z"
+        }
+      }
+    ],
+    "golden_horse_armor:266": [
+      {
+        "at": "2026-11-26T21:56:17.564Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Heritage No.1",
+          "sourceId": "game-f52ce5ac2d49dae0096be20af9542884dd719af61bf65866e1b423a2e9d359c9",
+          "updatedAt": "2026-11-26T21:56:17.564Z"
         }
       }
     ]
