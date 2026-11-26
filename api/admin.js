@@ -28,11 +28,11 @@ module.exports=async function(req,res){
   if(req.method==='GET'&&action==='list'){const offset=Math.min(100000,Math.max(0,Math.floor(Number(req.query.offset)||0)));return res.json(await m.list(offset,req.query.mode==='history'?'history':'pending'))}
   if(req.method==='GET'&&action==='preview'){
    const id=req.query.id;if(!m.idOk(id))return fail(400,'Неверный ID');
-   const p=await m.redis('GET',m.K('png:'+id));if(!p)return fail(404,'Изображение отсутствует');
+   const resolved=await m.resolveId(id);const p=await m.redis('GET',m.K('png:'+resolved));if(!p)return fail(404,'Изображение отсутствует');
    res.setHeader('Content-Type','image/png');return res.status(200).send(Buffer.from(p.slice(22),'base64'));
   }
   if(req.method==='POST'&&['approve','reject'].includes(action)){
-   const id=data.id;if(!m.idOk(id))return fail(400,'Неверный ID');
+   const requestId=String(data.id??'');if(!m.idOk(requestId))return fail(400,'Неверный ID');const id=await m.resolveId(requestId);
    const token=await m.lock(id);if(!token)return fail(409,'Заявка уже обрабатывается');
    try{
     const row=await m.row(id);if(!row)return fail(404,'Заявка не найдена');
@@ -44,7 +44,7 @@ module.exports=async function(req,res){
      const entry=await m.publish(row,{name,price,rarity});
      decision={status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity};
     }else {const entry=await m.previouslyPublished(row);decision=entry?{status:'approved',approvedName:entry.name,price:entry.price,rarity:entry.rarity}:{status:'rejected',reason:m.clean(data.reason).slice(0,400)}};
-    const finished=await m.finish(row,decision,token);const notification=await discord.send(discord.decisionLog(finished),{log:true});return res.json({ok:true,row:finished,logNotified:notification.ok});
+    const finished=await m.finish(row,decision,token);let png;try{const saved=await m.redis('GET',m.K('png:'+finished.id));if(typeof saved==='string'&&saved.startsWith('data:image/png;base64,'))png=Buffer.from(saved.slice(22),'base64')}catch{}const notification=await discord.send(discord.decisionLog(finished,!!png),{log:true,png});return res.json({ok:true,row:finished,logNotified:notification.ok});
    }finally{await m.unlock(id,token)}
   }
   return fail(405,'Неизвестное действие');
