@@ -426,6 +426,11 @@
       "name": "Лампа НЛО",
       "sourceId": "game-9c738b5e7d4b1e0a376d2c6e6ecba6474f1081bc95639bd33fc04b008f0dcb67",
       "updatedAt": "2026-11-26T22:05:59.396Z"
+    },
+    "golden_carrot:7": {
+      "name": "Шоколадное печенье",
+      "sourceId": "game-8acc721513a653e828a7d7a419a0eaf16cda5eaca0813c69a33f2b13f07efd6a",
+      "updatedAt": "2026-11-26T22:06:01.624Z"
     }
   },
   "history": {
@@ -1375,6 +1380,18 @@
           "name": "Лампа НЛО",
           "sourceId": "game-9c738b5e7d4b1e0a376d2c6e6ecba6474f1081bc95639bd33fc04b008f0dcb67",
           "updatedAt": "2026-11-26T22:05:59.396Z"
+        }
+      }
+    ],
+    "golden_carrot:7": [
+      {
+        "at": "2026-11-26T22:06:01.624Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шоколадное печенье",
+          "sourceId": "game-8acc721513a653e828a7d7a419a0eaf16cda5eaca0813c69a33f2b13f07efd6a",
+          "updatedAt": "2026-11-26T22:06:01.624Z"
         }
       }
     ]
