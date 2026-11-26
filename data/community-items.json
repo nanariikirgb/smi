@@ -406,6 +406,11 @@
       "name": "Питательная паста",
       "sourceId": "game-dc4d4170c69dd0610abb36e9a98217578594c64418aeed0cd763b24f6419f27c",
       "updatedAt": "2026-11-26T22:05:50.842Z"
+    },
+    "golden_carrot:70": {
+      "name": "Мармелад \"Гому гому\"",
+      "sourceId": "game-b73f907bb6757b92645caa0d2dbd7b50d10b061edde2d294a5338d1f6a63971c",
+      "updatedAt": "2026-11-26T22:05:53.260Z"
     }
   },
   "history": {
@@ -1307,6 +1312,18 @@
           "name": "Питательная паста",
           "sourceId": "game-dc4d4170c69dd0610abb36e9a98217578594c64418aeed0cd763b24f6419f27c",
           "updatedAt": "2026-11-26T22:05:50.842Z"
+        }
+      }
+    ],
+    "golden_carrot:70": [
+      {
+        "at": "2026-11-26T22:05:53.260Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Мармелад \"Гому гому\"",
+          "sourceId": "game-b73f907bb6757b92645caa0d2dbd7b50d10b061edde2d294a5338d1f6a63971c",
+          "updatedAt": "2026-11-26T22:05:53.260Z"
         }
       }
     ]
