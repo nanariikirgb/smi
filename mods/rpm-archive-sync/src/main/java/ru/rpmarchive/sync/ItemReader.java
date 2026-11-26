@@ -47,10 +47,10 @@ final class ItemReader {
     }
     static ArchiveItem read(ItemStack stack) {
         NbtCompound tag = stack.getNbt();
-        if (stack.isEmpty() || tag == null || !tag.contains("CustomModelData", NbtElement.INT_TYPE)) return null;
+        if (stack.getItem() instanceof net.minecraft.item.BlockItem || stack.isEmpty() || tag == null || !tag.contains("CustomModelData", NbtElement.INT_TYPE)) return null;
         var id = Registries.ITEM.getId(stack.getItem());
         int cmd = tag.getInt("CustomModelData");
-        if (cmd < 0 || !id.getNamespace().equals("minecraft")) return null;
+        if (!CatalogModels.contains(id.getPath(), cmd) || cmd < 0 || !id.getNamespace().equals("minecraft")) return null;
         NbtCompound display = tag.getCompound("display");
         String name = literal(display.getString("Name"), true);
         if (name.length() < 2 || name.length() > 100 || PRIVATE.matcher(name).find()) return null;

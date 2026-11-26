@@ -34,6 +34,8 @@ public final class ArchiveSyncClient implements ClientModInitializer {
         }
     }
 
+    static ArchiveQueue currentQueue() { return activeHandler == null ? null : queue; }
+
     static ArchiveConfig settings() { return config; }
 
     static void save(ArchiveConfig next) throws IOException {

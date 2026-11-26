@@ -62,7 +62,7 @@ const item = (customModelData, fields = {}) => ({
 
 function upload(items, token = modToken) {
   return invoke(ingest, {
-    headers: { authorization: 'Bearer ' + token, 'content-type': 'application/json' },
+    headers: { 'x-rpm-submission': 'manual', authorization: 'Bearer ' + token, 'content-type': 'application/json' },
     body: { items },
   });
 }
@@ -131,6 +131,15 @@ test('game observations and moderation share the existing catalogue and Redis', 
     const oversized = await upload(Array.from({ length: 33 }, (_, i) => item(i + 1)));
     assert.ok([400, 413].includes(oversized.statusCode));
     assert.equal((await list()).total, 0);
+  });
+
+  await t.test('old automatic clients and non-catalog objects cannot publish', async () => {
+    const old = await invoke(ingest, {headers: {authorization: 'Bearer ' + modToken, 'content-type': 'application/json'}, body: {items: [item(1)]}});
+    assert.equal(old.statusCode, 409);
+    const ignored = await upload([item(1, {material:'stone'}), item(2147483647, {name:'Неизвестная модель'})]);
+    assert.equal(ignored.body.skipped, 2);
+    assert.equal(ignored.body.published, 0);
+    assert.equal(revision, 1);
   });
 
   await t.test('concurrent batches publish once, skip known names and appear in history', async () => {

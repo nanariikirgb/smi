@@ -17,6 +17,7 @@ final class ArchiveSettingsScreen extends Screen {
     private boolean enabled = original.enabled();
     private String addresses = String.join(", ", original.servers());
     private String replacement = "";
+    private ButtonWidget send;
     private String error = "";
 
     ArchiveSettingsScreen(Screen parent) {
@@ -44,13 +45,24 @@ final class ArchiveSettingsScreen extends Screen {
         token.setText(replacement);
         token.setChangedListener(text -> replacement = text);
         addDrawableChild(token);
+        send = addDrawableChild(ButtonWidget.builder(Text.literal("Отправить из кэша"), b -> {
+            var queue = ArchiveSyncClient.currentQueue();
+            if (queue != null) queue.sendCached();
+        }).dimensions(x, y + 133, w, 20).build());
+        tick();
         addDrawableChild(ButtonWidget.builder(Text.literal("Сохранить"), b -> save())
-                .dimensions(x, y + 136, w / 2 - 2, 20).build());
+                .dimensions(x, y + 157, w / 2 - 2, 20).build());
         addDrawableChild(ButtonWidget.builder(Text.literal("Отмена"), b -> close())
-                .dimensions(x + w / 2 + 2, y + 136, w / 2 - 2, 20).build());
+                .dimensions(x + w / 2 + 2, y + 157, w / 2 - 2, 20).build());
     }
 
-    private int top() { return Math.max(2, (height - 158) / 2); }
+    private int top() { return Math.max(2, (height - 179) / 2); }
+
+    @Override public void tick() {
+        var queue = ArchiveSyncClient.currentQueue();
+        send.active = enabled && original.enabled() && replacement.isEmpty()
+                && addresses.equals(String.join(", ", original.servers())) && queue != null && !queue.sending();
+    }
 
     private void save() {
         try {
@@ -74,6 +86,12 @@ final class ArchiveSettingsScreen extends Screen {
         ctx.drawCenteredTextWithShadow(textRenderer, title, width / 2, y, 0xffffff);
         ctx.drawTextWithShadow(textRenderer, "Адреса серверов через запятую", x, y + 42, 0xffffff);
         ctx.drawTextWithShadow(textRenderer, original.token().isEmpty() ? "Токен синхронизации" : "Новый токен (пусто — сохранить текущий)", x, y + 80, 0xffffff);
-        ctx.drawTextWithShadow(textRenderer, error, x, y + 118, 0xff9999);
+        var queue = ArchiveSyncClient.currentQueue();
+        String hint;
+        if (queue == null) hint = "Для отправки зайдите на разрешённый сервер";
+        else if (!send.active && !queue.sending()) hint = "Сначала сохраните настройки";
+        else hint = "В кэше: " + queue.cached() + "   " + queue.status();
+        ctx.drawTextWithShadow(textRenderer, error.isEmpty() ? hint : error, x, y + 118,
+                error.isEmpty() ? 0xc8c8c8 : 0xff9999);
     }
 }

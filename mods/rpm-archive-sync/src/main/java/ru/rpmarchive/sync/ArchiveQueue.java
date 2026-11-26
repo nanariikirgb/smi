@@ -68,6 +68,11 @@ public final class ArchiveQueue implements AutoCloseable {
     private final LinkedHashSet<ArchiveItem> incoming = new LinkedHashSet<>();
     private boolean flushScheduled;
     private boolean active;
+    private volatile String status = "";
+    private volatile int cached;
+    private volatile boolean sending;
+    private int remaining;
+    private int sent;
     private boolean closed;
     private CompletableFuture<HttpResponse<byte[]>> inFlight;
 
@@ -76,7 +81,8 @@ public final class ArchiveQueue implements AutoCloseable {
         this.endpoint = endpoint;
         this.token = token;
         worker.setExecuteExistingDelayedTasksAfterShutdownPolicy(false);
-        worker.scheduleWithFixedDelay(this::onInterval, 60, 60, TimeUnit.SECONDS);
+        worker.execute(this::flushIncoming);
+        worker.scheduleWithFixedDelay(this::flushIncoming, 60, 60, TimeUnit.SECONDS);
     }
 
     public synchronized void setActive(boolean value) {
@@ -93,29 +99,44 @@ public final class ArchiveQueue implements AutoCloseable {
         worker.schedule(this::flushIncoming, 250, TimeUnit.MILLISECONDS);
     }
 
-    private void onInterval() {
-        synchronized (this) {
-            if (closed || (!active && incoming.isEmpty() && !dirty)) return;
-        }
-        if (!flushIncoming() || pending.isEmpty()) return;
-        synchronized (this) {
-            if (!active || closed || inFlight != null) return;
-        }
+    String status() { return status; }
+    int cached() { return cached; }
+    boolean sending() { return sending; }
+
+    synchronized void sendCached() {
+        if (!active || closed || sending) return;
+        sending = true;
+        status = "Отправка…";
+        worker.execute(() -> {
+            if (!flushIncoming()) { finish("Не удалось открыть кэш"); return; }
+            remaining = pending.size();
+            sent = 0;
+            if (remaining == 0) { finish("Кэш пуст"); return; }
+            sendNextBatch();
+        });
+    }
+
+    private void finish(String message) {
+        status = message;
+        sending = false;
+    }
+
+    private void sendNextBatch() {
         try {
             if (http == null) http = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(6))
                     .followRedirects(HttpClient.Redirect.NEVER).build();
-            var batch = pending.entrySet().stream().limit(BATCH).map(Map.Entry::copyOf).toList();
+            var batch = pending.entrySet().stream().limit(Math.min(BATCH, remaining)).map(Map.Entry::copyOf).toList();
             String body = JSON.toJson(Map.of("items", batch.stream().map(Map.Entry::getValue).toList()));
             HttpRequest request = HttpRequest.newBuilder(endpoint).timeout(Duration.ofSeconds(15))
                     .header("Authorization", "Bearer " + token).header("Content-Type", "application/json")
-                    .POST(HttpRequest.BodyPublishers.ofString(body)).build();
+                    .header("X-RPM-Submission", "manual").POST(HttpRequest.BodyPublishers.ofString(body)).build();
             synchronized (this) {
-                if (!active || closed) return;
+                if (!active || closed) { finish("Отправка прервана"); return; }
                 inFlight = http.sendAsync(request, headers -> new BoundedBody());
                 inFlight.whenComplete((response, error) -> dispatchResult(batch, response, error));
             }
         } catch (RuntimeException e) {
-            warn("Could not start sync. Check the local API configuration.");
+            finish("Ошибка соединения. Повторите отправку");
         }
     }
 
@@ -127,15 +148,15 @@ public final class ArchiveQueue implements AutoCloseable {
                 inFlight = null;
             }
             if (error != null) {
-                warn("Sync interrupted. Pending items will be retried.");
+                finish("Нет связи. Остаток сохранён в кэше");
                 return;
             }
             if (response.statusCode() != 200) {
-                warn("Sync returned HTTP " + response.statusCode() + ". Pending items will be retried.");
+                finish("Ошибка HTTP " + response.statusCode() + ". Остаток в кэше");
                 return;
             }
             if (!acknowledged(response.body(), batch.size())) {
-                warn("Invalid sync acknowledgement. Pending items will be retried.");
+                finish("Сайт не подтвердил приём. Остаток в кэше");
                 return;
             }
             for (var entry : batch) {
@@ -144,8 +165,11 @@ public final class ArchiveQueue implements AutoCloseable {
             }
             while (confirmed.size() > LIMIT) confirmed.remove(confirmed.iterator().next());
             dirty = true;
-            flushIncoming();
-            LOG.info("Archive sync acknowledged {} item(s).", batch.size());
+            sent += batch.size();
+            remaining -= batch.size();
+            if (!flushIncoming()) { finish("Ошибка записи кэша"); return; }
+            if (remaining > 0) sendNextBatch();
+            else finish("Обработано сайтом: " + sent);
         });
     }
 
@@ -181,6 +205,7 @@ public final class ArchiveQueue implements AutoCloseable {
                 dirty = true;
             }
             if (dirty) save();
+            cached = pending.size();
             return true;
         } catch (IOException | RuntimeException e) {
             storageRetryAt = System.nanoTime() + TimeUnit.SECONDS.toNanos(5);
@@ -209,7 +234,10 @@ public final class ArchiveQueue implements AutoCloseable {
                 throw new IOException("Invalid queue");
             }
             confirmed.addAll(state.confirmed);
-            for (ArchiveItem item : state.pending) pending.put(digest(JSON.toJson(item)), item);
+            for (ArchiveItem item : state.pending) {
+                if (CatalogModels.contains(item.material(), item.customModelData())) pending.put(digest(JSON.toJson(item)), item);
+                else dirty = true;
+            }
         }
         loaded = true;
     }

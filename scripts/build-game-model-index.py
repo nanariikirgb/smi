@@ -39,7 +39,15 @@ by_material = {}
 for (mat, cmd), model in sorted(models.items()):
     key = f"{mat}:{cmd}"
     wheel = re.fullmatch(r"item/emerald/t(\d+)(?:\.json)?", model, re.I)
+    # Materials used for standalone custom items in the RPM catalog. Block items are excluded.
+    if mat not in {"apple", "bowl", "cod", "diamond_horse_armor", "emerald", "feather", "flint",
+                   "golden_carrot", "golden_chestplate", "golden_horse_armor", "golden_leggings",
+                   "ink_sac", "iron_horse_armor", "paper", "potion", "quartz", "rabbit_foot",
+                   "shulker_shell", "stick", "sugar"}:
+        continue
     if mat in excluded or (key not in assemblies and (key in wheel_keys or (wheel and int(wheel[1]) in wheel_ids))):
         continue
     by_material.setdefault(mat, []).append(cmd)
-(root / "lib/game-model-index.json").write_text(json.dumps(by_material, separators=(",", ":")) + "\n")
+index = json.dumps(by_material, separators=(",", ":")) + "\n"
+for path in ("lib/game-model-index.json", "mods/rpm-archive-sync/src/main/resources/rpm-model-index.json"):
+    (root / path).write_text(index)

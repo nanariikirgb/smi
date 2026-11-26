@@ -19,6 +19,7 @@ module.exports = async function(req, res) {
   }
   const bearer = /^Bearer ([!-~]{32,256})$/.exec(req.headers.authorization || '');
   if (!bearer || !crypto.timingSafeEqual(digest(bearer[1]), digest(secret))) return fail(401, 'Неверный токен');
+  if (req.headers['x-rpm-submission'] !== 'manual') return fail(409, 'Обновите мод и отправьте кэш из настроек');
   if (String(req.headers['content-type'] || '').split(';')[0].trim().toLowerCase() !== 'application/json') {
     return fail(415, 'Требуется JSON');
   }
