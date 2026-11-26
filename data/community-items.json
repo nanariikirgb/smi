@@ -292,6 +292,13 @@
       "name": "Milka Nuts",
       "sourceId": "game-bc84a861a74043d5332f566a509654cfbd4a4091293e9ed1162f87dc16e64189",
       "updatedAt": "2026-11-26T21:58:55.888Z"
+    },
+    "flint:632": {
+      "name": "Старая скрипка",
+      "rarity": "Common",
+      "price": 150000,
+      "sourceId": "game-ca24cb8120063334b2c366cb212170ea7bfd24c07f4180fe7233daab3faa5902",
+      "updatedAt": "2026-11-26T21:59:01.333Z"
     }
   },
   "history": {
@@ -935,6 +942,20 @@
           "name": "Milka Nuts",
           "sourceId": "game-bc84a861a74043d5332f566a509654cfbd4a4091293e9ed1162f87dc16e64189",
           "updatedAt": "2026-11-26T21:58:55.888Z"
+        }
+      }
+    ],
+    "flint:632": [
+      {
+        "at": "2026-11-26T21:59:01.333Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Старая скрипка",
+          "rarity": "Common",
+          "price": 150000,
+          "sourceId": "game-ca24cb8120063334b2c366cb212170ea7bfd24c07f4180fe7233daab3faa5902",
+          "updatedAt": "2026-11-26T21:59:01.333Z"
         }
       }
     ]
