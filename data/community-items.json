@@ -547,6 +547,11 @@
       "name": "Пицца с саранчой",
       "sourceId": "game-6c6b3ef7e4f1d8437ba2663b19da0d4507417b2a830d28b400fa13bd8e5a3ff4",
       "updatedAt": "2026-11-26T22:07:11.988Z"
+    },
+    "apple:3": {
+      "name": "Варенье",
+      "sourceId": "game-4dabe4458b2da71e9afb7bc688d4653c296c031318c668119fb87142954605f9",
+      "updatedAt": "2026-11-26T22:07:14.287Z"
     }
   },
   "history": {
@@ -1778,6 +1783,18 @@
           "name": "Пицца с саранчой",
           "sourceId": "game-6c6b3ef7e4f1d8437ba2663b19da0d4507417b2a830d28b400fa13bd8e5a3ff4",
           "updatedAt": "2026-11-26T22:07:11.988Z"
+        }
+      }
+    ],
+    "apple:3": [
+      {
+        "at": "2026-11-26T22:07:14.287Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Варенье",
+          "sourceId": "game-4dabe4458b2da71e9afb7bc688d4653c296c031318c668119fb87142954605f9",
+          "updatedAt": "2026-11-26T22:07:14.287Z"
         }
       }
     ]
