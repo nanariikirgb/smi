@@ -204,6 +204,11 @@
       "name": "Клубничный чизкейк",
       "sourceId": "game-e1369b509ab44a368364459200e403cad763e5d4beef0671e1797d58d7d75b87",
       "updatedAt": "2026-11-26T21:56:23.798Z"
+    },
+    "potion:1": {
+      "name": "Пиво",
+      "sourceId": "game-9324dfd60a661deb84cc784129e556be39c1501536698d230719a4ef8b2cb82c",
+      "updatedAt": "2026-11-26T21:57:00.316Z"
     }
   },
   "history": {
@@ -631,6 +636,18 @@
           "name": "Клубничный чизкейк",
           "sourceId": "game-e1369b509ab44a368364459200e403cad763e5d4beef0671e1797d58d7d75b87",
           "updatedAt": "2026-11-26T21:56:23.798Z"
+        }
+      }
+    ],
+    "potion:1": [
+      {
+        "at": "2026-11-26T21:57:00.316Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пиво",
+          "sourceId": "game-9324dfd60a661deb84cc784129e556be39c1501536698d230719a4ef8b2cb82c",
+          "updatedAt": "2026-11-26T21:57:00.316Z"
         }
       }
     ]
