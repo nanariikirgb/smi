@@ -523,6 +523,13 @@
       "name": "Мясная нарезка",
       "sourceId": "game-a6962cbba34db274fc8a7ef39ece24f36ddc1fae7b6459e4542b647f57490933",
       "updatedAt": "2026-11-26T22:06:46.816Z"
+    },
+    "golden_leggings:195": {
+      "name": "Бертцы \"Спецназ\"",
+      "rarity": "RPMPass",
+      "price": 150000,
+      "sourceId": "game-8f640f409c717749799a8e344d55e1414a7b10ec516b1d57419849aae07502e2",
+      "updatedAt": "2026-11-26T22:06:51.639Z"
     }
   },
   "history": {
@@ -1702,6 +1709,20 @@
           "name": "Мясная нарезка",
           "sourceId": "game-a6962cbba34db274fc8a7ef39ece24f36ddc1fae7b6459e4542b647f57490933",
           "updatedAt": "2026-11-26T22:06:46.816Z"
+        }
+      }
+    ],
+    "golden_leggings:195": [
+      {
+        "at": "2026-11-26T22:06:51.639Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Бертцы \"Спецназ\"",
+          "rarity": "RPMPass",
+          "price": 150000,
+          "sourceId": "game-8f640f409c717749799a8e344d55e1414a7b10ec516b1d57419849aae07502e2",
+          "updatedAt": "2026-11-26T22:06:51.639Z"
         }
       }
     ]
