@@ -372,6 +372,13 @@
       "price": 200000,
       "sourceId": "game-8710cc5a9c5a85c2cef4006fe68927482bbd3a9b8d2fbff23b97ce6d808312bf",
       "updatedAt": "2026-11-26T21:59:38.541Z"
+    },
+    "diamond_horse_armor:1031": {
+      "name": "Чепчик Лолиты",
+      "rarity": "Limited",
+      "price": 80000,
+      "sourceId": "game-8a9bbd48e1002d63ee45356a7a7148033f32ef8751bec4c2d4b78010628e7eeb",
+      "updatedAt": "2026-11-26T21:59:40.022Z"
     }
   },
   "history": {
@@ -1197,6 +1204,20 @@
           "price": 200000,
           "sourceId": "game-8710cc5a9c5a85c2cef4006fe68927482bbd3a9b8d2fbff23b97ce6d808312bf",
           "updatedAt": "2026-11-26T21:59:38.541Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:1031": [
+      {
+        "at": "2026-11-26T21:59:40.022Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Чепчик Лолиты",
+          "rarity": "Limited",
+          "price": 80000,
+          "sourceId": "game-8a9bbd48e1002d63ee45356a7a7148033f32ef8751bec4c2d4b78010628e7eeb",
+          "updatedAt": "2026-11-26T21:59:40.022Z"
         }
       }
     ]
