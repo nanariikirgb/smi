@@ -51,10 +51,10 @@
     },
     "golden_horse_armor:561": {
       "name": "Накидка \"Гном\"",
-      "price": null,
+      "price": 100000,
       "rarity": "",
-      "sourceId": "8",
-      "updatedAt": "2026-11-26T21:28:18.270Z"
+      "sourceId": "game-0d143ceef09064d0fb4e64a81014ff8be6761f59f6199ef2d1ef22feb8bc5697",
+      "updatedAt": "2026-11-26T21:59:17.358Z"
     },
     "golden_horse_armor:673": {
       "name": "Букет цветов",
@@ -432,6 +432,24 @@
           "rarity": "",
           "sourceId": "8",
           "updatedAt": "2026-11-26T21:28:18.270Z"
+        }
+      },
+      {
+        "at": "2026-11-26T21:59:17.358Z",
+        "action": "approve",
+        "before": {
+          "name": "Накидка \"Гном\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "8",
+          "updatedAt": "2026-11-26T21:28:18.270Z"
+        },
+        "after": {
+          "name": "Накидка \"Гном\"",
+          "price": 100000,
+          "rarity": "",
+          "sourceId": "game-0d143ceef09064d0fb4e64a81014ff8be6761f59f6199ef2d1ef22feb8bc5697",
+          "updatedAt": "2026-11-26T21:59:17.358Z"
         }
       }
     ],
