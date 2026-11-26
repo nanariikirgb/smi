@@ -401,6 +401,11 @@
       "name": "Сырная пицца",
       "sourceId": "game-df9a3b928ae27a879926932eb1824c82f01e3137f319c37df9a803a355f8819d",
       "updatedAt": "2026-11-26T22:05:49.333Z"
+    },
+    "golden_carrot:160": {
+      "name": "Питательная паста",
+      "sourceId": "game-dc4d4170c69dd0610abb36e9a98217578594c64418aeed0cd763b24f6419f27c",
+      "updatedAt": "2026-11-26T22:05:50.842Z"
     }
   },
   "history": {
@@ -1290,6 +1295,18 @@
           "name": "Сырная пицца",
           "sourceId": "game-df9a3b928ae27a879926932eb1824c82f01e3137f319c37df9a803a355f8819d",
           "updatedAt": "2026-11-26T22:05:49.333Z"
+        }
+      }
+    ],
+    "golden_carrot:160": [
+      {
+        "at": "2026-11-26T22:05:50.842Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Питательная паста",
+          "sourceId": "game-dc4d4170c69dd0610abb36e9a98217578594c64418aeed0cd763b24f6419f27c",
+          "updatedAt": "2026-11-26T22:05:50.842Z"
         }
       }
     ]
