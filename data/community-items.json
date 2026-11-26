@@ -436,6 +436,11 @@
       "name": "МакМаффин",
       "sourceId": "game-697aa2631aae07dcbd6767e92da84b6a805861b461950f320381aa5d9b0cc055",
       "updatedAt": "2026-11-26T22:06:03.706Z"
+    },
+    "golden_carrot:18": {
+      "name": "Ролл \"Чёрный Дракон\"",
+      "sourceId": "game-58459ccf06bcf1b3518e0f218a4704b5eccef076d0d81d40340cfbff08a98bce",
+      "updatedAt": "2026-11-26T22:06:06.408Z"
     }
   },
   "history": {
@@ -1409,6 +1414,18 @@
           "name": "МакМаффин",
           "sourceId": "game-697aa2631aae07dcbd6767e92da84b6a805861b461950f320381aa5d9b0cc055",
           "updatedAt": "2026-11-26T22:06:03.706Z"
+        }
+      }
+    ],
+    "golden_carrot:18": [
+      {
+        "at": "2026-11-26T22:06:06.408Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Ролл \"Чёрный Дракон\"",
+          "sourceId": "game-58459ccf06bcf1b3518e0f218a4704b5eccef076d0d81d40340cfbff08a98bce",
+          "updatedAt": "2026-11-26T22:06:06.408Z"
         }
       }
     ]
