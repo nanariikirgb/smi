@@ -446,6 +446,11 @@
       "name": "Маффин \"Шоколадное наслаждение\"",
       "sourceId": "game-3ebc715ca969088c17e63ed41d74b96ce274ada746f62185bff064782f6d973c",
       "updatedAt": "2026-11-26T22:06:08.278Z"
+    },
+    "potion:45": {
+      "name": "Кефир",
+      "sourceId": "game-2d7ac326e81e2991964996d5ef082ac258dafd595b205bac9962a851c6a2d987",
+      "updatedAt": "2026-11-26T22:06:09.866Z"
     }
   },
   "history": {
@@ -1443,6 +1448,18 @@
           "name": "Маффин \"Шоколадное наслаждение\"",
           "sourceId": "game-3ebc715ca969088c17e63ed41d74b96ce274ada746f62185bff064782f6d973c",
           "updatedAt": "2026-11-26T22:06:08.278Z"
+        }
+      }
+    ],
+    "potion:45": [
+      {
+        "at": "2026-11-26T22:06:09.866Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кефир",
+          "sourceId": "game-2d7ac326e81e2991964996d5ef082ac258dafd595b205bac9962a851c6a2d987",
+          "updatedAt": "2026-11-26T22:06:09.866Z"
         }
       }
     ]
