@@ -2744,6 +2744,13 @@
       "price": 250000,
       "sourceId": "game-f3496201df67f75b199c2c2c51799b7f9101311318ba1de530d7cff4d285ed02",
       "updatedAt": "2026-11-26T22:15:08.741Z"
+    },
+    "diamond_horse_armor:553": {
+      "name": "Маска голубого йокая",
+      "rarity": "Limited",
+      "price": 250000,
+      "sourceId": "game-9c60051a9d91618dcecf14bc1b86b1f94acbb04459562f5238ab6b037f72e42f",
+      "updatedAt": "2026-11-26T22:21:58.237Z"
     }
   },
   "history": {
@@ -8619,6 +8626,20 @@
           "price": 250000,
           "sourceId": "game-f3496201df67f75b199c2c2c51799b7f9101311318ba1de530d7cff4d285ed02",
           "updatedAt": "2026-11-26T22:15:08.741Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:553": [
+      {
+        "at": "2026-11-26T22:21:58.237Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маска голубого йокая",
+          "rarity": "Limited",
+          "price": 250000,
+          "sourceId": "game-9c60051a9d91618dcecf14bc1b86b1f94acbb04459562f5238ab6b037f72e42f",
+          "updatedAt": "2026-11-26T22:21:58.237Z"
         }
       }
     ]
