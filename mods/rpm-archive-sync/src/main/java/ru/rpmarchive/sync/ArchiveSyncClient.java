@@ -19,7 +19,7 @@ import java.io.IOException;
 
 public final class ArchiveSyncClient implements ClientModInitializer {
     private static final Logger LOG = LoggerFactory.getLogger("rpm-archive-sync");
-    private static ArchiveConfig config;
+    private static ArchiveConfig config = ArchiveConfig.DEFAULT;
     private static ArchiveQueue queue;
     private static ClientPlayNetworkHandler activeHandler;
 
@@ -28,24 +28,32 @@ public final class ArchiveSyncClient implements ClientModInitializer {
         FabricLoader loader = FabricLoader.getInstance();
         try {
             config = ArchiveConfig.load(loader.getConfigDir().resolve("rpm-archive-sync.json"));
-            if (config != null) {
-                queue = new ArchiveQueue(loader.getGameDir().resolve("rpm-archive-sync"),
-                        config.server(), config.endpoint(), config.token());
-            }
         } catch (IOException | RuntimeException ex) {
             // Parser and network exceptions can contain the input, including the token.
             LOG.warn("RPM Archive Sync disabled. Check config/rpm-archive-sync.json and directory permissions.");
         }
     }
 
+    static ArchiveConfig settings() { return config; }
+
+    static void save(ArchiveConfig next) throws IOException {
+        next.save(FabricLoader.getInstance().getConfigDir().resolve("rpm-archive-sync.json"));
+        config = next;
+        joined(MinecraftClient.getInstance().getNetworkHandler());
+    }
+
     public static void joined(ClientPlayNetworkHandler handler) {
-        if (queue == null) return;
+        disconnected();
+        if (queue != null) { queue.close(); queue = null; }
         MinecraftClient client = MinecraftClient.getInstance();
+        if (!config.enabled() || handler == null || handler != client.getNetworkHandler() || client.isInSingleplayer()) return;
         ServerInfo info = handler.getServerInfo();
-        boolean allowed = handler == client.getNetworkHandler() && !client.isInSingleplayer()
-                && info != null && config.server().equals(ArchiveConfig.normalizeServer(info.address));
-        activeHandler = allowed ? handler : null;
-        queue.setActive(allowed);
+        String host = info == null ? null : ArchiveConfig.normalizeServer(info.address);
+        if (host == null || !config.servers().contains(host)) return;
+        queue = new ArchiveQueue(FabricLoader.getInstance().getGameDir().resolve("rpm-archive-sync"),
+                host, config.endpoint(), config.token());
+        activeHandler = handler;
+        queue.setActive(true);
     }
 
     public static void disconnected() {

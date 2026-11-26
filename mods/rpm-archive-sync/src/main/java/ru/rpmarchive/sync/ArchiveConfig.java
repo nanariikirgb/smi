@@ -14,38 +14,54 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.Locale;
 
-record ArchiveConfig(String server, URI endpoint, String token) {
-    private static final String TEMPLATE = """
-            {
-              "enabled": false,
-              "server": "play.rpmserver.com:25565",
-              "endpoint": "https://smi-pearl.vercel.app/api/game-items",
-              "token": ""
-            }
-            """;
+record ArchiveConfig(boolean enabled, java.util.List<String> servers, URI endpoint, String token) {
+    static final ArchiveConfig DEFAULT = new ArchiveConfig(false, java.util.List.of("play.rpmserver.com:25565"),
+            URI.create("https://smi-pearl.vercel.app/api/game-items"), "");
+
+    ArchiveConfig {
+        var unique = new java.util.LinkedHashSet<String>();
+        for (String entry : servers) {
+            String host = normalizeServer(entry);
+            if (host == null) throw new IllegalArgumentException("Проверьте адрес и порт сервера");
+            unique.add(host);
+        }
+        servers = java.util.List.copyOf(unique);
+        if (servers.size() > 16 || (enabled && servers.isEmpty()))
+            throw new IllegalArgumentException("Укажите от 1 до 16 серверов для сбора");
+        if (!(token.isEmpty() && !enabled) && !token.matches("[!-~]{32,256}"))
+            throw new IllegalArgumentException("Токен: 32–256 символов ASCII без пробелов");
+        if (!"https".equalsIgnoreCase(endpoint.getScheme()) || endpoint.getHost() == null
+                || endpoint.getRawUserInfo() != null || endpoint.getRawQuery() != null
+                || endpoint.getRawFragment() != null || !"/api/game-items".equals(endpoint.getRawPath()))
+            throw new IllegalArgumentException("Проверьте HTTPS-адрес API");
+    }
 
     static ArchiveConfig load(Path path) throws IOException {
         if (Files.notExists(path)) {
-            Files.createDirectories(path.getParent());
-            Files.writeString(path, TEMPLATE, StandardOpenOption.CREATE_NEW);
-            return null;
+            DEFAULT.save(path);
+            return DEFAULT;
         }
-        if (Files.size(path) > 8192) throw new IllegalArgumentException("config");
-        JsonObject settings = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
-        JsonElement enabled = settings.get("enabled");
-        if (enabled == null || !enabled.isJsonPrimitive() || !enabled.getAsJsonPrimitive().isBoolean()
-                || !enabled.getAsBoolean()) return null;
+        if (Files.size(path) > 16384) throw new IOException("config");
+        JsonObject obj = JsonParser.parseString(Files.readString(path)).getAsJsonObject();
+        var servers = new java.util.ArrayList<String>();
+        if (obj.has("servers")) obj.getAsJsonArray("servers").forEach(v -> servers.add(v.getAsString()));
+        else servers.add(obj.get("server").getAsString());
+        return new ArchiveConfig(obj.get("enabled").getAsBoolean(), servers,
+                URI.create(obj.get("endpoint").getAsString()), obj.get("token").getAsString());
+    }
 
-        String server = normalizeServer(settings.get("server").getAsString());
-        String token = settings.get("token").getAsString();
-        URI endpoint = URI.create(settings.get("endpoint").getAsString());
-        if (server == null || !token.matches("[!-~]{32,256}") || !"https".equalsIgnoreCase(endpoint.getScheme())
-                || endpoint.getHost() == null || endpoint.getRawUserInfo() != null
-                || endpoint.getRawQuery() != null || endpoint.getRawFragment() != null
-                || !"/api/game-items".equals(endpoint.getRawPath())) {
-            throw new IllegalArgumentException("config");
-        }
-        return new ArchiveConfig(server, endpoint, token);
+    void save(Path path) throws IOException {
+        Files.createDirectories(path.getParent());
+        Path tmp = Files.createTempFile(path.getParent(), "rpm-settings-", ".tmp");
+        try {
+            Files.writeString(tmp, new com.google.gson.GsonBuilder().setPrettyPrinting().create().toJson(this));
+            try {
+                Files.move(tmp, path, java.nio.file.StandardCopyOption.ATOMIC_MOVE,
+                        java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            } catch (java.nio.file.AtomicMoveNotSupportedException ex) {
+                Files.move(tmp, path, java.nio.file.StandardCopyOption.REPLACE_EXISTING);
+            }
+        } finally { Files.deleteIfExists(tmp); }
     }
 
     // Compare the address selected in the multiplayer screen. No IP lookup or suffix matching.

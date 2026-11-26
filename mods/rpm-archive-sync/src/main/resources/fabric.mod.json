@@ -6,12 +6,22 @@
   "description": "Синхронизация предметов из инвентаря с каталогом RPM.",
   "environment": "client",
   "entrypoints": {
-    "client": ["ru.rpmarchive.sync.ArchiveSyncClient"]
+    "client": [
+      "ru.rpmarchive.sync.ArchiveSyncClient"
+    ],
+    "modmenu": [
+      "ru.rpmarchive.sync.ArchiveModMenu"
+    ]
   },
-  "mixins": ["rpm-archive-sync.mixins.json"],
+  "mixins": [
+    "rpm-archive-sync.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.15.11",
     "minecraft": "1.20.4",
     "java": ">=17"
+  },
+  "suggests": {
+    "modmenu": "9.x"
   }
 }
