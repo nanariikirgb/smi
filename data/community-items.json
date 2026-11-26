@@ -147,6 +147,11 @@
       "name": "Nokia DOGGI STYLE",
       "sourceId": "game-aff7c9b943155b64493fc18afb03f6813a3b6612d886e21a872464a996807081",
       "updatedAt": "2026-11-26T21:55:22.613Z"
+    },
+    "shulker_shell:49": {
+      "name": "Nokia 3310",
+      "sourceId": "game-49f1f589a2f3082e0aac92761e98aadf894163cc634602e50dea15a6dd1edbc2",
+      "updatedAt": "2026-11-26T21:55:38.740Z"
     }
   },
   "history": {
@@ -440,6 +445,18 @@
           "name": "Nokia DOGGI STYLE",
           "sourceId": "game-aff7c9b943155b64493fc18afb03f6813a3b6612d886e21a872464a996807081",
           "updatedAt": "2026-11-26T21:55:22.613Z"
+        }
+      }
+    ],
+    "shulker_shell:49": [
+      {
+        "at": "2026-11-26T21:55:38.740Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Nokia 3310",
+          "sourceId": "game-49f1f589a2f3082e0aac92761e98aadf894163cc634602e50dea15a6dd1edbc2",
+          "updatedAt": "2026-11-26T21:55:38.740Z"
         }
       }
     ]
