@@ -491,6 +491,13 @@
       "name": "Рисовые шарики",
       "sourceId": "game-c31bd3a3b583ee2b1c53f5b9a4ed70247672cbc9db7aa52934a6443e7b8aeca5",
       "updatedAt": "2026-11-26T22:06:28.820Z"
+    },
+    "golden_leggings:200": {
+      "name": "Кроссовки \"Ян\"",
+      "rarity": "RPMPass",
+      "price": 150000,
+      "sourceId": "game-c40046478cc44b82b62b04ea5bb3b5218054d668b20266c66d0564844812e091",
+      "updatedAt": "2026-11-26T22:06:30.457Z"
     }
   },
   "history": {
@@ -1596,6 +1603,20 @@
           "name": "Рисовые шарики",
           "sourceId": "game-c31bd3a3b583ee2b1c53f5b9a4ed70247672cbc9db7aa52934a6443e7b8aeca5",
           "updatedAt": "2026-11-26T22:06:28.820Z"
+        }
+      }
+    ],
+    "golden_leggings:200": [
+      {
+        "at": "2026-11-26T22:06:30.457Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кроссовки \"Ян\"",
+          "rarity": "RPMPass",
+          "price": 150000,
+          "sourceId": "game-c40046478cc44b82b62b04ea5bb3b5218054d668b20266c66d0564844812e091",
+          "updatedAt": "2026-11-26T22:06:30.457Z"
         }
       }
     ]
