@@ -1205,6 +1205,13 @@
       "collection": "AniCosplay",
       "sourceId": "game-df136f78175118f9934825dcb72578491f69d77436774234c5af1b8b7ce819d3",
       "updatedAt": "2026-11-26T22:10:51.256Z"
+    },
+    "golden_leggings:64": {
+      "name": "Кроссовки \"NewBalance 474 PALLETE\"",
+      "rarity": "Epic",
+      "price": 240000,
+      "sourceId": "game-17c98bf6331535acb18acd9556ec3f8c2dc02f52dc61cffcd1db94b81761fa23",
+      "updatedAt": "2026-11-26T22:12:41.286Z"
     }
   },
   "history": {
@@ -3903,6 +3910,20 @@
           "collection": "AniCosplay",
           "sourceId": "game-df136f78175118f9934825dcb72578491f69d77436774234c5af1b8b7ce819d3",
           "updatedAt": "2026-11-26T22:10:51.256Z"
+        }
+      }
+    ],
+    "golden_leggings:64": [
+      {
+        "at": "2026-11-26T22:12:41.286Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кроссовки \"NewBalance 474 PALLETE\"",
+          "rarity": "Epic",
+          "price": 240000,
+          "sourceId": "game-17c98bf6331535acb18acd9556ec3f8c2dc02f52dc61cffcd1db94b81761fa23",
+          "updatedAt": "2026-11-26T22:12:41.286Z"
         }
       }
     ]
