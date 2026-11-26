@@ -17,7 +17,9 @@
     },
     "golden_horse_armor:2": {
       "name": "Лейка",
-      "updatedAt": "2026-11-26T10:39:58.904Z"
+      "updatedAt": "2026-11-26T21:58:58.592Z",
+      "price": 10000,
+      "sourceId": "game-bdd528f17f4ceec41a246de5cf572eabef7d1e999d2265a99191b33a425fa7e3"
     },
     "golden_horse_armor:775": {
       "name": "Водный пистолет",
@@ -321,6 +323,20 @@
         "after": {
           "name": "Лейка",
           "updatedAt": "2026-11-26T10:39:58.904Z"
+        }
+      },
+      {
+        "at": "2026-11-26T21:58:58.592Z",
+        "action": "approve",
+        "before": {
+          "name": "Лейка",
+          "updatedAt": "2026-11-26T10:39:58.904Z"
+        },
+        "after": {
+          "name": "Лейка",
+          "updatedAt": "2026-11-26T21:58:58.592Z",
+          "price": 10000,
+          "sourceId": "game-bdd528f17f4ceec41a246de5cf572eabef7d1e999d2265a99191b33a425fa7e3"
         }
       }
     ],
