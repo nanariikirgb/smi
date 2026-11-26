@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "rpm_archive_sync",
+  "version": "${version}",
+  "name": "RPM Archive Sync",
+  "description": "Синхронизация предметов из инвентаря с каталогом RPM.",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["ru.rpmarchive.sync.ArchiveSyncClient"]
+  },
+  "mixins": ["rpm-archive-sync.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "1.20.4",
+    "java": ">=17"
+  }
+}
