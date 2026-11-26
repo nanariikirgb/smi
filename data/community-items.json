@@ -338,6 +338,13 @@
       "price": 100000,
       "sourceId": "game-2a69d201320c5977c62a7566bb3e28cc314b4943eb4ab0f99bb8727f7d334e07",
       "updatedAt": "2026-11-26T21:59:25.948Z"
+    },
+    "golden_horse_armor:796": {
+      "name": "Накидка \"Подсолнух\"",
+      "rarity": "Season",
+      "price": 150000,
+      "sourceId": "game-3f0cea06176b6a58d107c4005dcc72b2e418855786f41c1a32d062a5a807524e",
+      "updatedAt": "2026-11-26T21:59:29.552Z"
     }
   },
   "history": {
@@ -1094,6 +1101,20 @@
           "price": 100000,
           "sourceId": "game-2a69d201320c5977c62a7566bb3e28cc314b4943eb4ab0f99bb8727f7d334e07",
           "updatedAt": "2026-11-26T21:59:25.948Z"
+        }
+      }
+    ],
+    "golden_horse_armor:796": [
+      {
+        "at": "2026-11-26T21:59:29.552Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Накидка \"Подсолнух\"",
+          "rarity": "Season",
+          "price": 150000,
+          "sourceId": "game-3f0cea06176b6a58d107c4005dcc72b2e418855786f41c1a32d062a5a807524e",
+          "updatedAt": "2026-11-26T21:59:29.552Z"
         }
       }
     ]
