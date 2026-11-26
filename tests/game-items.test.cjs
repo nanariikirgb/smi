@@ -155,7 +155,7 @@ test('game observations and moderation share the existing catalogue and Redis', 
     assert.equal(community.items['paper:1'].name, item(1).name);
     assert.equal(community.items['paper:2'].name, item(2).name);
     assert.equal((await list()).total, 0);
-    assert.equal((await list('history')).total, 2);
+    assert.equal((await list('history')).total, 3);
     assert.ok((await list('history')).rows.every(row => row.automatic));
     await upload([item(1, {name:'Другое название'})]);
     assert.equal(revision, 2);
@@ -170,6 +170,26 @@ test('game observations and moderation share the existing catalogue and Redis', 
     assert.equal(loseCommitResponse, false);
     assert.equal((await upload([item(4)])).body.processed, 1);
     assert.equal(revision, 3);
-    assert.equal((await list('history')).total, 3);
+    assert.equal((await list('history')).total, 4);
   });
+  await t.test('fill missing fields without replacing names, prices, collections or static lore', async () => {
+    community.items['paper:1'].price = null;
+    const inputs = [
+      item(1, {name:'', collection:'Custom Clothes', price:0}),
+      item(2, {collection:'Old Style', price:4}),
+      item(633, {material:'golden_chestplate', collection:'Другая', price:1})
+    ];
+    assert.equal((await upload(inputs)).statusCode, 200);
+    const filled = community.items['paper:1'];
+    assert.equal(filled.name, item(1).name);
+    assert.equal(filled.price, 0);
+    assert.equal(filled.collection, 'Custom Clothes');
+    assert.equal(community.items['paper:2'].price, 125000);
+    assert.equal(community.items['paper:2'].collection, 'Old Style');
+    assert.equal(community.items['golden_chestplate:633'], undefined);
+    const after = revision;
+    await upload([item(1, {name:'Иное', collection:'Иная', price:55})]);
+    assert.equal(revision, after);
+  });
+
 });

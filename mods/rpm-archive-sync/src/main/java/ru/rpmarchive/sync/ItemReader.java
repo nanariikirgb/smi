@@ -10,6 +10,14 @@ import java.util.regex.*;
 final class ItemReader {
     private static final Set<String> RARITIES = Set.of("Event","Rare","Uncommon","Epic","RPMPass","Common","Legendary","Season","Secret","Limited");
     private static final Pattern PRICE = Pattern.compile("(?iu)^(?:стандартная )?цена\\s*:\\s*([0-9]{1,13}|[0-9]{1,3}(?:[ .,_\\u00a0][0-9]{3}){1,4})\\s*\\$?$");
+    private static final Pattern COLLECTION = Pattern.compile("(?iu)^коллекция(?:\\s*[:—-]\\s*|\\s+)[«\"“]?([^«»\"“”]+?)[»\"”]?$");
+    private static final Pattern COLLECTION_LABEL = Pattern.compile("[\\p{L}\\p{M}\\p{N} ☠&'’_-]{1,64}");
+    static String collectionLabel(String line) {
+        Matcher match = COLLECTION.matcher(line);
+        if (!match.matches()) return "";
+        String label = match.group(1).strip();
+        return !label.isEmpty() && COLLECTION_LABEL.matcher(label).matches() && !PRIVATE.matcher(label).find() ? label : "";
+    }
     private static final Pattern PRIVATE = Pattern.compile("(?iu)[\\p{C}§@]|https?://|www\\.|discord\\.gg|t\\.me/|[a-f0-9]{8}-(?:[a-f0-9]{4}-){3}[a-f0-9]{12}|\\d{7,}|(?:владелец|владелица|игрок|ник|owner|player)\\s*[:=]");
     private static final Pattern FORMAT = Pattern.compile("(?i)§[0-9a-fklmnorx]");
     private static final Set<String> LITERAL_FIELDS = Set.of("text", "extra", "color", "bold", "italic",
@@ -57,12 +65,14 @@ final class ItemReader {
                 || !CatalogModels.contains(id.getPath(), cmd)) return null;
         NbtCompound display = tag.getCompound("display");
         String name = literal(display.getString("Name"), true);
-        if (name.length() < 2 || name.length() > 100 || PRIVATE.matcher(name).find()) return null;
+        if (name.length() < 2 || name.length() > 100 || PRIVATE.matcher(name).find()) name = "";
         Long price = null;
         String rarity = "";
+        String collection = "";
         NbtList lore = display.getList("Lore", NbtElement.STRING_TYPE);
         for (int i = 0; i < Math.min(lore.size(), 64); i++) {
             String line = literal(lore.getString(i), false).replaceFirst("^❙\\s*", "");
+            if (collection.isEmpty()) collection = collectionLabel(line);
             Matcher match = PRICE.matcher(line);
             if (match.matches()) {
                 long n = Long.parseLong(match.group(1).replaceAll("[^0-9]", ""));
@@ -73,6 +83,7 @@ final class ItemReader {
                 if (RARITIES.contains(label)) rarity = label;
             }
         }
-        return new ArchiveItem(id.getPath(), cmd, name, price, rarity);
+        if (name.isEmpty() && price == null && collection.isEmpty()) return null;
+        return new ArchiveItem(id.getPath(), cmd, name, price, rarity, collection);
     }
 }
