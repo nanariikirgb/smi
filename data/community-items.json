@@ -461,6 +461,11 @@
       "name": "Филе рыбы",
       "sourceId": "game-287dbbce2998179e8119ae0e65115dd097b920424a967ae1debac7c9136dd179",
       "updatedAt": "2026-11-26T22:06:12.921Z"
+    },
+    "potion:55": {
+      "name": "REDBULL",
+      "sourceId": "game-334438ea4ec0d84024f2c5af5a83448aa3ccea6f4b606b0ebd677c50ad552329",
+      "updatedAt": "2026-11-26T22:06:15.310Z"
     }
   },
   "history": {
@@ -1494,6 +1499,18 @@
           "name": "Филе рыбы",
           "sourceId": "game-287dbbce2998179e8119ae0e65115dd097b920424a967ae1debac7c9136dd179",
           "updatedAt": "2026-11-26T22:06:12.921Z"
+        }
+      }
+    ],
+    "potion:55": [
+      {
+        "at": "2026-11-26T22:06:15.310Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "REDBULL",
+          "sourceId": "game-334438ea4ec0d84024f2c5af5a83448aa3ccea6f4b606b0ebd677c50ad552329",
+          "updatedAt": "2026-11-26T22:06:15.310Z"
         }
       }
     ]
