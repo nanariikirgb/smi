@@ -39,6 +39,13 @@
       "rarity": "",
       "sourceId": "6",
       "updatedAt": "2026-11-26T21:28:11.477Z"
+    },
+    "golden_horse_armor:548": {
+      "name": "Черная накидка",
+      "price": null,
+      "rarity": "",
+      "sourceId": "7",
+      "updatedAt": "2026-11-26T21:28:14.933Z"
     }
   },
   "history": {
@@ -112,6 +119,20 @@
           "rarity": "",
           "sourceId": "6",
           "updatedAt": "2026-11-26T21:28:11.477Z"
+        }
+      }
+    ],
+    "golden_horse_armor:548": [
+      {
+        "at": "2026-11-26T21:28:14.933Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Черная накидка",
+          "price": null,
+          "rarity": "",
+          "sourceId": "7",
+          "updatedAt": "2026-11-26T21:28:14.933Z"
         }
       }
     ]
