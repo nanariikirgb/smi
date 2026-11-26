@@ -285,6 +285,11 @@
       "price": 75000,
       "sourceId": "game-71d83c1a3a158c811f1a5dde338d5c4ea2f2a21dd0215acb952562570b702ef8",
       "updatedAt": "2026-11-26T21:58:26.420Z"
+    },
+    "golden_carrot:146": {
+      "name": "Milka Nuts",
+      "sourceId": "game-bc84a861a74043d5332f566a509654cfbd4a4091293e9ed1162f87dc16e64189",
+      "updatedAt": "2026-11-26T21:58:55.888Z"
     }
   },
   "history": {
@@ -902,6 +907,18 @@
           "price": 75000,
           "sourceId": "game-71d83c1a3a158c811f1a5dde338d5c4ea2f2a21dd0215acb952562570b702ef8",
           "updatedAt": "2026-11-26T21:58:26.420Z"
+        }
+      }
+    ],
+    "golden_carrot:146": [
+      {
+        "at": "2026-11-26T21:58:55.888Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Milka Nuts",
+          "sourceId": "game-bc84a861a74043d5332f566a509654cfbd4a4091293e9ed1162f87dc16e64189",
+          "updatedAt": "2026-11-26T21:58:55.888Z"
         }
       }
     ]
