@@ -451,6 +451,11 @@
       "name": "Кефир",
       "sourceId": "game-2d7ac326e81e2991964996d5ef082ac258dafd595b205bac9962a851c6a2d987",
       "updatedAt": "2026-11-26T22:06:09.866Z"
+    },
+    "golden_carrot:129": {
+      "name": "Сэндвич \"Итальянский капрезе\"",
+      "sourceId": "game-0b8f07899f6220e8b72963d0186f6f4b2e8c16cd226a8107a5128562505c5697",
+      "updatedAt": "2026-11-26T22:06:11.344Z"
     }
   },
   "history": {
@@ -1460,6 +1465,18 @@
           "name": "Кефир",
           "sourceId": "game-2d7ac326e81e2991964996d5ef082ac258dafd595b205bac9962a851c6a2d987",
           "updatedAt": "2026-11-26T22:06:09.866Z"
+        }
+      }
+    ],
+    "golden_carrot:129": [
+      {
+        "at": "2026-11-26T22:06:11.344Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Сэндвич \"Итальянский капрезе\"",
+          "sourceId": "game-0b8f07899f6220e8b72963d0186f6f4b2e8c16cd226a8107a5128562505c5697",
+          "updatedAt": "2026-11-26T22:06:11.344Z"
         }
       }
     ]
