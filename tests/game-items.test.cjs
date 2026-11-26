@@ -144,7 +144,7 @@ test('game observations and moderation share the existing catalogue and Redis', 
 
   await t.test('concurrent batches queue once, skip known names and require approval', async () => {
     const items = [item(633, {material:'golden_chestplate'}), item(10, {material:'emerald'}),
-      item(80, {material:'sugar'}), item(99), item(1), item(2)];
+      item(80, {material:'sugar',price:null}), item(99, {price:null}), item(1), item(2)];
     const replies = await Promise.all([upload(items), upload(items)]);
     for (const response of replies) {
       assert.equal(response.statusCode, 200);
@@ -185,4 +185,19 @@ test('game observations and moderation share the existing catalogue and Redis', 
     assert.equal((await list()).total,1);
     assert.equal((await list('history')).total,2);
   });
+  await t.test('1.3 cache rows preserve collections and enrich an existing name on approval', async () => {
+    const cached = [item(1, {name:'', collection:'Old Style', price:0}), item(6, {collection:''})];
+    const sent = await upload(cached);
+    assert.equal(sent.statusCode, 200);
+    assert.equal(sent.body.processed, 2);
+    const row = (await list()).rows.find(r => r.collection === 'Old Style');
+    assert.equal(row.name, item(1).name);
+    const res = await moderate('game-approve', {method:'POST', cookie, body:{
+      id:row.id, name:row.name, price:row.suggestedPrice, rarity:row.suggestedRarity
+    }});
+    assert.equal(res.statusCode, 200);
+    assert.equal(community.items['paper:1'].collection, 'Old Style');
+    assert.equal(community.items['paper:1'].price, 125000);
+  });
+
 });
