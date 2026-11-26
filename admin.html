@@ -2,14 +2,19 @@
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>SMI SOUTH — Модерация</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23222532'/%3E%3Cpath d='M13 23h38v29H13zM10 12h44v11H10z' fill='%23b7a7ff'/%3E%3Cpath d='M25 31h14' stroke='%23222532' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E"><style>
 *{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:#101116;color:#f3f4f9;font:15px system-ui,sans-serif}header{border-bottom:1px solid #303342;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:16px}header b{color:#b7a7ff;letter-spacing:2px}main{max-width:1100px;margin:auto;padding:30px 5%}h1{margin:0 0 10px;font-size:clamp(28px,4vw,42px);letter-spacing:-.035em}h2{font-size:19px;margin:0 0 8px}p{color:#a8acbd;line-height:1.55;margin:6px 0 14px}button,input,textarea,select{font:inherit;border:1px solid #404457;border-radius:9px;padding:11px;background:#222532;color:#fff}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}button.primary{background:#b7a7ff;color:#171322;border-color:transparent;font-weight:700}button.reject{background:#462b35;border-color:#71414b;color:#ffcad0}button[aria-pressed=true]{border-color:#b7a7ff;color:#d0c4ff}.panel{border:1px solid #303342;border-radius:16px;background:#1a1c25;padding:20px;margin:18px 0}.login{max-width:430px;margin:50px auto}.login form,.fields{display:grid;gap:10px}label{display:block;font-size:13px;color:#bcc1d2;font-weight:600}input,textarea{width:100%}textarea{resize:vertical}.toolbar,.actions,.pagination{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.toolbar{margin:18px 0}.toolbar #refresh{margin-left:auto}.submission{display:grid;grid-template-columns:180px minmax(0,1fr);gap:20px}.preview{background:radial-gradient(ellipse,#34354c,#20222d);border-radius:12px;width:100%;aspect-ratio:1;display:grid;place-items:center;overflow:hidden;color:#989caf}.preview img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.meta{font-size:12px;color:#989caf;overflow-wrap:anywhere}.badge{font-size:12px;font-weight:600;color:#c0b2ff}.badge.approved{color:#85d4aa}.badge.rejected{color:#e0a2ac}.fields{margin-top:15px}.fields .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fields label input,.fields label textarea{margin-top:5px}.comment{white-space:pre-wrap;overflow-wrap:anywhere}.status{min-height:22px;font-size:13px;color:#a8acbd;white-space:pre-wrap}.status.error{color:#ffb0b9}.pagination{justify-content:center;margin:20px}.record{white-space:pre-wrap;overflow-wrap:anywhere;color:#d5d7e3}.history{border-top:1px solid #343744;margin-top:12px;padding-top:12px}a{color:#b7a7ff;text-decoration:none}@media(max-width:650px){.submission{grid-template-columns:1fr}.preview{max-width:220px}.fields .pair{grid-template-columns:1fr}.toolbar #refresh{margin-left:0}}
  .evidence-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin:8px 0 12px}.evidence-gallery a{display:flex;flex-direction:column;gap:6px;text-align:center;padding:5px;background:#242433;border-radius:8px;color:#b7a7ff;text-decoration:none;font-size:12px}.evidence-gallery img{display:block;max-width:100%;width:100%;height:100px;object-fit:contain;border-radius:5px}.evidence-gallery .expired{color:#a5a5b5;padding:8px;background:#242433;border-radius:8px;font-size:12px}.page-jump{display:flex;align-items:center;gap:6px}.page-jump input{width:75px;text-align:center;padding:7px}header nav{display:flex;gap:8px;align-items:center}#analyticsDialog{background:#1a1c25;color:#f3f4f9;border:1px solid #44495c;border-radius:16px;width:min(1050px,95vw);max-height:92dvh;overflow:auto;padding:20px}#analyticsDialog::backdrop{background:#000b}#analyticsDialog .toolbar h2{margin-right:auto}.analytics-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px;margin-bottom:22px}.analytics-stat{background:#222532;border:1px solid #343744;border-radius:10px;padding:12px}.analytics-stat strong{display:block;font-size:25px;margin-top:5px;color:#c6baff}.analytics-tops{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin-top:22px}.analytics-rank{border:1px solid #343744;border-radius:10px;padding:12px}.analytics-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #303342;overflow-wrap:anywhere;font-size:13px}.analytics-row b{flex-shrink:0}.analytics-bar{height:8px;border-radius:8px;background:#9c86e8;min-width:0}.analytics-day{display:grid;grid-template-columns:85px 1fr 55px;gap:10px;align-items:center;font-size:12px;margin:6px 0}#analyticsChart{max-height:360px;overflow:auto}</style></head><body><header><b>SMI SOUTH / ADMIN</b><nav><a href="https://nanariikirgb.github.io/smi/">Каталог</a> · <a href="/?edit=1">Редактор</a></nav></header><main>
-<section class="panel login" id="loginView"><h1>Вход</h1><p>Панель модерации предложений названий.</p><form id="loginForm"><label for="password">Пароль администратора</label><input id="password" type="password" autocomplete="current-password" required><button class="primary" id="loginButton">Войти</button><div id="loginStatus" role="status" class="status"></div></form></section>
-<section id="adminView" hidden><h1>Предложения названий</h1><p>Проверьте название и изображение, затем одобрите или отклоните заявку.</p><div class="toolbar"><button id="pending" aria-pressed="true">На рассмотрении</button><button id="history" aria-pressed="false">История</button><button id="analyticsOpen">Статистика сайта</button><button id="refresh">Обновить</button><button id="logout">Выйти</button></div><div id="globalStatus" role="status" class="status"></div><div id="directBar" class="toolbar" hidden><span id="directLabel"></span><button id="allRequests">Все заявки</button></div><div id="topPager" class="pagination"><button id="prevTop">←</button><label class="page-jump"><input id="pageTop" type="number" min="1" value="1" aria-label="Номер страницы"><span id="totalTop">/ 1</span></label><button id="nextTop">→</button></div><div id="rows"></div><div id="bottomPager" class="pagination"><button id="prev">←</button><label class="page-jump"><input id="pageInfo" type="number" min="1" value="1" aria-label="Номер страницы"><span id="totalBottom">/ 1</span></label><button id="next">→</button></div></section>
+<section class="panel login" id="loginView"><h1>Вход</h1><p>Панель модерации каталога.</p><form id="loginForm"><label for="password">Пароль администратора</label><input id="password" type="password" autocomplete="current-password" required><button class="primary" id="loginButton">Войти</button><div id="loginStatus" role="status" class="status"></div></form></section>
+<section id="adminView" hidden><h1>Модерация каталога</h1>
+<div class="toolbar" role="group" aria-label="Источник заявок">
+  <button id="suggestionsTab" aria-pressed="true">Предложения названий</button>
+  <button id="gameTab" aria-pressed="false">Предметы из игры</button>
+</div>
+<div class="toolbar"><button id="pending" aria-pressed="true">На рассмотрении</button><button id="history" aria-pressed="false">История</button><button id="analyticsOpen">Статистика сайта</button><button id="refresh">Обновить</button><button id="logout">Выйти</button></div><div id="globalStatus" role="status" class="status"></div><div id="directBar" class="toolbar" hidden><span id="directLabel"></span><button id="allRequests">Все заявки</button></div><div id="topPager" class="pagination"><button id="prevTop">←</button><label class="page-jump"><input id="pageTop" type="number" min="1" value="1" aria-label="Номер страницы"><span id="totalTop">/ 1</span></label><button id="nextTop">→</button></div><div id="rows"></div><div id="bottomPager" class="pagination"><button id="prev">←</button><label class="page-jump"><input id="pageInfo" type="number" min="1" value="1" aria-label="Номер страницы"><span id="totalBottom">/ 1</span></label><button id="next">→</button></div></section>
 <dialog id="analyticsDialog"><div class="toolbar"><h2>Статистика сайта</h2><select id="analyticsDays" aria-label="Период"><option value="1">Сегодня</option><option value="7" selected>7 дней</option><option value="30">30 дней</option></select><button id="analyticsRefresh">Обновить</button><button id="analyticsClose">Закрыть ×</button></div><p id="analyticsStatus" role="status"></p><div id="analyticsCards" class="analytics-cards"></div><h2>Посещаемость по дням</h2><div id="analyticsChart"></div><div class="analytics-tops" id="analyticsTops"></div><p class="meta">Дни по UTC. Уникальные — приблизительная сумма уникальных браузеров по дням, не уникальные люди за период. Повторное посещение после 30 минут неактивности в тот же день. Среднее время — видимое время страницы / посещения; приблизительно. Запросы отображаются от двух повторений. Хранение до 31 дня, без идентификаторов посетителей. Счётчики ограничены по объёму.</p></dialog></main><script>
 
 function parsePrice(value){const s=String(value??'').trim();if(!s)return null;const n=s.replace(/\s*\$$/,'').trim();if(!/^(?:\d+|\d{1,3}(?:\.\d{3})+|\d{1,3}(?:[ \u00a0\u202f]\d{3})+)$/.test(n))throw Error('Укажите целую цену, например 350.000$');const amount=Number(n.replace(/[.\s]/g,''));if(!Number.isSafeInteger(amount)||amount<0||amount>1000000000000)throw Error('Цена должна быть от 0 до 1.000.000.000.000$');return amount}
 function formatPrice(value){return value==null?'':String(value).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'$'}
 function priceInput(input,value){input.type='text';input.inputMode='numeric';input.maxLength=25;input.placeholder='Например: 350.000$';input.value=formatPrice(value);const validate=()=>{try{const n=parsePrice(input.value);input.setCustomValidity('');return {ok:true,n}}catch(e){input.setCustomValidity(e.message);return {ok:false}}};input.addEventListener('input',validate);input.addEventListener('blur',()=>{const r=validate();if(r.ok)input.value=formatPrice(r.n)});return input}
-const $=id=>document.getElementById(id);let mode='pending',offset=0,total=0,generation=0;let directId=new URLSearchParams(location.search).get('id');if(directId&&!/^(?:[1-9]\d{0,11}|[0-9a-f-]{36})$/.test(directId))directId=null;const shortId=id=>String(id||'').split('-')[0].toUpperCase();const requestNumber=row=>String(row.number||shortId(row.id));
+const $=id=>document.getElementById(id);let section='suggestions',mode='pending',offset=0,total=0,generation=0;let directId=new URLSearchParams(location.search).get('id');if(directId&&!/^(?:[1-9]\d{0,11}|[0-9a-f-]{36})$/.test(directId))directId=null;const shortId=id=>String(id||'').split('-')[0].toUpperCase();const requestNumber=row=>String(row.number||shortId(row.id));
 function el(tag,cls='',text=''){const e=document.createElement(tag);if(cls)e.className=cls;if(text)e.textContent=text;return e}
 function message(target,text,error=false){target.textContent=text;target.classList.toggle('error',error)}
 async function api(action,data,extra=''){const r=await fetch('/api/admin?action='+encodeURIComponent(action)+extra,{method:data===undefined?'GET':'POST',credentials:'same-origin',cache:'no-store',...(data===undefined?{}:{headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})});const d=await r.json().catch(()=>({}));if(!r.ok)throw Object.assign(Error(d.error||'Ошибка сервера'),{status:r.status});return d}
@@ -18,13 +23,114 @@ function showAdmin(){$('loginView').hidden=true;$('adminView').hidden=false}
 function date(t){return t?new Date(t).toLocaleString('ru-RU'):'—'}
 function field(label,type,value,max){const l=el('label','',label),i=el(type==='textarea'?'textarea':'input');if(type!=='textarea')i.type=type;if(max)i.maxLength=max;i.value=value??'';l.append(i);return [l,i]}
 function evidenceGallery(row){const photos=Array.isArray(row.photos)?row.photos.slice(0,3):[];if(!photos.length)return null;const wrap=el('section'),gallery=el('div','evidence-gallery');wrap.append(el('p','meta','Скриншоты: '+photos.length+' · хранение 90 дней'),gallery);for(const [i,p] of photos.entries()){let url;try{url=new URL(p.url);if(url.protocol!=='https:'||url.hostname!=='i.ibb.co'||url.username||url.password||url.port)throw Error()}catch{continue}if(!p.expiresAt||Date.parse(p.expiresAt)<=Date.now()){gallery.append(el('div','expired','Скриншот '+(i+1)+': срок хранения истёк'));continue}const a=el('a');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';a.referrerPolicy='no-referrer';const img=new Image();img.src=url.href;img.alt='Скриншот '+(i+1);img.loading='lazy';img.referrerPolicy='no-referrer';img.onerror=()=>{img.remove();a.textContent='Изображение недоступно — открыть ссылку'};a.append(img,el('span','','Открыть скриншот '+(i+1)));gallery.append(a)}return wrap}
-function card(row){const root=el('article','panel submission'),preview=el('div','preview'),im=new Image();im.alt='Превью модели';im.loading='lazy';im.src='/api/admin?action=preview&id='+encodeURIComponent(row.number||row.id);im.onerror=()=>{preview.textContent='Нет изображения'};preview.append(im);const body=el('div');const state={pending:'На рассмотрении',approved:'Одобрено',rejected:'Отклонено'}[row.status]||row.status;body.append(el('span','badge '+row.status,state),el('h2','',row.name),el('div','meta',['Заявка №'+requestNumber(row),row.category,date(row.createdAt)].join(' · ')));if(row.suggestedPrice!=null)body.append(el('p','comment','Предложенная цена: '+formatPrice(row.suggestedPrice)));if(row.suggestedRarity)body.append(el('p','comment','Предложенная редкость: '+row.suggestedRarity));if(row.comment)body.append(el('p','comment','Комментарий: '+row.comment));const evidence=evidenceGallery(row);if(evidence)body.append(evidence);
-if(row.status==='pending'){const form=el('form','fields');const [nl,n]=field('Точное название предмета','text',row.name,100);n.required=true;n.minLength=2;const pair=el('div','pair');const [pl,p]=field('Гос. цена ($)','text','');priceInput(p,row.suggestedPrice??null);const [rl,r]=field('Редкость','text',row.suggestedRarity||'',50);r.placeholder='Например: Elite';pair.append(pl,rl);const [rejectLabel,reason]=field('Причина отклонения (необязательно)','textarea','',400);reason.rows=2;const actions=el('div','actions'),approve=el('button','primary','Одобрить'),reject=el('button','reject','Отклонить'),status=el('div','status');approve.type='submit';reject.type='button';status.setAttribute('role','status');actions.append(approve,reject);form.append(nl,pair,rejectLabel,actions,status);body.append(form);let busy=false;async function decide(action){if(busy)return;if(action==='approve'&&!form.reportValidity())return;if(action==='reject'&&!confirm('Отклонить эту заявку?'))return;busy=true;approve.disabled=reject.disabled=true;message(status,'Сохранение…');try{const result=await api(action,{id:String(row.number||row.id),name:n.value.trim(),price:action==='approve'?parsePrice(p.value):null,rarity:r.value.trim(),reason:reason.value.trim()});await load();if(result.logNotified===false)message($('globalStatus'),'Решение сохранено, но лог Discord не отправлен.',true)}catch(e){if(e.status===401){showLogin('Сессия истекла');return}message(status,e.message,true);busy=false;approve.disabled=reject.disabled=false}}form.onsubmit=e=>{e.preventDefault();decide('approve')};reject.onclick=()=>decide('reject')}
-else{const hist=el('div','history');hist.append(el('div','meta','Решение: '+date(row.decidedAt)));if(row.status==='approved'){hist.append(el('div','record','Одобренное название: '+row.approvedName));if(row.price!==null&&row.price!==undefined)hist.append(el('div','record','Гос. цена: '+formatPrice(row.price)));if(row.rarity)hist.append(el('div','record','Редкость: '+row.rarity))}else if(row.reason)hist.append(el('div','record','Причина: '+row.reason));body.append(hist)}
-root.append(preview,body);return root}
-async function load(){const token=++generation;message($('globalStatus'),'Загрузка…');try{if(directId){const d=await api('submission',undefined,'&id='+encodeURIComponent(directId));if(token!==generation)return;showAdmin();$('directBar').hidden=false;$('directLabel').textContent='Заявка №'+requestNumber(d.row);$('topPager').hidden=$('bottomPager').hidden=true;$('rows').replaceChildren(card(d.row));message($('globalStatus'),'Просмотр одной заявки');return} $('directBar').hidden=true;$('topPager').hidden=$('bottomPager').hidden=false;const d=await api('list',undefined,'&offset='+offset+'&mode='+mode);if(token!==generation)return;total=d.total||0;if(offset>0&&offset>=total){offset=Math.max(0,Math.floor((total-1)/20)*20);return load()}showAdmin();$('rows').replaceChildren(...d.rows.map(card));if(!d.rows.length)$('rows').append(el('div','panel',mode==='pending'?'Нет заявок на рассмотрении.':'История пока пуста.'));const pages=Math.max(1,Math.ceil(total/20));for(const id of ['pageInfo','pageTop']){$(id).value=String(Math.floor(offset/20)+1);$(id).max=String(pages)}for(const id of ['totalTop','totalBottom'])$(id).textContent='/ '+pages;for(const id of ['prev','prevTop'])$(id).disabled=offset===0;for(const id of ['next','nextTop'])$(id).disabled=offset+20>=total;message($('globalStatus'),'Всего: '+total)}catch(e){if(token!==generation)return;if(e.status===401||e.status===503)showLogin(e.status===503?e.message:'');else message($('globalStatus'),e.message,true)}}
+function card(row, fromGame = false) {
+  const root = el('article', 'panel submission');
+  const body = el('div');
+  const state = {pending:'На рассмотрении', approved:'Одобрено', rejected:'Отклонено'}[row.status] || row.status;
+  body.append(el('span', 'badge ' + row.status, state), el('h2', 'record', row.name));
+  if (fromGame) {
+    const preview = el('div','preview'), image = new Image();
+    image.alt = 'Превью модели'; image.loading = 'lazy';
+    image.src = 'https://nanariikirgb.github.io/smi/data/previews/' + encodeURIComponent(row.material + '_' + row.customModelData) + '.png';
+    image.onerror = () => { preview.textContent = 'Нет превью модели'; };
+    preview.append(image); root.append(preview);
+    body.append(el('div', 'record', 'Материал: ' + row.material),
+      el('div', 'record', 'CustomModelData: ' + row.customModelData),
+      el('div', 'meta', date(row.createdAt)));
+  } else {
+    const preview = el('div', 'preview'), image = new Image();
+    image.alt = 'Превью модели';
+    image.loading = 'lazy';
+    image.src = '/api/admin?action=preview&id=' + encodeURIComponent(row.number || row.id);
+    image.onerror = () => { preview.textContent = 'Нет изображения' };
+    preview.append(image);
+    root.append(preview);
+    body.append(el('div', 'meta', ['Заявка №' + requestNumber(row), row.category, date(row.createdAt)].join(' · ')));
+    if (row.comment) body.append(el('p', 'comment', 'Комментарий: ' + row.comment));
+    const evidence = evidenceGallery(row);
+    if (evidence) body.append(evidence);
+  }
+  const price = row.suggestedPrice;
+  const rarity = row.suggestedRarity;
+  const priceLabel = fromGame ? 'Гос. цена из Lore' : 'Предложенная цена';
+  const rarityLabel = fromGame ? 'Редкость из Lore' : 'Предложенная редкость';
+  if (price != null) body.append(el('p', 'comment', priceLabel + ': ' + formatPrice(price)));
+  if (rarity) body.append(el('p', 'comment', rarityLabel + ': ' + rarity));
+  if (row.status === 'pending') {
+    const absent = fromGame && row.indexed === false;
+    if (absent) body.append(el('p', 'comment', 'Модель отсутствует в ресурс-паке каталога. Проверьте её после обновления ресурс-пака или отклоните заявку.'));
+    const form = el('form', 'fields');
+    const [nameLabel, nameInput] = field('Точное название предмета', 'text', row.name, 100);
+    nameInput.required = true;
+    nameInput.minLength = 2;
+    const pair = el('div', 'pair');
+    const [priceField, priceBox] = field('Гос. цена ($)', 'text', '');
+    priceInput(priceBox, price ?? null);
+    const [rarityField, rarityInput] = field('Редкость', 'text', rarity || '', 50);
+    rarityInput.placeholder = 'Например: Elite';
+    pair.append(priceField, rarityField);
+    const [reasonLabel, reasonInput] = field('Причина отклонения (необязательно)', 'textarea', '', 400);
+    reasonInput.rows = 2;
+    const actions = el('div', 'actions'), status = el('div', 'status');
+    const approve = el('button', 'primary', 'Одобрить'), reject = el('button', 'reject', 'Отклонить');
+    approve.type = 'submit';
+    approve.disabled = absent;
+    reject.type = 'button';
+    status.setAttribute('role', 'status');
+    actions.append(approve, reject);
+    form.append(nameLabel, pair, reasonLabel, actions, status);
+    body.append(form);
+
+    let busy = false;
+    async function decide(action) {
+      if (busy) return;
+      if (action === 'approve' && (absent || !form.reportValidity())) return;
+      if (action === 'reject' && !confirm('Отклонить эту заявку?')) return;
+      busy = true;
+      approve.disabled = reject.disabled = true;
+      message(status, 'Сохранение…');
+      const view = generation;
+      try {
+        const result = await api(fromGame ? 'game-' + action : action, {
+          id: String(row.number || row.id), name: nameInput.value.trim(),
+          price: action === 'approve' ? parsePrice(priceBox.value) : null,
+          rarity: rarityInput.value.trim(), reason: reasonInput.value.trim()
+        });
+        if (view !== generation) return;
+        await load();
+        if (result.logNotified === false) message($('globalStatus'), 'Решение сохранено, но лог Discord не отправлен.', true);
+      } catch (e) {
+        if (view !== generation) return;
+        if (e.status === 401) { showLogin('Сессия истекла'); return }
+        message(status, e.message, true);
+      } finally {
+        busy = false;
+        approve.disabled = absent;
+        reject.disabled = false;
+      }
+    }
+    form.onsubmit = e => { e.preventDefault(); decide('approve') };
+    reject.onclick = () => decide('reject');
+  }
+else{const hist=el('div','history');hist.append(el('div','meta','Решение: '+date(row.decidedAt)));if(row.status==='approved'){hist.append(el('div','record',(row.automatic?'Опубликовано автоматически: ':'Одобренное название: ')+row.approvedName));if(row.price!==null&&row.price!==undefined)hist.append(el('div','record','Гос. цена: '+formatPrice(row.price)));if(row.rarity)hist.append(el('div','record','Редкость: '+row.rarity))}else if(row.reason)hist.append(el('div','record','Причина: '+row.reason));body.append(hist)}
+root.append(body);return root}
+async function load(){const token=++generation;message($('globalStatus'),'Загрузка…');try{if(directId){const d=await api('submission',undefined,'&id='+encodeURIComponent(directId));if(token!==generation)return;showAdmin();$('directBar').hidden=false;$('directLabel').textContent='Заявка №'+requestNumber(d.row);$('topPager').hidden=$('bottomPager').hidden=true;$('rows').replaceChildren(card(d.row));message($('globalStatus'),'Просмотр одной заявки');return} $('directBar').hidden=true;$('topPager').hidden=$('bottomPager').hidden=false;const game=section==='game';const d=await api(game?'game-list':'list',undefined,'&offset='+offset+'&mode='+mode);if(token!==generation)return;total=d.total||0;if(offset>0&&offset>=total){offset=Math.max(0,Math.floor((total-1)/20)*20);return load()}showAdmin();$('rows').replaceChildren(...d.rows.map(row=>card(row,game)));if(!d.rows.length)$('rows').append(el('div','panel',mode==='pending'?(game?'Нет предметов из игры на рассмотрении.':'Нет заявок на рассмотрении.'):'История пока пуста.'));const pages=Math.max(1,Math.ceil(total/20));for(const id of ['pageInfo','pageTop']){$(id).value=String(Math.floor(offset/20)+1);$(id).max=String(pages)}for(const id of ['totalTop','totalBottom'])$(id).textContent='/ '+pages;for(const id of ['prev','prevTop'])$(id).disabled=offset===0;for(const id of ['next','nextTop'])$(id).disabled=offset+20>=total;message($('globalStatus'),'Всего: '+total)}catch(e){if(token!==generation)return;if(e.status===401||e.status===503)showLogin(e.status===503?e.message:'');else message($('globalStatus'),e.message,true)}}
 $('loginForm').onsubmit=async e=>{e.preventDefault();$('loginButton').disabled=true;message($('loginStatus'),'Вход…');try{await api('login',{password:$('password').value});$('password').value='';showAdmin();await load()}catch(e){message($('loginStatus'),e.message,true)}finally{$('loginButton').disabled=false}};
-function tab(v){directId=null;history.replaceState(null,'',location.pathname);mode=v;offset=0;$('pending').setAttribute('aria-pressed',String(v==='pending'));$('history').setAttribute('aria-pressed',String(v==='history'));load()}
+function tab(nextMode, nextSection = section) {
+  directId = null;
+  history.replaceState(null, '', location.pathname);
+  section = nextSection;
+  mode = nextMode;
+  offset = total = 0;
+  $('rows').replaceChildren();
+  $('suggestionsTab').setAttribute('aria-pressed', String(section === 'suggestions'));
+  $('gameTab').setAttribute('aria-pressed', String(section === 'game'));
+  $('pending').setAttribute('aria-pressed', String(mode === 'pending'));
+  $('history').setAttribute('aria-pressed', String(mode === 'history'));
+  load();
+}
+$('suggestionsTab').onclick = () => tab('pending', 'suggestions');
+$('gameTab').onclick = () => tab('pending', 'game');
 $('pending').onclick=()=>tab('pending');$('history').onclick=()=>tab('history');$('refresh').onclick=load;$('allRequests').onclick=()=>tab('pending');function goPage(p){offset=(Math.max(1,Math.min(Math.max(1,Math.ceil(total/20)),Math.floor(Number(p)||1)))-1)*20;load();window.scrollTo({top:0,behavior:'smooth'})}for(const id of ['prev','prevTop'])$(id).onclick=()=>goPage(Math.floor(offset/20));for(const id of ['next','nextTop'])$(id).onclick=()=>goPage(Math.floor(offset/20)+2);for(const id of ['pageInfo','pageTop']){$(id).onchange=()=>goPage($(id).value);$(id).onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();goPage($(id).value)}}}$('logout').onclick=async()=>{try{await api('logout',{});showLogin()}catch(e){message($('globalStatus'),e.message,true)}};load();
 
 let analyticsGeneration=0;
