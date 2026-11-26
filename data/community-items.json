@@ -157,6 +157,11 @@
       "name": "Cosmos",
       "sourceId": "game-297728498c9b6fe334aeaefd6a995feaf73b89e7da071fa7cb58046f5eaf8614",
       "updatedAt": "2026-11-26T21:55:41.623Z"
+    },
+    "shulker_shell:10": {
+      "name": "CLOUDS",
+      "sourceId": "game-3fdaa9056f840f54fba8abc1250b7bb1fd576ab861928103b0307a01a296515b",
+      "updatedAt": "2026-11-26T21:55:47.433Z"
     }
   },
   "history": {
@@ -474,6 +479,18 @@
           "name": "Cosmos",
           "sourceId": "game-297728498c9b6fe334aeaefd6a995feaf73b89e7da071fa7cb58046f5eaf8614",
           "updatedAt": "2026-11-26T21:55:41.623Z"
+        }
+      }
+    ],
+    "shulker_shell:10": [
+      {
+        "at": "2026-11-26T21:55:47.433Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "CLOUDS",
+          "sourceId": "game-3fdaa9056f840f54fba8abc1250b7bb1fd576ab861928103b0307a01a296515b",
+          "updatedAt": "2026-11-26T21:55:47.433Z"
         }
       }
     ]
