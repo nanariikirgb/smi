@@ -476,6 +476,11 @@
       "name": "Кекс \"Луна\"",
       "sourceId": "game-0ac011ec3ce73e10e76be56564df806bace04c5924ed1e2294afd79bc44e3959",
       "updatedAt": "2026-11-26T22:06:22.604Z"
+    },
+    "golden_carrot:151": {
+      "name": "Milka Strawberry",
+      "sourceId": "game-005090c86ab6ea51968217009ccc4c14a33b08c98c6eedfa364e4546b46cc7fb",
+      "updatedAt": "2026-11-26T22:06:24.013Z"
     }
   },
   "history": {
@@ -1545,6 +1550,18 @@
           "name": "Кекс \"Луна\"",
           "sourceId": "game-0ac011ec3ce73e10e76be56564df806bace04c5924ed1e2294afd79bc44e3959",
           "updatedAt": "2026-11-26T22:06:22.604Z"
+        }
+      }
+    ],
+    "golden_carrot:151": [
+      {
+        "at": "2026-11-26T22:06:24.013Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Milka Strawberry",
+          "sourceId": "game-005090c86ab6ea51968217009ccc4c14a33b08c98c6eedfa364e4546b46cc7fb",
+          "updatedAt": "2026-11-26T22:06:24.013Z"
         }
       }
     ]
