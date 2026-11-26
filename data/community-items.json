@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "items": {
+    "golden_horse_armor:3": {
+      "name": "Фонарик",
+      "price": null,
+      "rarity": "",
+      "sourceId": "529626c4-3bf7-4974-b1aa-8c58773409eb",
+      "updatedAt": "2026-11-25T22:55:58.590Z"
+    },
+    "iron_horse_armor:128": {
+      "name": "Рюкзак Plush",
+      "price": 230000,
+      "rarity": "Season",
+      "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+      "updatedAt": "2026-11-25T23:34:25.917Z"
+    },
+    "golden_horse_armor:2": {
+      "name": "Лейка",
+      "updatedAt": "2026-11-26T10:39:58.904Z"
+    }
+  },
+  "history": {
+    "iron_horse_armor:128": [
+      {
+        "at": "2026-11-25T23:34:25.917Z",
+        "action": "edit",
+        "before": {
+          "name": "Рюкзак Plush",
+          "price": 230,
+          "rarity": "Season",
+          "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+          "updatedAt": "2026-11-25T23:06:00.195Z"
+        },
+        "after": {
+          "name": "Рюкзак Plush",
+          "price": 230000,
+          "rarity": "Season",
+          "sourceId": "66759386-ff0a-46b0-8978-f5a474ed12ee",
+          "updatedAt": "2026-11-25T23:34:25.917Z"
+        }
+      }
+    ],
+    "golden_horse_armor:2": [
+      {
+        "at": "2026-11-26T10:39:58.904Z",
+        "action": "edit",
+        "before": null,
+        "after": {
+          "name": "Лейка",
+          "updatedAt": "2026-11-26T10:39:58.904Z"
+        }
+      }
+    ]
+  }
+}
