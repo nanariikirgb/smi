@@ -14,7 +14,7 @@ if(!cached){
  const browser=await chromium.launch({headless:true});try{
  const page=await browser.newPage();await page.route('https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js',r=>r.fulfill({path:join(root,'node_modules/jszip/dist/jszip.min.js'),contentType:'text/javascript'}));
  page.on('pageerror',e=>console.error('Catalog page error:',e.message));
- await page.goto('http://127.0.0.1:'+server.address().port+'/?buildPreviews=1',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.catalogBuild,{timeout:180000});
+ await page.goto('http://127.0.0.1:'+server.address().port+'/?buildPreviews=1',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.catalogBuild,null,{timeout:180000});
  const info=await page.evaluate(()=>window.catalogBuild.manifest());if(!info.digest||!info.keys.length)throw Error('Catalog build failed');
  const ready=[],failed=[];let done=0;
  for(const key of info.keys){
