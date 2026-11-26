@@ -130,6 +130,13 @@
       "rarity": "Ultimate",
       "sourceId": "19",
       "updatedAt": "2026-11-26T21:46:51.457Z"
+    },
+    "diamond_horse_armor:62": {
+      "name": "Чёрная акубра",
+      "rarity": "Uncommon",
+      "price": 70000,
+      "sourceId": "game-59ff786d714921e963a593d7e5908b23cfd63989865a2b6e5fe03d42afd716e5",
+      "updatedAt": "2026-11-26T21:54:34.094Z"
     }
   },
   "history": {
@@ -385,6 +392,20 @@
           "rarity": "Ultimate",
           "sourceId": "19",
           "updatedAt": "2026-11-26T21:46:51.457Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:62": [
+      {
+        "at": "2026-11-26T21:54:34.094Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Чёрная акубра",
+          "rarity": "Uncommon",
+          "price": 70000,
+          "sourceId": "game-59ff786d714921e963a593d7e5908b23cfd63989865a2b6e5fe03d42afd716e5",
+          "updatedAt": "2026-11-26T21:54:34.094Z"
         }
       }
     ]
