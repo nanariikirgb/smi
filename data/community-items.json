@@ -310,6 +310,13 @@
       "rarity": "RPMPass",
       "sourceId": "game-d9727e21d7c42113b4e92ba872146578aca62306c768f412aa5b13ddc62551c3",
       "updatedAt": "2026-11-26T21:59:10.858Z"
+    },
+    "flint:644": {
+      "name": "Микрофон",
+      "rarity": "Uncommon",
+      "price": 30000,
+      "sourceId": "game-0c1b56c209ad1293299c74910cfe1a01a442b0908ba513fc419f45f6aa947f6a",
+      "updatedAt": "2026-11-26T21:59:14.784Z"
     }
   },
   "history": {
@@ -992,6 +999,20 @@
           "rarity": "RPMPass",
           "sourceId": "game-d9727e21d7c42113b4e92ba872146578aca62306c768f412aa5b13ddc62551c3",
           "updatedAt": "2026-11-26T21:59:10.858Z"
+        }
+      }
+    ],
+    "flint:644": [
+      {
+        "at": "2026-11-26T21:59:14.784Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Микрофон",
+          "rarity": "Uncommon",
+          "price": 30000,
+          "sourceId": "game-0c1b56c209ad1293299c74910cfe1a01a442b0908ba513fc419f45f6aa947f6a",
+          "updatedAt": "2026-11-26T21:59:14.784Z"
         }
       }
     ]
