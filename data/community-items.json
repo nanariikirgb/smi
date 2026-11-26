@@ -265,6 +265,12 @@
       "name": "Булочка с сосиской",
       "sourceId": "game-15d631f8f2dae313a12774931222d5c990c7e8418d8cf4ba40a79aeb8df4a979",
       "updatedAt": "2026-11-26T21:58:11.237Z"
+    },
+    "diamond_horse_armor:1015": {
+      "name": "Маска \"Ханья\"",
+      "price": 2500000,
+      "sourceId": "game-0f648b413776a3fc7caf3f87654f4526df9eab52c14ef345c5d90454f4a2862c",
+      "updatedAt": "2026-11-26T21:58:14.499Z"
     }
   },
   "history": {
@@ -841,6 +847,19 @@
           "name": "Булочка с сосиской",
           "sourceId": "game-15d631f8f2dae313a12774931222d5c990c7e8418d8cf4ba40a79aeb8df4a979",
           "updatedAt": "2026-11-26T21:58:11.237Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:1015": [
+      {
+        "at": "2026-11-26T21:58:14.499Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маска \"Ханья\"",
+          "price": 2500000,
+          "sourceId": "game-0f648b413776a3fc7caf3f87654f4526df9eab52c14ef345c5d90454f4a2862c",
+          "updatedAt": "2026-11-26T21:58:14.499Z"
         }
       }
     ]
