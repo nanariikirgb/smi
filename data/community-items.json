@@ -53,6 +53,13 @@
       "rarity": "",
       "sourceId": "8",
       "updatedAt": "2026-11-26T21:28:18.270Z"
+    },
+    "golden_horse_armor:673": {
+      "name": "Букет цветов",
+      "price": null,
+      "rarity": "",
+      "sourceId": "9",
+      "updatedAt": "2026-11-26T21:28:20.784Z"
     }
   },
   "history": {
@@ -154,6 +161,20 @@
           "rarity": "",
           "sourceId": "8",
           "updatedAt": "2026-11-26T21:28:18.270Z"
+        }
+      }
+    ],
+    "golden_horse_armor:673": [
+      {
+        "at": "2026-11-26T21:28:20.784Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Букет цветов",
+          "price": null,
+          "rarity": "",
+          "sourceId": "9",
+          "updatedAt": "2026-11-26T21:28:20.784Z"
         }
       }
     ]
