@@ -1,4 +1,5 @@
 const moderation=require('../lib/moderation');
+const evidence=require('../lib/evidence');
 const buckets=new Map();
 module.exports=async function(req,res){
   const origin=req.headers.origin||'';
@@ -10,9 +11,11 @@ module.exports=async function(req,res){
   if(req.method==='OPTIONS')return res.status(204).end();
   if(req.method!=='POST')return res.status(405).json({error:'Требуется POST'});
   if(!moderation.configured()&&!process.env.DISCORD_WEBHOOK_URL)return res.status(503).json({error:'Отправка ещё не настроена'});
-  if(Number(req.headers['content-length']||0)>1000000)return res.status(413).json({error:'Слишком большой запрос'});
+  if(Number(req.headers['content-length']||0)>2600000)return res.status(413).json({error:'Слишком большой запрос'});
   let data=req.body;try{if(typeof data==='string')data=JSON.parse(data)}catch{return res.status(400).json({error:'Некорректный запрос'})}
-  const {name,comment='',price=null,rarity='',key,model,category,preview,honey=''}=data||{};
+  const {name,comment='',price=null,rarity='',key,model,category,preview,photos=[],honey=''}=data||{};
+  let photoBytes;try{photoBytes=evidence.validatePhotos(photos)}catch(e){return res.status(400).json({error:e.message})}
+  if(photoBytes.length&&(!moderation.configured()||!process.env.IMGBB_API_KEY))return res.status(503).json({error:'Хранилище скриншотов ещё не подключено. Можно отправить заявку без фотографий.'});
   if((price!==null&&(!Number.isSafeInteger(price)||price<0||price>1000000000000))||typeof rarity!=='string'||rarity.length>50)return res.status(400).json({error:'Проверьте цену и редкость'});
   if(honey||typeof name!=='string'||name.trim().length<2||name.trim().length>100||typeof comment!=='string'||comment.length>400||typeof key!=='string'||!/^[a-z0-9_]+:\d+$/i.test(key)||typeof model!=='string'||model.length>250||typeof category!=='string'||category.length>100||typeof preview!=='string'||!/^data:image\/png;base64,[A-Za-z0-9+/=]+$/.test(preview)||preview.length>700000)return res.status(400).json({error:'Проверьте название и изображение модели'});
   const png=Buffer.from(preview.slice(22),'base64');
@@ -20,11 +23,11 @@ module.exports=async function(req,res){
   const now=Date.now(),ip=String(req.headers['x-forwarded-for']||req.socket?.remoteAddress||'unknown').split(',')[0].trim();
   for(const [k,v] of buckets)if(now-v.start>60000)buckets.delete(k);
   const bucket=buckets.get(ip)||{start:now,count:0};if(bucket.count>=3)return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});bucket.count++;buckets.set(ip,bucket);
-  let saved=null;if(moderation.configured()){try{if(!await moderation.limit('submit:'+moderation.ip(req),3,60)||!await moderation.limit('submit-global',120,3600))return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});saved=await moderation.submit({name,comment,price,rarity,key,model,category,preview});}catch{return res.status(503).json({error:'Не удалось сохранить заявку. Попробуйте позже.'})}
+  let saved=null,uploaded=[];if(moderation.configured()){try{if(!await moderation.limit('submit:'+moderation.ip(req),3,60)||!await moderation.limit('submit-global',120,3600))return res.status(429).json({error:'Слишком много предложений. Попробуйте позже.'});const entry={name,comment,price,rarity,key,model,category,preview,...(photoBytes.length?{photoFingerprint:evidence.photoFingerprint(photoBytes)}:{})};const duplicate=await moderation.duplicateSubmission(entry);if(duplicate)return res.status(200).json({ok:true,id:duplicate,duplicate:true});if(photoBytes.length){if(!await moderation.limit('photos:'+moderation.ip(req),6,3600)||!await moderation.limit('photos-global',60,3600))return res.status(429).json({error:'Лимит заявок со скриншотами. Попробуйте позже.'});try{uploaded=await evidence.uploadPhotos(photoBytes)}catch{return res.status(502).json({error:'Не удалось загрузить фотографии. Попробуйте ещё раз.'})}}saved=await moderation.submit({...entry,photos:uploaded});}catch{return res.status(503).json({error:'Не удалось сохранить заявку. Попробуйте позже.'})}
   if(saved.duplicate)return res.status(200).json({ok:true,id:saved.id,duplicate:true});}
   if(!process.env.DISCORD_WEBHOOK_URL)return res.status(200).json({ok:true,id:saved.id,notified:false});
   const safe=s=>String(s).replace(/[\u0000-\u001f\u007f]/g,' ').trim();
-  const payload={allowed_mentions:{parse:[]},embeds:[{title:'Новое предложение названия',color:11839487,fields:[{name:'Предложенное название',value:safe(name)},{name:'Категория',value:safe(category)||'—',inline:true},{name:'Материал / CMD',value:safe(key),inline:true},{name:'Модель',value:safe(model)||'—'},...(price!==null?[{name:'Гос. цена',value:String(price).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'$',inline:true}]:[]),...(rarity.trim()?[{name:'Редкость',value:safe(rarity),inline:true}]:[]),...(comment.trim()?[{name:'Комментарий',value:safe(comment)}]:[])],image:{url:'attachment://model.png'},...(saved?{footer:{text:'Заявка '+saved.id}}:{}),timestamp:new Date().toISOString()}]};
+  const payload={allowed_mentions:{parse:[]},embeds:[{title:'Новое предложение названия',color:11839487,fields:[{name:'Предложенное название',value:safe(name)},{name:'Категория',value:safe(category)||'—',inline:true},{name:'Материал / CMD',value:safe(key),inline:true},{name:'Модель',value:safe(model)||'—'},...(price!==null?[{name:'Гос. цена',value:String(price).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+'$',inline:true}]:[]),...(rarity.trim()?[{name:'Редкость',value:safe(rarity),inline:true}]:[]),...(comment.trim()?[{name:'Комментарий',value:safe(comment)}]:[]),...(uploaded.length?[{name:'Скриншоты (90 дней)',value:uploaded.map((p,i)=>'[Скриншот '+(i+1)+']('+p.url+')').join('\n')}]:[])],image:{url:'attachment://model.png'},...(saved?{footer:{text:'Заявка '+saved.id}}:{}),timestamp:new Date().toISOString()}]};
   const form=new FormData();form.append('payload_json',JSON.stringify(payload));form.append('files[0]',new Blob([png],{type:'image/png'}),'model.png');
   try{const url=new URL(process.env.DISCORD_WEBHOOK_URL);if(url.protocol!=='https:'||url.hostname!=='discord.com'||!/^\/api\/webhooks\/\d+\/[A-Za-z0-9_-]+$/.test(url.pathname))throw Error('Invalid webhook configuration');url.searchParams.set('wait','true');const response=await fetch(url,{method:'POST',body:form,signal:AbortSignal.timeout(10000)});if(saved)return res.status(200).json({ok:true,id:saved.id,notified:response.ok});if(!response.ok)return res.status(response.status===429?429:502).json({error:'Discord не принял предложение'});return res.status(200).json({ok:true,legacy:true})}catch{return saved?res.status(200).json({ok:true,id:saved.id,notified:false}):res.status(502).json({error:'Не удалось отправить предложение'})}
 };
