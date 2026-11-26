@@ -386,6 +386,11 @@
       "price": 150000,
       "sourceId": "game-8b38da84fb732f92c84502c554a3eec8c03d48972c5096c7d7c35cf9bc22f51c",
       "updatedAt": "2026-11-26T21:59:45.471Z"
+    },
+    "golden_horse_armor:380": {
+      "price": 10000,
+      "sourceId": "game-23643bc802cc5d9b23d2458612788a2252fdef6f039dd242ab5b088bc66b1f8f",
+      "updatedAt": "2026-11-26T22:05:25.731Z"
     }
   },
   "history": {
@@ -1239,6 +1244,18 @@
           "price": 150000,
           "sourceId": "game-8b38da84fb732f92c84502c554a3eec8c03d48972c5096c7d7c35cf9bc22f51c",
           "updatedAt": "2026-11-26T21:59:45.471Z"
+        }
+      }
+    ],
+    "golden_horse_armor:380": [
+      {
+        "at": "2026-11-26T22:05:25.731Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "price": 10000,
+          "sourceId": "game-23643bc802cc5d9b23d2458612788a2252fdef6f039dd242ab5b088bc66b1f8f",
+          "updatedAt": "2026-11-26T22:05:25.731Z"
         }
       }
     ]
