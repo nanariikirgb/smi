@@ -1,0 +1,54 @@
+name: Build catalog previews
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['index.html', 'data/**', 'scripts/build-previews.mjs', '.github/workflows/catalog-previews.yml']
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: catalog-preview-pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/cache@v4
+        id: previews
+        with:
+          path: .generated-previews
+          key: previews-v1-${{ hashFiles('data/resourcepack.zip', 'data/vehicle-assemblies.json', 'index.html', 'scripts/build-previews.mjs') }}
+      - run: npm install --no-save --no-package-lock playwright@1.55.0 jszip@3.10.1
+      - if: steps.previews.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+      - run: node scripts/build-previews.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-catalog
+          path: _site/
+          include-hidden-files: true
+          retention-days: 7
+      - if: vars.PAGES_PREBUILT_ENABLED == 'true'
+        uses: actions/configure-pages@v5
+      - if: vars.PAGES_PREBUILT_ENABLED == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: vars.PAGES_PREBUILT_ENABLED == 'true'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy public catalog
+        id: deployment
+        uses: actions/deploy-pages@v4
