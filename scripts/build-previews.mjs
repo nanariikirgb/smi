@@ -11,7 +11,7 @@ if(!cached){
  await mkdir(generated,{recursive:true});
  const server=createServer(async(req,res)=>{try{const url=new URL(req.url,'http://127.0.0.1');const p=resolve(out,'.'+(url.pathname==='/'?'/index.html':decodeURIComponent(url.pathname)));if(!p.startsWith(out+sep))throw Error('bad path');const b=await readFile(p);res.writeHead(200,{'Content-Type':types[extname(p)]||'application/octet-stream','Content-Length':b.length});res.end(req.method==='HEAD'?undefined:b)}catch{res.writeHead(404);res.end()}});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
- const browser=await chromium.launch({headless:true});try{
+ const browser=await chromium.launch({headless:true,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});try{
  const page=await browser.newPage();await page.route('https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js',r=>r.fulfill({path:join(root,'node_modules/jszip/dist/jszip.min.js'),contentType:'text/javascript'}));
  page.on('pageerror',e=>console.error('Catalog page error:',e.message));
  await page.goto('http://127.0.0.1:'+server.address().port+'/?buildPreviews=1',{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>!!window.catalogBuild,null,{timeout:180000});
