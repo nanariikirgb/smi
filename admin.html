@@ -23,17 +23,56 @@ function showAdmin(){$('loginView').hidden=true;$('adminView').hidden=false}
 function date(t){return t?new Date(t).toLocaleString('ru-RU'):'—'}
 function field(label,type,value,max){const l=el('label','',label),i=el(type==='textarea'?'textarea':'input');if(type!=='textarea')i.type=type;if(max)i.maxLength=max;i.value=value??'';l.append(i);return [l,i]}
 function evidenceGallery(row){const photos=Array.isArray(row.photos)?row.photos.slice(0,3):[];if(!photos.length)return null;const wrap=el('section'),gallery=el('div','evidence-gallery');wrap.append(el('p','meta','Скриншоты: '+photos.length+' · хранение 90 дней'),gallery);for(const [i,p] of photos.entries()){let url;try{url=new URL(p.url);if(url.protocol!=='https:'||url.hostname!=='i.ibb.co'||url.username||url.password||url.port)throw Error()}catch{continue}if(!p.expiresAt||Date.parse(p.expiresAt)<=Date.now()){gallery.append(el('div','expired','Скриншот '+(i+1)+': срок хранения истёк'));continue}const a=el('a');a.href=url.href;a.target='_blank';a.rel='noopener noreferrer';a.referrerPolicy='no-referrer';const img=new Image();img.src=url.href;img.alt='Скриншот '+(i+1);img.loading='lazy';img.referrerPolicy='no-referrer';img.onerror=()=>{img.remove();a.textContent='Изображение недоступно — открыть ссылку'};a.append(img,el('span','','Открыть скриншот '+(i+1)));gallery.append(a)}return wrap}
+// Reuse one isolated catalogue renderer only when a ready PNG is unavailable.
+let previewFrame=null,previewFrameReady=null,previewTail=Promise.resolve();
+const gamePreviewCache=new Map();
+function previewTimeout(p,ms){let timer;return Promise.race([p,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error('Preview timeout')),ms)})]).finally(()=>clearTimeout(timer))}
+function resetPreviewFrame(){previewFrame?.remove();previewFrame=null;previewFrameReady=null}
+function getPreviewFrame(){
+  if(!previewFrameReady){
+    const frame=document.createElement('iframe');frame.hidden=true;frame.title='Рендер превью';frame.setAttribute('aria-hidden','true');
+    previewFrame=frame;
+    previewFrameReady=previewTimeout(new Promise((resolve,reject)=>{
+      frame.onload=()=>{try{const render=frame.contentWindow?.archiveAdminPreview;if(typeof render!=='function')throw Error('Renderer unavailable');resolve(render)}catch(e){reject(e)}};
+      frame.onerror=()=>reject(Error('Renderer unavailable'));
+      frame.src='./index.html?adminPreview=1';document.body.append(frame);
+    }),30000).catch(e=>{resetPreviewFrame();throw e});
+  }
+  return previewFrameReady;
+}
+function gamePreview(key){
+  if(!/^[a-z0-9_]{1,64}:\d{1,10}$/.test(key))return Promise.resolve('');
+  if(gamePreviewCache.has(key))return gamePreviewCache.get(key);
+  const task=previewTail.then(async()=>{
+    try{const render=await getPreviewFrame();const url=await previewTimeout(render(key),120000);
+      return typeof url==='string'&&url.startsWith('data:image/png;base64,')&&url.length<=1400000?url:'';
+    }catch(e){resetPreviewFrame();return ''}
+  });
+  previewTail=task.catch(()=>{});
+  gamePreviewCache.set(key,task);task.then(url=>{if(!url&&gamePreviewCache.get(key)===task)gamePreviewCache.delete(key);while(gamePreviewCache.size>120)gamePreviewCache.delete(gamePreviewCache.keys().next().value)});
+  return task;
+}
+function gamePreviewCard(row){
+  const preview=el('div','preview'),image=new Image(),key=row.material+':'+row.customModelData;
+  image.alt='Превью модели';image.loading='lazy';image.decoding='async';
+  image.onerror=async()=>{
+    image.onerror=null;preview.textContent='Построение превью…';
+    const url=await gamePreview(key);
+    if(!preview.isConnected)return;
+    if(url){const rendered=new Image();rendered.alt='Превью модели';rendered.onerror=()=>{preview.textContent='Не удалось построить превью'};rendered.src=url;preview.replaceChildren(rendered)}
+    else preview.textContent='Не удалось построить превью';
+  };
+  preview.append(image);
+  image.src='https://nanariikirgb.github.io/smi/data/previews/'+encodeURIComponent(key.replace(':','_'))+'.png';
+  return preview;
+}
 function card(row, fromGame = false) {
   const root = el('article', 'panel submission');
   const body = el('div');
   const state = {pending:'На рассмотрении', approved:'Одобрено', rejected:'Отклонено'}[row.status] || row.status;
   body.append(el('span', 'badge ' + row.status, state), el('h2', 'record', row.name));
   if (fromGame) {
-    const preview = el('div','preview'), image = new Image();
-    image.alt = 'Превью модели'; image.loading = 'lazy';
-    image.src = 'https://nanariikirgb.github.io/smi/data/previews/' + encodeURIComponent(row.material + '_' + row.customModelData) + '.png';
-    image.onerror = () => { preview.textContent = 'Нет превью модели'; };
-    preview.append(image); root.append(preview);
+    root.append(gamePreviewCard(row));
     body.append(el('div', 'record', 'Материал: ' + row.material),
       el('div', 'record', 'CustomModelData: ' + row.customModelData),
       el('div', 'meta', date(row.createdAt)));
@@ -86,7 +125,6 @@ function card(row, fromGame = false) {
     async function decide(action) {
       if (busy) return;
       if (action === 'approve' && (absent || !form.reportValidity())) return;
-      if (action === 'reject' && !confirm('Отклонить эту заявку?')) return;
       busy = true;
       approve.disabled = reject.disabled = true;
       message(status, 'Сохранение…');

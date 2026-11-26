@@ -239,5 +239,19 @@ function analyticsStop(){analyticsEnabled=false;clearInterval(analyticsTimer);cl
 function analyticsStart(){if(analyticsEnabled||!analyticsAllowed())return;analyticsEnabled=true;analyticsVisit();if(!document.hidden)analyticsSince=Date.now();analyticsTimer=setInterval(analyticsFlush,60000)}
 function analyticsInit(){analyticsStart();document.addEventListener('visibilitychange',()=>{if(!analyticsEnabled)return;if(document.hidden)analyticsFlush();else{analyticsVisit();analyticsSince=Date.now()}});window.addEventListener('pagehide',()=>{analyticsTime();analyticsFlush();analyticsSince=0});window.addEventListener('pageshow',e=>{if(e.persisted&&analyticsEnabled&&!document.hidden){analyticsVisit();analyticsSince=Date.now()}});window.addEventListener('storage',e=>{if(e.key===analyticsStore+':off'){if(analyticsAllowed())analyticsStart();else analyticsStop()}});document.querySelector('a.discord-link[href^="https://discord.gg/"]')?.addEventListener('click',()=>analyticsCount('discord'))}
 
-analyticsInit();$('retry').onclick=boot;boot();
+// Same-origin, on-demand preview service for the authenticated moderation UI.
+let adminPreviewMode=false;
+try{adminPreviewMode=window.parent!==window&&window.parent.location.origin===location.origin&&new URLSearchParams(location.search).get('adminPreview')==='1'}catch{}
+if(adminPreviewMode){
+ let init=null;
+ window.archiveAdminPreview=async key=>{
+  if(typeof key!=='string'||!/^[a-z0-9_]{1,64}:\d{1,10}$/.test(key))return '';
+  if(!init)init=(async()=>{
+   const [pack,assemblyData]=await Promise.all([initPack(),getMetadata('data/vehicle-assemblies.json')]);
+   modelIndex=pack.data;initAssemblies(assemblyData);await initThumbVersion(assemblyData);
+  })().catch(e=>{init=null;throw e});
+  await init;
+  const x=modelIndex.get(key);return x?thumb(x):'';
+ };
+}else{analyticsInit();$('retry').onclick=boot;boot();}
 </script></body></html>
