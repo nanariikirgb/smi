@@ -24,7 +24,13 @@ module.exports=async function(req,res){
    return res.json(await gameItems.list(offset,req.query.mode));
   }
   if(req.method==='POST'&&(action==='game-approve'||action==='game-reject')){
-   return res.json({ok:true,row:await gameItems.decide(action,data)});
+   const row=await gameItems.decide(action,data);
+   let notification={ok:false};
+   try{
+    const files=await discord.editPreviews({updated:{[row.key]:true}},{[row.key]:row.approvedName||row.name});
+    notification=await discord.send(discord.gameDecisionLog(row,files),{log:true,files});
+   }catch{console.warn('Game item log delivery failed')}
+   return res.json({ok:true,row,logNotified:notification.ok});
   }
   if(req.method==='GET'&&action==='analytics')return res.json(await analytics.report(req.query.days));
   if(req.method==='GET'&&action==='session')return res.json({ok:true});
