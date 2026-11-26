@@ -56,6 +56,14 @@ public final class ArchiveSyncClient implements ClientModInitializer {
                 host, config.endpoint(), config.token());
         activeHandler = handler;
         queue.setActive(true);
+        if (client.player != null && !(client.currentScreen instanceof CreativeInventoryScreen)) {
+            PlayerInventory inventory = client.player.getInventory();
+            for (int slot = 0; slot < inventory.size(); slot++) observe(inventory.getStack(slot));
+            if (client.currentScreen instanceof HandledScreen<?> screen) {
+                ScreenHandler open = screen.getScreenHandler();
+                if (open == client.player.currentScreenHandler) inventoryUpdated(handler, open.syncId, open.slots.size());
+            }
+        }
     }
 
     public static void disconnected() {
