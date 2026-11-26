@@ -421,6 +421,11 @@
       "name": "Макет ракеты",
       "sourceId": "game-a8e2df6033a1a386ce1930683921582dfd025d4bd773462d4d1d6033d8d71b9e",
       "updatedAt": "2026-11-26T22:05:57.402Z"
+    },
+    "rabbit_foot:52": {
+      "name": "Лампа НЛО",
+      "sourceId": "game-9c738b5e7d4b1e0a376d2c6e6ecba6474f1081bc95639bd33fc04b008f0dcb67",
+      "updatedAt": "2026-11-26T22:05:59.396Z"
     }
   },
   "history": {
@@ -1358,6 +1363,18 @@
           "name": "Макет ракеты",
           "sourceId": "game-a8e2df6033a1a386ce1930683921582dfd025d4bd773462d4d1d6033d8d71b9e",
           "updatedAt": "2026-11-26T22:05:57.402Z"
+        }
+      }
+    ],
+    "rabbit_foot:52": [
+      {
+        "at": "2026-11-26T22:05:59.396Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Лампа НЛО",
+          "sourceId": "game-9c738b5e7d4b1e0a376d2c6e6ecba6474f1081bc95639bd33fc04b008f0dcb67",
+          "updatedAt": "2026-11-26T22:05:59.396Z"
         }
       }
     ]
