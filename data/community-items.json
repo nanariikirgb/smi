@@ -3357,6 +3357,342 @@
       "price": 80000,
       "sourceId": "game-84f3dc5bc653ea64993b8798dce11869a5c53558c7f5b088a32b8a8019366203",
       "updatedAt": "2026-11-26T22:28:25.816Z"
+    },
+    "golden_chestplate:267": {
+      "name": "Комплект \"Miles\"",
+      "price": 80000,
+      "sourceId": "game-130c7e41eec1b4e988094aa0d9d60386c2766130a911a2c07132775f71d3c93f",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:101": {
+      "name": "Куртка \"Akatsuki\"",
+      "price": 100000,
+      "sourceId": "game-48c094f842638fd1ffd6fb7adcbefbfaa15dafe17155fc5e40c5e9f511664b6f",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:133": {
+      "name": "Куртка \"Warface\"",
+      "price": 80000,
+      "sourceId": "game-5702ef828322fcb1dc11f45f2993bcb5170ef924db34e61dfcaa1304727247e9",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:244": {
+      "name": "Костюм \"Дуо\"",
+      "price": 80000,
+      "sourceId": "game-6d37dddf31f9135db18122057fd1dd68ca766732feb3fded9f40665f7cb1d55a",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:240": {
+      "name": "Костюм \"Дуо\"",
+      "price": 80000,
+      "sourceId": "game-6deb9c5e101c37922f006c799772ddb11fa4be86efe306197928a0116b1fb703",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:100": {
+      "name": "Куртка \"Naruto\"",
+      "price": 100000,
+      "sourceId": "game-7efc9da3a42b90485f193e855e8b25164bc20e92620339f6d6e40a9010da5cb4",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:243": {
+      "name": "Пиджак со свитером",
+      "price": 80000,
+      "sourceId": "game-90351c463373b3cefea857a444c6aa9f8c751426819bfc5ff4042750fde7a4a1",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:563": {
+      "name": "Куртка \"MilfHunter\"",
+      "price": 80000,
+      "sourceId": "game-b6aab8d8c8782176fde974e87fe285dbd960caf5dfb3248072723a9662525afb",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:237": {
+      "name": "Двубортный костюм",
+      "price": 90000,
+      "sourceId": "game-d8acfe6575baf5b1d8495d1e204dd8f87eddc3cc47f3ac756190a22e7f72c889",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:262": {
+      "name": "Худи \"CryCubes\"",
+      "price": 100000,
+      "sourceId": "game-00cedb9e533871e1dc2475ddb1f68a57bb526547cd38fc8905fd43aa0c626071",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:86": {
+      "name": "Куртка MonsterEnergy",
+      "price": 120000,
+      "sourceId": "game-2013dcdc93781b9b969c0d5e0e514ece93219c75f2c6aebf1831b9e6e90bd5be",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:283": {
+      "name": "Куртка \"Гон\"",
+      "price": 110000,
+      "sourceId": "game-2a5054b085d400ea067ab43bc110f4194007e109821f1b325776077619ced43f",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:275": {
+      "name": "Хаори \"Зеницу\"",
+      "price": 111000,
+      "sourceId": "game-33b24968aac4bd7274c4ad986d31b56fad4f5f38a5ac06a2e0054133dfed41b2",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:743": {
+      "name": "Кроп-худи \"PlayBoy Pink\"",
+      "price": 100000,
+      "sourceId": "game-3c1a5623d155e188091d88a3d257a416797964811daecfd1576510f8633fc67f",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:353": {
+      "name": "Куртка \"Крутой хлеб\"",
+      "price": 100000,
+      "sourceId": "game-631163cb1242c5a625173738dcd22a885378fda6835c44705fa2a09d75ab703a",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:91": {
+      "name": "Свитер Hentai",
+      "price": 120000,
+      "sourceId": "game-6ff287fb030e76f28f914b4135cae3ffe433abf153112d94202cbea1c320e9f8",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:264": {
+      "name": "Куртка \"RetroWave\"",
+      "price": 100000,
+      "sourceId": "game-7059f9e31db1abe73800dfa2a2213ca6122f17fd7183f245424f70eff17b3cdb",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:576": {
+      "name": "Куртка \"Ло\"",
+      "price": 110000,
+      "sourceId": "game-a02d925d84bb7fc8bc253598f23638f2d69502b673a61e50769c0cfeaee72eca",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:584": {
+      "name": "Жилетка \"Rubik\"",
+      "price": 100000,
+      "sourceId": "game-acecd75166e89e412e937e44d7789614565586b5f6c1d9a06e8e4062e191f7cc",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:308": {
+      "name": "Багряна куртка с рубашкой",
+      "price": 100000,
+      "sourceId": "game-bd3bf6425a0a50b51e1798589a7fd0fc8b8fd0c04c02c1d53089e9cfda6eea51",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:738": {
+      "name": "Кроп-худи \"Juicy\"",
+      "price": 100000,
+      "sourceId": "game-ca868ec6eace28e78c864fb232cc01ed382d0d396c7574329728ad77d44aa574",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:274": {
+      "name": "Хаори \"Тандзиро\"",
+      "price": 110000,
+      "sourceId": "game-cde514eda58ee5bee96ae725eb039e4e3372c49f36148474bb1c41df44b2625a",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:282": {
+      "name": "Куртка \"Симон\"",
+      "price": 110000,
+      "sourceId": "game-d610dc89dc0163656b0d421174d846e71e03a2ca88f4d1404fdeced65dcaa9c7",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:106": {
+      "name": "Mako",
+      "price": 120000,
+      "sourceId": "game-daca74e66ccb17f17fdc649404ba0417c40ec5e9fbce1b9d936e39be27aca92c",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:307": {
+      "name": "Куртка \"Бобр\"",
+      "price": 100000,
+      "sourceId": "game-eefc9238f62800f8e2b7e72abeb7599c4dc4029c10417cdd7706c456db8630f2",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:582": {
+      "name": "Жилетка \"Nikotin\"",
+      "price": 100000,
+      "sourceId": "game-fdd9c561f74503bc9bce619b5cac02f12e5cb367e7dc97b44de432a7a7c3ca36",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:27": {
+      "name": "Куртка Overwatch",
+      "price": 130000,
+      "sourceId": "game-299602e648e62dcd22343914ff3645b546753c8afc0677d24fa626b62c72c78c",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:737": {
+      "name": "Поло \"Burberry Women\"",
+      "price": 125000,
+      "sourceId": "game-2c72fbfda0f4e54e4b54fa4c1500976f24371ba581d980e197880d91f73d9b7a",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:732": {
+      "name": "Олимпийка \"Adidas Japan\"",
+      "price": 130000,
+      "sourceId": "game-302339966805edfd99daac744c28a29f6d1b4a9859dd1e891a463e6b79691d39",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:266": {
+      "name": "Мантия \"Cult\"",
+      "price": 125000,
+      "sourceId": "game-3186237669e430db9edb8a80a69c3a0d6276f2d3765b6627f5d42a490da20836",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:278": {
+      "name": "Лонгсвит \"Киллуа\"",
+      "price": 120000,
+      "sourceId": "game-9f904f6126de6cbbf9760a261cd39d402290f4365bfb41124286bb31a10cf071",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:744": {
+      "name": "Поло \"Lacoste\"",
+      "price": 125000,
+      "sourceId": "game-a0c2b72ad2073002624492e5e255cce35a1be180115005875616b00ce2acd5ee",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:403": {
+      "name": "Куртка \"Вальхалла\"",
+      "price": 130000,
+      "sourceId": "game-cb62ce9a84f7c6afddb06fb9db1cabdfdc1cfec246685c9cde722e07878fca0d",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:279": {
+      "name": "Школьная форма \"Лелуш Ламперуж\"",
+      "price": 130000,
+      "sourceId": "game-d5cbb8544d3cabd0dbb6107c009362f2f0e2a1402065455596a2b85ae0276169",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:581": {
+      "name": "Куртка \"KINO\"",
+      "price": 120000,
+      "sourceId": "game-d7cbb931472359c0b6f96ae625387ddbf13a4243b6daf8105167c1048113fe6d",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:25": {
+      "name": "BlueFire",
+      "price": 150000,
+      "sourceId": "game-df053d11c12b79017901c2d8fe63f01c72e578d1d5b6891c4b71ffbad2ad533c",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:26": {
+      "name": "Fire",
+      "price": 150000,
+      "sourceId": "game-ede67f4048f00a08f2e61cc149cc12f6db72a95a0344f113497faf302c7a7e10",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:280": {
+      "name": "Куртка \"Разведкорпус\"",
+      "price": 140000,
+      "sourceId": "game-f76bc6297ed9f35c3e8c3fdb1341a603d9c04aea3d5fe47681fde6d3c740195d",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:102": {
+      "name": "Куртка \"Bananza\"",
+      "price": 125000,
+      "sourceId": "game-fde177c65a76b313a31ce0def6162543662b0f3f589d5238f82794b2509abdf1",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:595": {
+      "name": "Лонг \"Аутсайдер\"",
+      "price": 200000,
+      "sourceId": "game-0ead27e7e4e397fbbe68d5afaad21f682de906dc625b08e66a89cb91139a2557",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:273": {
+      "name": "Куртка \"JOJO\"",
+      "price": 150000,
+      "sourceId": "game-16dfa174765da49e6581708fb27ea9ff85b9f4e8044ec5af0c854b9549015583",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:748": {
+      "name": "Майка MiuMiu",
+      "price": 150000,
+      "sourceId": "game-1a68c4256a3ae27022797509d8616aee4b346b6eff53958b312318b3de2db1f5",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:272": {
+      "name": "Школьная форма \"Джотаро\"",
+      "price": 150000,
+      "sourceId": "game-2b8b2e383cdace0f36c7b273d3adbd862042e6f4aa0b002762a609bb102293ae",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:745": {
+      "name": "Футболка \"Acne Studio\"",
+      "price": 190000,
+      "sourceId": "game-6b561ed588f67cace3fcbbc03196a1d71bdb896f9580970430e08e6e7063d3f5",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:571": {
+      "name": "Жилетка \"TNF Smooth\"",
+      "price": 150000,
+      "sourceId": "game-7b5670f09fb4773956e5d409b78b5140017fb183a93e7e424753f9a113ebedfc",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:441": {
+      "name": "Куртка \"FireLove\"",
+      "price": 170000,
+      "sourceId": "game-88bb525664fe90929325cf343dc691bbff602c3af53fb5ca07bc970f97c7877d",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:505": {
+      "name": "Куртка \"hlx\"",
+      "price": 200000,
+      "sourceId": "game-8dbfd0d3196fc83fed8620fb2b1562dd4f803cbdd6e5071a7a290669f253581c",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:330": {
+      "name": "Куртка \"KAIJU\"",
+      "price": 150000,
+      "sourceId": "game-c6001fa1b291053d1df0a2819def19a2b66fb54f07279ad5e903c0d7e45d159d",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:351": {
+      "name": "Худи \"Манки\"",
+      "price": 175000,
+      "sourceId": "game-ca422c498ed309ab5b985a60dcff2625c1d9acd56f7f187038796de89927f587",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:281": {
+      "name": "Куртка \"С.С.\"",
+      "price": 150000,
+      "sourceId": "game-d44d2a037193d11afd6418ec71f9146b95276c7135656069bd2fdb86c89a90b4",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:248": {
+      "name": "Костюм \"Trio\"",
+      "price": 180000,
+      "sourceId": "game-f06948afa9d2e42910ae1185e1cfadfe855475c5dbb809112790e30d2c5b98d5",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:245": {
+      "name": "Костюм с жилеткой",
+      "price": 180000,
+      "sourceId": "game-f285944e7e67f4984b637cd386ef8cf32834d696979f65fed1a4085b895460d6",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:604": {
+      "name": "Куртка \"Weed\"",
+      "price": 175000,
+      "sourceId": "game-fc1f2d38cc8712a9d8bb980914584647ae8290f612bc1d0497e8beea286e4506",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:735": {
+      "name": "Худи \"Balenciaga White\"",
+      "price": 450000,
+      "sourceId": "game-40eb277737c2d7097671b99d453bac58da4d540ca7a0d1ffa28bed31d7100fca",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:36": {
+      "name": "Fire Skull",
+      "price": 300000,
+      "sourceId": "game-42bddcabb3ea103f16c0a084b19a61495f9e903e7a53b85e9bb86c98542c57be",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
+    },
+    "golden_chestplate:740": {
+      "name": "Пуховик \"Balenciaga\"",
+      "price": 450000,
+      "sourceId": "game-8a7cad15b68fa054255ba119012ebb561fa99745322e6509f03f4bf1e372ae93",
+      "updatedAt": "2026-11-26T22:30:52.044Z"
     }
   },
   "history": {
@@ -10761,6 +11097,734 @@
           "price": 80000,
           "sourceId": "game-84f3dc5bc653ea64993b8798dce11869a5c53558c7f5b088a32b8a8019366203",
           "updatedAt": "2026-11-26T22:28:25.816Z"
+        }
+      }
+    ],
+    "golden_chestplate:267": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Комплект \"Miles\"",
+          "price": 80000,
+          "sourceId": "game-130c7e41eec1b4e988094aa0d9d60386c2766130a911a2c07132775f71d3c93f",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:101": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Akatsuki\"",
+          "price": 100000,
+          "sourceId": "game-48c094f842638fd1ffd6fb7adcbefbfaa15dafe17155fc5e40c5e9f511664b6f",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:133": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Warface\"",
+          "price": 80000,
+          "sourceId": "game-5702ef828322fcb1dc11f45f2993bcb5170ef924db34e61dfcaa1304727247e9",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:244": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм \"Дуо\"",
+          "price": 80000,
+          "sourceId": "game-6d37dddf31f9135db18122057fd1dd68ca766732feb3fded9f40665f7cb1d55a",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:240": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм \"Дуо\"",
+          "price": 80000,
+          "sourceId": "game-6deb9c5e101c37922f006c799772ddb11fa4be86efe306197928a0116b1fb703",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:100": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Naruto\"",
+          "price": 100000,
+          "sourceId": "game-7efc9da3a42b90485f193e855e8b25164bc20e92620339f6d6e40a9010da5cb4",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:243": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пиджак со свитером",
+          "price": 80000,
+          "sourceId": "game-90351c463373b3cefea857a444c6aa9f8c751426819bfc5ff4042750fde7a4a1",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:563": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"MilfHunter\"",
+          "price": 80000,
+          "sourceId": "game-b6aab8d8c8782176fde974e87fe285dbd960caf5dfb3248072723a9662525afb",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:237": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Двубортный костюм",
+          "price": 90000,
+          "sourceId": "game-d8acfe6575baf5b1d8495d1e204dd8f87eddc3cc47f3ac756190a22e7f72c889",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:262": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Худи \"CryCubes\"",
+          "price": 100000,
+          "sourceId": "game-00cedb9e533871e1dc2475ddb1f68a57bb526547cd38fc8905fd43aa0c626071",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:86": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка MonsterEnergy",
+          "price": 120000,
+          "sourceId": "game-2013dcdc93781b9b969c0d5e0e514ece93219c75f2c6aebf1831b9e6e90bd5be",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:283": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Гон\"",
+          "price": 110000,
+          "sourceId": "game-2a5054b085d400ea067ab43bc110f4194007e109821f1b325776077619ced43f",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:275": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Хаори \"Зеницу\"",
+          "price": 111000,
+          "sourceId": "game-33b24968aac4bd7274c4ad986d31b56fad4f5f38a5ac06a2e0054133dfed41b2",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:743": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кроп-худи \"PlayBoy Pink\"",
+          "price": 100000,
+          "sourceId": "game-3c1a5623d155e188091d88a3d257a416797964811daecfd1576510f8633fc67f",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:353": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Крутой хлеб\"",
+          "price": 100000,
+          "sourceId": "game-631163cb1242c5a625173738dcd22a885378fda6835c44705fa2a09d75ab703a",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:91": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Свитер Hentai",
+          "price": 120000,
+          "sourceId": "game-6ff287fb030e76f28f914b4135cae3ffe433abf153112d94202cbea1c320e9f8",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:264": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"RetroWave\"",
+          "price": 100000,
+          "sourceId": "game-7059f9e31db1abe73800dfa2a2213ca6122f17fd7183f245424f70eff17b3cdb",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:576": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Ло\"",
+          "price": 110000,
+          "sourceId": "game-a02d925d84bb7fc8bc253598f23638f2d69502b673a61e50769c0cfeaee72eca",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:584": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Жилетка \"Rubik\"",
+          "price": 100000,
+          "sourceId": "game-acecd75166e89e412e937e44d7789614565586b5f6c1d9a06e8e4062e191f7cc",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:308": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Багряна куртка с рубашкой",
+          "price": 100000,
+          "sourceId": "game-bd3bf6425a0a50b51e1798589a7fd0fc8b8fd0c04c02c1d53089e9cfda6eea51",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:738": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кроп-худи \"Juicy\"",
+          "price": 100000,
+          "sourceId": "game-ca868ec6eace28e78c864fb232cc01ed382d0d396c7574329728ad77d44aa574",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:274": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Хаори \"Тандзиро\"",
+          "price": 110000,
+          "sourceId": "game-cde514eda58ee5bee96ae725eb039e4e3372c49f36148474bb1c41df44b2625a",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:282": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Симон\"",
+          "price": 110000,
+          "sourceId": "game-d610dc89dc0163656b0d421174d846e71e03a2ca88f4d1404fdeced65dcaa9c7",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:106": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Mako",
+          "price": 120000,
+          "sourceId": "game-daca74e66ccb17f17fdc649404ba0417c40ec5e9fbce1b9d936e39be27aca92c",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:307": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Бобр\"",
+          "price": 100000,
+          "sourceId": "game-eefc9238f62800f8e2b7e72abeb7599c4dc4029c10417cdd7706c456db8630f2",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:582": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Жилетка \"Nikotin\"",
+          "price": 100000,
+          "sourceId": "game-fdd9c561f74503bc9bce619b5cac02f12e5cb367e7dc97b44de432a7a7c3ca36",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:27": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка Overwatch",
+          "price": 130000,
+          "sourceId": "game-299602e648e62dcd22343914ff3645b546753c8afc0677d24fa626b62c72c78c",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:737": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Поло \"Burberry Women\"",
+          "price": 125000,
+          "sourceId": "game-2c72fbfda0f4e54e4b54fa4c1500976f24371ba581d980e197880d91f73d9b7a",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:732": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Олимпийка \"Adidas Japan\"",
+          "price": 130000,
+          "sourceId": "game-302339966805edfd99daac744c28a29f6d1b4a9859dd1e891a463e6b79691d39",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:266": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Мантия \"Cult\"",
+          "price": 125000,
+          "sourceId": "game-3186237669e430db9edb8a80a69c3a0d6276f2d3765b6627f5d42a490da20836",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:278": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Лонгсвит \"Киллуа\"",
+          "price": 120000,
+          "sourceId": "game-9f904f6126de6cbbf9760a261cd39d402290f4365bfb41124286bb31a10cf071",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:744": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Поло \"Lacoste\"",
+          "price": 125000,
+          "sourceId": "game-a0c2b72ad2073002624492e5e255cce35a1be180115005875616b00ce2acd5ee",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:403": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Вальхалла\"",
+          "price": 130000,
+          "sourceId": "game-cb62ce9a84f7c6afddb06fb9db1cabdfdc1cfec246685c9cde722e07878fca0d",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:279": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Школьная форма \"Лелуш Ламперуж\"",
+          "price": 130000,
+          "sourceId": "game-d5cbb8544d3cabd0dbb6107c009362f2f0e2a1402065455596a2b85ae0276169",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:581": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"KINO\"",
+          "price": 120000,
+          "sourceId": "game-d7cbb931472359c0b6f96ae625387ddbf13a4243b6daf8105167c1048113fe6d",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:25": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "BlueFire",
+          "price": 150000,
+          "sourceId": "game-df053d11c12b79017901c2d8fe63f01c72e578d1d5b6891c4b71ffbad2ad533c",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:26": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Fire",
+          "price": 150000,
+          "sourceId": "game-ede67f4048f00a08f2e61cc149cc12f6db72a95a0344f113497faf302c7a7e10",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:280": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Разведкорпус\"",
+          "price": 140000,
+          "sourceId": "game-f76bc6297ed9f35c3e8c3fdb1341a603d9c04aea3d5fe47681fde6d3c740195d",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:102": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Bananza\"",
+          "price": 125000,
+          "sourceId": "game-fde177c65a76b313a31ce0def6162543662b0f3f589d5238f82794b2509abdf1",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:595": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Лонг \"Аутсайдер\"",
+          "price": 200000,
+          "sourceId": "game-0ead27e7e4e397fbbe68d5afaad21f682de906dc625b08e66a89cb91139a2557",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:273": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"JOJO\"",
+          "price": 150000,
+          "sourceId": "game-16dfa174765da49e6581708fb27ea9ff85b9f4e8044ec5af0c854b9549015583",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:748": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Майка MiuMiu",
+          "price": 150000,
+          "sourceId": "game-1a68c4256a3ae27022797509d8616aee4b346b6eff53958b312318b3de2db1f5",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:272": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Школьная форма \"Джотаро\"",
+          "price": 150000,
+          "sourceId": "game-2b8b2e383cdace0f36c7b273d3adbd862042e6f4aa0b002762a609bb102293ae",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:745": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Футболка \"Acne Studio\"",
+          "price": 190000,
+          "sourceId": "game-6b561ed588f67cace3fcbbc03196a1d71bdb896f9580970430e08e6e7063d3f5",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:571": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Жилетка \"TNF Smooth\"",
+          "price": 150000,
+          "sourceId": "game-7b5670f09fb4773956e5d409b78b5140017fb183a93e7e424753f9a113ebedfc",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:441": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"FireLove\"",
+          "price": 170000,
+          "sourceId": "game-88bb525664fe90929325cf343dc691bbff602c3af53fb5ca07bc970f97c7877d",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:505": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"hlx\"",
+          "price": 200000,
+          "sourceId": "game-8dbfd0d3196fc83fed8620fb2b1562dd4f803cbdd6e5071a7a290669f253581c",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:330": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"KAIJU\"",
+          "price": 150000,
+          "sourceId": "game-c6001fa1b291053d1df0a2819def19a2b66fb54f07279ad5e903c0d7e45d159d",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:351": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Худи \"Манки\"",
+          "price": 175000,
+          "sourceId": "game-ca422c498ed309ab5b985a60dcff2625c1d9acd56f7f187038796de89927f587",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:281": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"С.С.\"",
+          "price": 150000,
+          "sourceId": "game-d44d2a037193d11afd6418ec71f9146b95276c7135656069bd2fdb86c89a90b4",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:248": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм \"Trio\"",
+          "price": 180000,
+          "sourceId": "game-f06948afa9d2e42910ae1185e1cfadfe855475c5dbb809112790e30d2c5b98d5",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:245": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм с жилеткой",
+          "price": 180000,
+          "sourceId": "game-f285944e7e67f4984b637cd386ef8cf32834d696979f65fed1a4085b895460d6",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:604": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Куртка \"Weed\"",
+          "price": 175000,
+          "sourceId": "game-fc1f2d38cc8712a9d8bb980914584647ae8290f612bc1d0497e8beea286e4506",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:735": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Худи \"Balenciaga White\"",
+          "price": 450000,
+          "sourceId": "game-40eb277737c2d7097671b99d453bac58da4d540ca7a0d1ffa28bed31d7100fca",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:36": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Fire Skull",
+          "price": 300000,
+          "sourceId": "game-42bddcabb3ea103f16c0a084b19a61495f9e903e7a53b85e9bb86c98542c57be",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
+        }
+      }
+    ],
+    "golden_chestplate:740": [
+      {
+        "at": "2026-11-26T22:30:52.044Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пуховик \"Balenciaga\"",
+          "price": 450000,
+          "sourceId": "game-8a7cad15b68fa054255ba119012ebb561fa99745322e6509f03f4bf1e372ae93",
+          "updatedAt": "2026-11-26T22:30:52.044Z"
         }
       }
     ]
