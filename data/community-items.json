@@ -358,6 +358,13 @@
       "price": 80000,
       "sourceId": "game-4aafe3fb009a5133569cc926644dac7b5fa280e1bf1225045c353c1fd82c1fbe",
       "updatedAt": "2026-11-26T21:59:34.139Z"
+    },
+    "golden_horse_armor:810": {
+      "name": "Зонт Лолиты",
+      "rarity": "Limited",
+      "price": 100000,
+      "sourceId": "game-58c62e398ad563f6a88dee083d56b4960683b99902232df7504a4a4d79f32fc9",
+      "updatedAt": "2026-11-26T21:59:35.775Z"
     }
   },
   "history": {
@@ -1155,6 +1162,20 @@
           "price": 80000,
           "sourceId": "game-4aafe3fb009a5133569cc926644dac7b5fa280e1bf1225045c353c1fd82c1fbe",
           "updatedAt": "2026-11-26T21:59:34.139Z"
+        }
+      }
+    ],
+    "golden_horse_armor:810": [
+      {
+        "at": "2026-11-26T21:59:35.775Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Зонт Лолиты",
+          "rarity": "Limited",
+          "price": 100000,
+          "sourceId": "game-58c62e398ad563f6a88dee083d56b4960683b99902232df7504a4a4d79f32fc9",
+          "updatedAt": "2026-11-26T21:59:35.775Z"
         }
       }
     ]
