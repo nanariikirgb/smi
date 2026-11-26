@@ -1197,6 +1197,14 @@
       "name": "XIAOMI",
       "sourceId": "game-dfbb3620704401e9f4e30a284388760ebaba1eae2e8cc5cd0238a04afb046d60",
       "updatedAt": "2026-11-26T22:09:39.999Z"
+    },
+    "golden_chestplate:277": {
+      "name": "Форма \"Виктория\"",
+      "rarity": "Rare",
+      "price": 111000,
+      "collection": "AniCosplay",
+      "sourceId": "game-df136f78175118f9934825dcb72578491f69d77436774234c5af1b8b7ce819d3",
+      "updatedAt": "2026-11-26T22:10:51.256Z"
     }
   },
   "history": {
@@ -3880,6 +3888,21 @@
           "name": "XIAOMI",
           "sourceId": "game-dfbb3620704401e9f4e30a284388760ebaba1eae2e8cc5cd0238a04afb046d60",
           "updatedAt": "2026-11-26T22:09:39.999Z"
+        }
+      }
+    ],
+    "golden_chestplate:277": [
+      {
+        "at": "2026-11-26T22:10:51.256Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Форма \"Виктория\"",
+          "rarity": "Rare",
+          "price": 111000,
+          "collection": "AniCosplay",
+          "sourceId": "game-df136f78175118f9934825dcb72578491f69d77436774234c5af1b8b7ce819d3",
+          "updatedAt": "2026-11-26T22:10:51.256Z"
         }
       }
     ]
