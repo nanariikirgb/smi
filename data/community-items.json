@@ -228,6 +228,13 @@
       "price": 150000,
       "sourceId": "game-64ed435a6594d1f2ab771dc0f96e87a549624516cd6803df8107f4d14a76ee08",
       "updatedAt": "2026-11-26T21:57:17.003Z"
+    },
+    "diamond_horse_armor:507": {
+      "name": "Зимняя шапка \"DJRETRO\"",
+      "rarity": "Epic",
+      "price": 200000,
+      "sourceId": "game-462f2a2d69068ae7577b967ffa5842677534eb97960ebc07e99adf7f829c17e6",
+      "updatedAt": "2026-11-26T21:57:22.627Z"
     }
   },
   "history": {
@@ -725,6 +732,20 @@
           "price": 150000,
           "sourceId": "game-64ed435a6594d1f2ab771dc0f96e87a549624516cd6803df8107f4d14a76ee08",
           "updatedAt": "2026-11-26T21:57:17.003Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:507": [
+      {
+        "at": "2026-11-26T21:57:22.627Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Зимняя шапка \"DJRETRO\"",
+          "rarity": "Epic",
+          "price": 200000,
+          "sourceId": "game-462f2a2d69068ae7577b967ffa5842677534eb97960ebc07e99adf7f829c17e6",
+          "updatedAt": "2026-11-26T21:57:22.627Z"
         }
       }
     ]
