@@ -416,6 +416,11 @@
       "name": "Газировка \"Футурама\"",
       "sourceId": "game-b2d65c070b2033c19ab30d800d992ca734350264f197677fef5b7beea71aecf0",
       "updatedAt": "2026-11-26T22:05:55.444Z"
+    },
+    "rabbit_foot:55": {
+      "name": "Макет ракеты",
+      "sourceId": "game-a8e2df6033a1a386ce1930683921582dfd025d4bd773462d4d1d6033d8d71b9e",
+      "updatedAt": "2026-11-26T22:05:57.402Z"
     }
   },
   "history": {
@@ -1341,6 +1346,18 @@
           "name": "Газировка \"Футурама\"",
           "sourceId": "game-b2d65c070b2033c19ab30d800d992ca734350264f197677fef5b7beea71aecf0",
           "updatedAt": "2026-11-26T22:05:55.444Z"
+        }
+      }
+    ],
+    "rabbit_foot:55": [
+      {
+        "at": "2026-11-26T22:05:57.402Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Макет ракеты",
+          "sourceId": "game-a8e2df6033a1a386ce1930683921582dfd025d4bd773462d4d1d6033d8d71b9e",
+          "updatedAt": "2026-11-26T22:05:57.402Z"
         }
       }
     ]
