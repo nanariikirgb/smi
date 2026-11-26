@@ -365,6 +365,13 @@
       "price": 100000,
       "sourceId": "game-58c62e398ad563f6a88dee083d56b4960683b99902232df7504a4a4d79f32fc9",
       "updatedAt": "2026-11-26T21:59:35.775Z"
+    },
+    "diamond_horse_armor:291": {
+      "name": "Рогатая шапка MELODY",
+      "rarity": "Epic",
+      "price": 200000,
+      "sourceId": "game-8710cc5a9c5a85c2cef4006fe68927482bbd3a9b8d2fbff23b97ce6d808312bf",
+      "updatedAt": "2026-11-26T21:59:38.541Z"
     }
   },
   "history": {
@@ -1176,6 +1183,20 @@
           "price": 100000,
           "sourceId": "game-58c62e398ad563f6a88dee083d56b4960683b99902232df7504a4a4d79f32fc9",
           "updatedAt": "2026-11-26T21:59:35.775Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:291": [
+      {
+        "at": "2026-11-26T21:59:38.541Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Рогатая шапка MELODY",
+          "rarity": "Epic",
+          "price": 200000,
+          "sourceId": "game-8710cc5a9c5a85c2cef4006fe68927482bbd3a9b8d2fbff23b97ce6d808312bf",
+          "updatedAt": "2026-11-26T21:59:38.541Z"
         }
       }
     ]
