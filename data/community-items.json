@@ -481,6 +481,11 @@
       "name": "Milka Strawberry",
       "sourceId": "game-005090c86ab6ea51968217009ccc4c14a33b08c98c6eedfa364e4546b46cc7fb",
       "updatedAt": "2026-11-26T22:06:24.013Z"
+    },
+    "golden_carrot:155": {
+      "name": "Воппер",
+      "sourceId": "game-de9e6ab674c00abafa7f84840bd7861ea494c9044f5f1aacbad36a7a693a2f11",
+      "updatedAt": "2026-11-26T22:06:25.430Z"
     }
   },
   "history": {
@@ -1562,6 +1567,18 @@
           "name": "Milka Strawberry",
           "sourceId": "game-005090c86ab6ea51968217009ccc4c14a33b08c98c6eedfa364e4546b46cc7fb",
           "updatedAt": "2026-11-26T22:06:24.013Z"
+        }
+      }
+    ],
+    "golden_carrot:155": [
+      {
+        "at": "2026-11-26T22:06:25.430Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Воппер",
+          "sourceId": "game-de9e6ab674c00abafa7f84840bd7861ea494c9044f5f1aacbad36a7a693a2f11",
+          "updatedAt": "2026-11-26T22:06:25.430Z"
         }
       }
     ]
