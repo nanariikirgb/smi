@@ -535,6 +535,13 @@
       "name": "Milka Cookie",
       "sourceId": "game-7d37c409f38a3a139cc73cd708c7b6501ab2644a6c7e660cf455ab4667fa8480",
       "updatedAt": "2026-11-26T22:06:54.229Z"
+    },
+    "diamond_horse_armor:495": {
+      "name": "Белая акубра",
+      "rarity": "Uncommon",
+      "price": 70000,
+      "sourceId": "game-6caef955aec3e09e27f1bbc94e94336967e9f0062c524cebbdb597ed19bf8c83",
+      "updatedAt": "2026-11-26T22:07:08.961Z"
     }
   },
   "history": {
@@ -1740,6 +1747,20 @@
           "name": "Milka Cookie",
           "sourceId": "game-7d37c409f38a3a139cc73cd708c7b6501ab2644a6c7e660cf455ab4667fa8480",
           "updatedAt": "2026-11-26T22:06:54.229Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:495": [
+      {
+        "at": "2026-11-26T22:07:08.961Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Белая акубра",
+          "rarity": "Uncommon",
+          "price": 70000,
+          "sourceId": "game-6caef955aec3e09e27f1bbc94e94336967e9f0062c524cebbdb597ed19bf8c83",
+          "updatedAt": "2026-11-26T22:07:08.961Z"
         }
       }
     ]
