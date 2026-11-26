@@ -95,6 +95,13 @@
       "rarity": "Ultimate",
       "sourceId": "14",
       "updatedAt": "2026-11-26T21:29:43.671Z"
+    },
+    "golden_horse_armor:777": {
+      "name": "Катана \"Сад\"",
+      "price": 2500000,
+      "rarity": "Ultimate",
+      "sourceId": "15",
+      "updatedAt": "2026-11-26T21:29:48.039Z"
     }
   },
   "history": {
@@ -280,6 +287,20 @@
           "rarity": "Ultimate",
           "sourceId": "14",
           "updatedAt": "2026-11-26T21:29:43.671Z"
+        }
+      }
+    ],
+    "golden_horse_armor:777": [
+      {
+        "at": "2026-11-26T21:29:48.039Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Катана \"Сад\"",
+          "price": 2500000,
+          "rarity": "Ultimate",
+          "sourceId": "15",
+          "updatedAt": "2026-11-26T21:29:48.039Z"
         }
       }
     ]
