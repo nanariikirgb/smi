@@ -25,6 +25,13 @@
       "rarity": "",
       "sourceId": "game-413772a8300d4e9b89bce0f5fe06c59454012f2c62f3d0834bfd75906759e936",
       "updatedAt": "2026-11-26T21:22:36.800Z"
+    },
+    "golden_horse_armor:364": {
+      "name": "Валентинка",
+      "price": null,
+      "rarity": "",
+      "sourceId": "5",
+      "updatedAt": "2026-11-26T21:25:39.077Z"
     }
   },
   "history": {
@@ -70,6 +77,20 @@
           "rarity": "",
           "sourceId": "game-413772a8300d4e9b89bce0f5fe06c59454012f2c62f3d0834bfd75906759e936",
           "updatedAt": "2026-11-26T21:22:36.800Z"
+        }
+      }
+    ],
+    "golden_horse_armor:364": [
+      {
+        "at": "2026-11-26T21:25:39.077Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Валентинка",
+          "price": null,
+          "rarity": "",
+          "sourceId": "5",
+          "updatedAt": "2026-11-26T21:25:39.077Z"
         }
       }
     ]
