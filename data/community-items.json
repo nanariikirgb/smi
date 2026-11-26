@@ -167,6 +167,11 @@
       "name": "Вафли",
       "sourceId": "game-feb282daa4df52daf3b8c6b6fbebcf558a8de68f54a7962b37d2412b5ff7b766",
       "updatedAt": "2026-11-26T21:55:56.616Z"
+    },
+    "golden_carrot:59": {
+      "name": "Картошка фри",
+      "sourceId": "game-fe6fe4ba60794183142b3ba3a3817e780c30371860d5f9957c0300ba428ac9e6",
+      "updatedAt": "2026-11-26T21:55:57.798Z"
     }
   },
   "history": {
@@ -508,6 +513,18 @@
           "name": "Вафли",
           "sourceId": "game-feb282daa4df52daf3b8c6b6fbebcf558a8de68f54a7962b37d2412b5ff7b766",
           "updatedAt": "2026-11-26T21:55:56.616Z"
+        }
+      }
+    ],
+    "golden_carrot:59": [
+      {
+        "at": "2026-11-26T21:55:57.798Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Картошка фри",
+          "sourceId": "game-fe6fe4ba60794183142b3ba3a3817e780c30371860d5f9957c0300ba428ac9e6",
+          "updatedAt": "2026-11-26T21:55:57.798Z"
         }
       }
     ]
