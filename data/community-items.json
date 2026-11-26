@@ -391,6 +391,11 @@
       "price": 10000,
       "sourceId": "game-23643bc802cc5d9b23d2458612788a2252fdef6f039dd242ab5b088bc66b1f8f",
       "updatedAt": "2026-11-26T22:05:25.731Z"
+    },
+    "apple:14": {
+      "name": "Клубника",
+      "sourceId": "game-dface33fe0d965e20a41208c1c0bb86ef9e15173053882b10a3c9765f562e1a9",
+      "updatedAt": "2026-11-26T22:05:40.209Z"
     }
   },
   "history": {
@@ -1256,6 +1261,18 @@
           "price": 10000,
           "sourceId": "game-23643bc802cc5d9b23d2458612788a2252fdef6f039dd242ab5b088bc66b1f8f",
           "updatedAt": "2026-11-26T22:05:25.731Z"
+        }
+      }
+    ],
+    "apple:14": [
+      {
+        "at": "2026-11-26T22:05:40.209Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Клубника",
+          "sourceId": "game-dface33fe0d965e20a41208c1c0bb86ef9e15173053882b10a3c9765f562e1a9",
+          "updatedAt": "2026-11-26T22:05:40.209Z"
         }
       }
     ]
