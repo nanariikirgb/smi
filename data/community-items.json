@@ -84,10 +84,10 @@
     },
     "golden_horse_armor:697": {
       "name": "Палка \"PickMe\"",
-      "price": null,
+      "price": 100000,
       "rarity": "",
-      "sourceId": "13",
-      "updatedAt": "2026-11-26T21:29:18.321Z"
+      "sourceId": "game-733dfd6d0c04c26f013ef5d2b9e0f5c8536f577b256fb992a72c83189100de44",
+      "updatedAt": "2026-11-26T21:57:09.080Z"
     },
     "golden_horse_armor:776": {
       "name": "Катана \"Сад\"",
@@ -387,6 +387,24 @@
           "rarity": "",
           "sourceId": "13",
           "updatedAt": "2026-11-26T21:29:18.321Z"
+        }
+      },
+      {
+        "at": "2026-11-26T21:57:09.080Z",
+        "action": "approve",
+        "before": {
+          "name": "Палка \"PickMe\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "13",
+          "updatedAt": "2026-11-26T21:29:18.321Z"
+        },
+        "after": {
+          "name": "Палка \"PickMe\"",
+          "price": 100000,
+          "rarity": "",
+          "sourceId": "game-733dfd6d0c04c26f013ef5d2b9e0f5c8536f577b256fb992a72c83189100de44",
+          "updatedAt": "2026-11-26T21:57:09.080Z"
         }
       }
     ],
