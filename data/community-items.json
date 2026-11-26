@@ -498,6 +498,11 @@
       "price": 150000,
       "sourceId": "game-c40046478cc44b82b62b04ea5bb3b5218054d668b20266c66d0564844812e091",
       "updatedAt": "2026-11-26T22:06:30.457Z"
+    },
+    "apple:9": {
+      "name": "Вишня",
+      "sourceId": "game-db0ddea5f6cdad56102313d8b26181ec5e89a07a1d6363a334010d99c76d24a8",
+      "updatedAt": "2026-11-26T22:06:32.262Z"
     }
   },
   "history": {
@@ -1617,6 +1622,18 @@
           "price": 150000,
           "sourceId": "game-c40046478cc44b82b62b04ea5bb3b5218054d668b20266c66d0564844812e091",
           "updatedAt": "2026-11-26T22:06:30.457Z"
+        }
+      }
+    ],
+    "apple:9": [
+      {
+        "at": "2026-11-26T22:06:32.262Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Вишня",
+          "sourceId": "game-db0ddea5f6cdad56102313d8b26181ec5e89a07a1d6363a334010d99c76d24a8",
+          "updatedAt": "2026-11-26T22:06:32.262Z"
         }
       }
     ]
