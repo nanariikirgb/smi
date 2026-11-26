@@ -431,6 +431,11 @@
       "name": "Шоколадное печенье",
       "sourceId": "game-8acc721513a653e828a7d7a419a0eaf16cda5eaca0813c69a33f2b13f07efd6a",
       "updatedAt": "2026-11-26T22:06:01.624Z"
+    },
+    "golden_carrot:57": {
+      "name": "МакМаффин",
+      "sourceId": "game-697aa2631aae07dcbd6767e92da84b6a805861b461950f320381aa5d9b0cc055",
+      "updatedAt": "2026-11-26T22:06:03.706Z"
     }
   },
   "history": {
@@ -1392,6 +1397,18 @@
           "name": "Шоколадное печенье",
           "sourceId": "game-8acc721513a653e828a7d7a419a0eaf16cda5eaca0813c69a33f2b13f07efd6a",
           "updatedAt": "2026-11-26T22:06:01.624Z"
+        }
+      }
+    ],
+    "golden_carrot:57": [
+      {
+        "at": "2026-11-26T22:06:03.706Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "МакМаффин",
+          "sourceId": "game-697aa2631aae07dcbd6767e92da84b6a805861b461950f320381aa5d9b0cc055",
+          "updatedAt": "2026-11-26T22:06:03.706Z"
         }
       }
     ]
