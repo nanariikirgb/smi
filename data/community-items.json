@@ -240,6 +240,13 @@
       "name": "Капучино \"Печенье и сливки\"",
       "sourceId": "game-4515e82bcbfb59ccdc666896e3fef33c280ae374c0398b94e3eb09daaccfe536",
       "updatedAt": "2026-11-26T21:57:26.728Z"
+    },
+    "golden_chestplate:498": {
+      "name": "Костюм \"Красавчик\"",
+      "rarity": "Limited",
+      "price": 150000,
+      "sourceId": "game-3b52455536164258b3f13ec72e20b5cb9c75e1db46a0c9c65bd418b91d54facd",
+      "updatedAt": "2026-11-26T21:57:29.933Z"
     }
   },
   "history": {
@@ -763,6 +770,20 @@
           "name": "Капучино \"Печенье и сливки\"",
           "sourceId": "game-4515e82bcbfb59ccdc666896e3fef33c280ae374c0398b94e3eb09daaccfe536",
           "updatedAt": "2026-11-26T21:57:26.728Z"
+        }
+      }
+    ],
+    "golden_chestplate:498": [
+      {
+        "at": "2026-11-26T21:57:29.933Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Костюм \"Красавчик\"",
+          "rarity": "Limited",
+          "price": 150000,
+          "sourceId": "game-3b52455536164258b3f13ec72e20b5cb9c75e1db46a0c9c65bd418b91d54facd",
+          "updatedAt": "2026-11-26T21:57:29.933Z"
         }
       }
     ]
