@@ -32,6 +32,13 @@
       "rarity": "",
       "sourceId": "5",
       "updatedAt": "2026-11-26T21:25:39.077Z"
+    },
+    "golden_horse_armor:407": {
+      "name": "Крылья \"Свобода\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "6",
+      "updatedAt": "2026-11-26T21:28:11.477Z"
     }
   },
   "history": {
@@ -91,6 +98,20 @@
           "rarity": "",
           "sourceId": "5",
           "updatedAt": "2026-11-26T21:25:39.077Z"
+        }
+      }
+    ],
+    "golden_horse_armor:407": [
+      {
+        "at": "2026-11-26T21:28:11.477Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Крылья \"Свобода\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "6",
+          "updatedAt": "2026-11-26T21:28:11.477Z"
         }
       }
     ]
