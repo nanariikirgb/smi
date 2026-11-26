@@ -194,6 +194,11 @@
       "name": "Heritage No.1",
       "sourceId": "game-f52ce5ac2d49dae0096be20af9542884dd719af61bf65866e1b423a2e9d359c9",
       "updatedAt": "2026-11-26T21:56:17.564Z"
+    },
+    "golden_carrot:127": {
+      "name": "Хэппи Ням",
+      "sourceId": "game-e1a5468845e492c83ebf69c898e6f924535fd47cdc18a5c817286f6de2ae3198",
+      "updatedAt": "2026-11-26T21:56:20.628Z"
     }
   },
   "history": {
@@ -597,6 +602,18 @@
           "name": "Heritage No.1",
           "sourceId": "game-f52ce5ac2d49dae0096be20af9542884dd719af61bf65866e1b423a2e9d359c9",
           "updatedAt": "2026-11-26T21:56:17.564Z"
+        }
+      }
+    ],
+    "golden_carrot:127": [
+      {
+        "at": "2026-11-26T21:56:20.628Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Хэппи Ням",
+          "sourceId": "game-e1a5468845e492c83ebf69c898e6f924535fd47cdc18a5c817286f6de2ae3198",
+          "updatedAt": "2026-11-26T21:56:20.628Z"
         }
       }
     ]
