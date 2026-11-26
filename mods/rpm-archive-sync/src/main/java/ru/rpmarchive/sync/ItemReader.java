@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.regex.*;
 
 final class ItemReader {
-    private static final Set<String> RARITIES = Set.of("Event","Rare","Uncommon","Epic","RPMPass","Common","Legendary","Season","Secret","Limited");
+    private static final Set<String> RARITIES = Set.of("Event","Rare","Uncommon","Epic","RPMPass","Common","Legendary","Season","Secret","Limited","Ultra","Collab","Collection");
     private static final Pattern PRICE = Pattern.compile("(?iu)^(?:стандартная )?цена\\s*:\\s*([0-9]{1,13}|[0-9]{1,3}(?:[ .,_\\u00a0][0-9]{3}){1,4})\\s*\\$?$");
     private static final Pattern COLLECTION = Pattern.compile("(?iu)^коллекция(?:\\s*[:—-]\\s*|\\s+)[«\"“]?([^«»\"“”]+?)[»\"”]?$");
     private static final Pattern COLLECTION_LABEL = Pattern.compile("[\\p{L}\\p{M}\\p{N} ☠&'’_-]{1,64}");
@@ -83,7 +83,7 @@ final class ItemReader {
                 if (RARITIES.contains(label)) rarity = label;
             }
         }
-        if (name.isEmpty() && price == null && collection.isEmpty()) return null;
+        if (name.isEmpty() && price == null && collection.isEmpty() && rarity.isEmpty()) return null;
         return new ArchiveItem(id.getPath(), cmd, name, price, rarity, collection);
     }
 }

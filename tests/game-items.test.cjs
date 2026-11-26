@@ -144,7 +144,7 @@ test('game observations and moderation share the existing catalogue and Redis', 
 
   await t.test('concurrent batches queue once, skip known names and require approval', async () => {
     const items = [item(633, {material:'golden_chestplate'}), item(10, {material:'emerald'}),
-      item(80, {material:'sugar',price:null}), item(99, {price:null}), item(1), item(2)];
+      item(80, {material:'sugar',price:null,rarity:''}), item(99, {price:null,rarity:''}), item(1), item(2)];
     const replies = await Promise.all([upload(items), upload(items)]);
     for (const response of replies) {
       assert.equal(response.statusCode, 200);
@@ -198,6 +198,22 @@ test('game observations and moderation share the existing catalogue and Redis', 
     assert.equal(res.statusCode, 200);
     assert.equal(community.items['paper:1'].collection, 'Old Style');
     assert.equal(community.items['paper:1'].price, 125000);
+  });
+
+  await t.test('new rarity tags are accepted, missing rarity can be filled without overwriting a name or existing rarity', async () => {
+    const validator = require('../lib/game-items').validateBatch;
+    for (const rarity of ['Ultra','Collab','Collection']) {
+      assert.equal(validator({items:[item(99,{name:'',price:null,rarity})]})[0].suggestedRarity,rarity);
+    }
+    const sent=await upload([item(99,{name:'',price:null,rarity:'Ultra'})]);
+    assert.equal(sent.statusCode,200);
+    const row=(await list()).rows.find(r=>r.key==='paper:99'&&r.suggestedRarity==='Ultra');
+    assert.ok(row);
+    const res=await moderate('game-approve',{method:'POST',cookie,body:{id:row.id,name:row.name,price:null,rarity:'Ultra'}});
+    assert.equal(res.statusCode,200);
+    assert.equal(community.items['paper:99'].name,'Известная модель');
+    assert.equal(community.items['paper:99'].rarity,'Ultra');
+    assert.equal((await upload([item(99,{name:'',price:null,rarity:'Collab'})])).body.queued,0);
   });
 
 });
