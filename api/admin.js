@@ -1,5 +1,6 @@
 const m=require('../lib/moderation');
 const discord=require('../lib/discord');
+const analytics=require('../lib/analytics');
 module.exports=async function(req,res){
  res.setHeader('Cache-Control','no-store, private');res.setHeader('X-Content-Type-Options','nosniff');
  const fail=(s,error)=>res.status(s).json({error});
@@ -16,6 +17,7 @@ module.exports=async function(req,res){
   }
   if(!await m.authenticated(req))return fail(401,'Войдите в админ-панель');
   if(req.method==='POST'&&action==='logout'){await m.logout(req,res);return res.json({ok:true})}
+  if(req.method==='GET'&&action==='analytics')return res.json(await analytics.report(req.query.days));
   if(req.method==='GET'&&action==='session')return res.json({ok:true});
   if(req.method==='GET'&&action==='catalog'){const db=await m.community();return res.json({items:db.items})}
   if(req.method==='GET'&&action==='item-history'){const key=req.query.key;if(!m.keyOk(key))return fail(400,'Неверная модель');const db=await m.community();return res.json({history:db.history[key]||[],current:db.items[key]||null})}
