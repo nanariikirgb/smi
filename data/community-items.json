@@ -331,6 +331,13 @@
       "price": 200000,
       "sourceId": "game-1121d0be147e7fdb8ad5f362b337cdb74816fdeb039acc76a3a7aa522f929d49",
       "updatedAt": "2026-11-26T21:59:23.403Z"
+    },
+    "diamond_horse_armor:760": {
+      "name": "Набор \"Гном\"",
+      "rarity": "Limited",
+      "price": 100000,
+      "sourceId": "game-2a69d201320c5977c62a7566bb3e28cc314b4943eb4ab0f99bb8727f7d334e07",
+      "updatedAt": "2026-11-26T21:59:25.948Z"
     }
   },
   "history": {
@@ -1073,6 +1080,20 @@
           "price": 200000,
           "sourceId": "game-1121d0be147e7fdb8ad5f362b337cdb74816fdeb039acc76a3a7aa522f929d49",
           "updatedAt": "2026-11-26T21:59:23.403Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:760": [
+      {
+        "at": "2026-11-26T21:59:25.948Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Набор \"Гном\"",
+          "rarity": "Limited",
+          "price": 100000,
+          "sourceId": "game-2a69d201320c5977c62a7566bb3e28cc314b4943eb4ab0f99bb8727f7d334e07",
+          "updatedAt": "2026-11-26T21:59:25.948Z"
         }
       }
     ]
