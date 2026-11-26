@@ -142,6 +142,11 @@
       "name": "CyberPhone",
       "sourceId": "game-ca900e781161e725bba54fd79c994cce4afc56d82e272179beb37496a9019cc2",
       "updatedAt": "2026-11-26T21:54:41.736Z"
+    },
+    "shulker_shell:42": {
+      "name": "Nokia DOGGI STYLE",
+      "sourceId": "game-aff7c9b943155b64493fc18afb03f6813a3b6612d886e21a872464a996807081",
+      "updatedAt": "2026-11-26T21:55:22.613Z"
     }
   },
   "history": {
@@ -423,6 +428,18 @@
           "name": "CyberPhone",
           "sourceId": "game-ca900e781161e725bba54fd79c994cce4afc56d82e272179beb37496a9019cc2",
           "updatedAt": "2026-11-26T21:54:41.736Z"
+        }
+      }
+    ],
+    "shulker_shell:42": [
+      {
+        "at": "2026-11-26T21:55:22.613Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Nokia DOGGI STYLE",
+          "sourceId": "game-aff7c9b943155b64493fc18afb03f6813a3b6612d886e21a872464a996807081",
+          "updatedAt": "2026-11-26T21:55:22.613Z"
         }
       }
     ]
