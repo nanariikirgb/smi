@@ -55,6 +55,7 @@ function card(row, fromGame = false) {
   const priceLabel = fromGame ? 'Гос. цена из Lore' : 'Предложенная цена';
   const rarityLabel = fromGame ? 'Редкость из Lore' : 'Предложенная редкость';
   if (price != null) body.append(el('p', 'comment', priceLabel + ': ' + formatPrice(price)));
+  if (row.collection) body.append(el('p', 'comment', 'Коллекция из Lore: ' + row.collection));
   if (rarity) body.append(el('p', 'comment', rarityLabel + ': ' + rarity));
   if (row.status === 'pending') {
     const absent = fromGame && row.indexed === false;
