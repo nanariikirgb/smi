@@ -471,6 +471,11 @@
       "name": "Вишнёвый чизкейк",
       "sourceId": "game-33b06742d7dffc5ad98ffac0243b013ca9279bab2ebfa2c6db86a2869274173f",
       "updatedAt": "2026-11-26T22:06:16.653Z"
+    },
+    "golden_carrot:35": {
+      "name": "Кекс \"Луна\"",
+      "sourceId": "game-0ac011ec3ce73e10e76be56564df806bace04c5924ed1e2294afd79bc44e3959",
+      "updatedAt": "2026-11-26T22:06:22.604Z"
     }
   },
   "history": {
@@ -1528,6 +1533,18 @@
           "name": "Вишнёвый чизкейк",
           "sourceId": "game-33b06742d7dffc5ad98ffac0243b013ca9279bab2ebfa2c6db86a2869274173f",
           "updatedAt": "2026-11-26T22:06:16.653Z"
+        }
+      }
+    ],
+    "golden_carrot:35": [
+      {
+        "at": "2026-11-26T22:06:22.604Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кекс \"Луна\"",
+          "sourceId": "game-0ac011ec3ce73e10e76be56564df806bace04c5924ed1e2294afd79bc44e3959",
+          "updatedAt": "2026-11-26T22:06:22.604Z"
         }
       }
     ]
