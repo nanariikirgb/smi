@@ -199,6 +199,11 @@
       "name": "Хэппи Ням",
       "sourceId": "game-e1a5468845e492c83ebf69c898e6f924535fd47cdc18a5c817286f6de2ae3198",
       "updatedAt": "2026-11-26T21:56:20.628Z"
+    },
+    "golden_carrot:9": {
+      "name": "Клубничный чизкейк",
+      "sourceId": "game-e1369b509ab44a368364459200e403cad763e5d4beef0671e1797d58d7d75b87",
+      "updatedAt": "2026-11-26T21:56:23.798Z"
     }
   },
   "history": {
@@ -614,6 +619,18 @@
           "name": "Хэппи Ням",
           "sourceId": "game-e1a5468845e492c83ebf69c898e6f924535fd47cdc18a5c817286f6de2ae3198",
           "updatedAt": "2026-11-26T21:56:20.628Z"
+        }
+      }
+    ],
+    "golden_carrot:9": [
+      {
+        "at": "2026-11-26T21:56:23.798Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Клубничный чизкейк",
+          "sourceId": "game-e1369b509ab44a368364459200e403cad763e5d4beef0671e1797d58d7d75b87",
+          "updatedAt": "2026-11-26T21:56:23.798Z"
         }
       }
     ]
