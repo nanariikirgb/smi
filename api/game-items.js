@@ -15,7 +15,9 @@ module.exports = async function(req, res) {
     return fail(405, 'Требуется POST');
   }
   const secret = process.env.RPM_ARCHIVE_TOKEN || '';
-  if (!/^[!-~]{32,256}$/.test(secret) || !moderation.configured() || !process.env.GITHUB_CONTENTS_TOKEN) {
+  const ready={modToken:/^[!-~]{32,256}$/.test(secret),redis:moderation.configured(),github:!!process.env.GITHUB_CONTENTS_TOKEN};
+  if (!ready.modToken || !ready.redis || !ready.github) {
+    console.warn('[game-items] configuration missing or invalid',ready);
     return fail(503, 'Синхронизация ещё не настроена');
   }
   const bearer = /^Bearer ([!-~]{32,256})$/.exec(req.headers.authorization || '');
@@ -34,11 +36,13 @@ module.exports = async function(req, res) {
   } catch (e) {
     return fail(400, e.status === 400 ? e.message : 'Некорректный JSON');
   }
+  let stage='redis_rate_limit';
   try {
     if (!await moderation.limit('game-ingest', 60, 60)) {
       res.setHeader('Retry-After', '60');
       return fail(429, 'Лимит пакетов. Повторите через минуту.');
     }
+    stage='ingest';
     const result = await gameItems.ingest(items);
     let notification = {ok:false};
     try {
@@ -47,6 +51,10 @@ module.exports = async function(req, res) {
     return res.json({...result, logNotified:notification.ok});
   } catch (e) {
     if (e.status === 429) { res.setHeader('Retry-After','60'); return fail(429,e.message); }
+    const service=['redis','github'].includes(e?.service)?e.service:'internal';
+    const reason=['rate_limit','authorization','upstream_error','timeout','network','invalid_response','invalid_catalog'].includes(e?.reason)?e.reason:'unexpected';
+    const upstreamStatus=Number.isInteger(e?.httpStatus)&&e.httpStatus>=100&&e.httpStatus<=599?e.httpStatus:0;
+    console.error('[game-items] 503',{stage,service,reason,upstreamStatus});
     return fail(503, 'Каталог или хранилище временно недоступны');
   }
 };
