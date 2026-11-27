@@ -13,6 +13,9 @@ import org.slf4j.LoggerFactory;
 final class Archive {
     private static final Gson JSON = new GsonBuilder().disableHtmlEscaping().create();
     private static final org.slf4j.Logger LOG = LoggerFactory.getLogger("rpm-nbt-export");
+    private static final List<String> DEFAULT_SERVERS = List.of(
+            "play.rpmserver.com:25565", "mc.rpmserver.com:25565",
+            "fix.rpmserver.ru:25565", "ru.rpmserver.ru:25565");
     private final Path file;
     private final Set<String> servers = new HashSet<>();
     private final Set<InventoryExport.Sample> pending = new LinkedHashSet<>();
@@ -28,7 +31,17 @@ final class Archive {
         try {
             Files.createDirectories(file.getParent());
             Path config = file.resolveSibling("servers.txt");
-            if (Files.notExists(config)) Files.writeString(config, "play.rpmserver.com:25565\n", StandardOpenOption.CREATE_NEW);
+            Path migrated = file.resolveSibling(".servers-v2");
+            if (Files.notExists(config)) {
+                Files.write(config, DEFAULT_SERVERS, StandardOpenOption.CREATE_NEW);
+            } else if (Files.notExists(migrated) && Files.readAllLines(config).equals(List.of(DEFAULT_SERVERS.get(0)))) {
+                Path temp = Files.createTempFile(file.getParent(), "servers-", ".tmp");
+                try {
+                    Files.write(temp, DEFAULT_SERVERS);
+                    Files.move(temp, config, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
+                } finally { Files.deleteIfExists(temp); }
+            }
+            if (Files.notExists(migrated)) Files.writeString(migrated, "", StandardOpenOption.CREATE);
             for (String line : Files.readAllLines(config)) {
                 String address = line.strip();
                 if (!address.isEmpty() && ServerAddress.isValid(address)) servers.add(normalize(address));
