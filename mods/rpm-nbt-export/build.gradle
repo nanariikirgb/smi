@@ -1,0 +1,40 @@
+plugins {
+    id 'fabric-loom' version '1.6.12'
+}
+
+version = '1.0.0'
+group = 'ru.rpmarchive.export'
+
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.20.4'
+    mappings 'net.fabricmc:yarn:1.20.4+build.3:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.15.11'
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') {
+        expand(version: project.version)
+    }
+}
+
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+tasks.wrapper {
+    gradleVersion = '8.7'
+    distributionType = Wrapper.DistributionType.BIN
+    distributionSha256Sum = '544c35d6bd849ae8a5ed0bcea39ba677dc40f49df7d1835561582da2009b961d'
+}

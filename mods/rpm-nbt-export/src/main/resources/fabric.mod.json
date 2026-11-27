@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1, "id": "rpm_nbt_export", "version": "${version}",
+  "name": "RPM Local NBT Export", "environment": "client",
+  "mixins": ["rpm-nbt-export.mixins.json"],
+  "depends": {"minecraft":"1.20.4","fabricloader":">=0.15.11","java":">=17"}
+}
