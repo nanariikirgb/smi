@@ -11035,6 +11035,13 @@
       "rarity": "",
       "sourceId": "51",
       "updatedAt": "2026-11-28T12:13:40.115Z"
+    },
+    "golden_horse_armor:321": {
+      "name": "Большая профессиональная видеокамера",
+      "price": 150000,
+      "rarity": "Basic",
+      "sourceId": "50",
+      "updatedAt": "2026-11-28T12:13:43.742Z"
     }
   },
   "history": {
@@ -36205,6 +36212,20 @@
           "rarity": "",
           "sourceId": "51",
           "updatedAt": "2026-11-28T12:13:40.115Z"
+        }
+      }
+    ],
+    "golden_horse_armor:321": [
+      {
+        "at": "2026-11-28T12:13:43.742Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Большая профессиональная видеокамера",
+          "price": 150000,
+          "rarity": "Basic",
+          "sourceId": "50",
+          "updatedAt": "2026-11-28T12:13:43.742Z"
         }
       }
     ]
