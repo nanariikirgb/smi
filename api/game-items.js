@@ -36,25 +36,28 @@ module.exports = async function(req, res) {
   } catch (e) {
     return fail(400, e.status === 400 ? e.message : 'Некорректный JSON');
   }
+  const started=Date.now();
   let stage='redis_rate_limit';
   try {
-    if (!await moderation.limit('game-ingest', 60, 60)) {
-      res.setHeader('Retry-After', '60');
-      return fail(429, 'Лимит пакетов. Повторите через минуту.');
-    }
-    stage='ingest';
-    const result = await gameItems.ingest(items);
+    const result = await moderation.withDeadline(9500,async()=>{
+      if (!await moderation.limit('game-ingest', 60, 60)) {
+        throw Object.assign(Error('Лимит пакетов. Повторите через минуту.'),{status:429});
+      }
+      stage='ingest';
+      return gameItems.ingest(items);
+    });
     let notification = {ok:false};
     try {
-      notification = await discord.send(discord.gameIngestLog(result), {log:true});
+      notification = await discord.send(discord.gameIngestLog(result), {log:true,timeoutMs:Math.max(500,Math.min(7000,12000-(Date.now()-started)))});
     } catch { console.warn('Game cache log delivery failed'); }
+    console.info('[game-items] accepted',{elapsedMs:Date.now()-started,processed:result.processed,queued:result.queued,logNotified:notification.ok});
     return res.json({...result, logNotified:notification.ok});
   } catch (e) {
     if (e.status === 429) { res.setHeader('Retry-After','60'); return fail(429,e.message); }
     const service=['redis','github'].includes(e?.service)?e.service:'internal';
     const reason=['rate_limit','authorization','upstream_error','timeout','network','invalid_response','invalid_catalog'].includes(e?.reason)?e.reason:'unexpected';
     const upstreamStatus=Number.isInteger(e?.httpStatus)&&e.httpStatus>=100&&e.httpStatus<=599?e.httpStatus:0;
-    console.error('[game-items] 503',{stage,service,reason,upstreamStatus});
+    console.error('[game-items] 503',{stage,service,reason,upstreamStatus,elapsedMs:Date.now()-started});
     return fail(503, 'Каталог или хранилище временно недоступны');
   }
 };
