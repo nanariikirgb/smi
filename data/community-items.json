@@ -10818,6 +10818,13 @@
       "rarity": "Ultimate",
       "sourceId": "30",
       "updatedAt": "2026-11-28T09:06:23.261Z"
+    },
+    "golden_horse_armor:829": {
+      "name": "Зонт SweetyCloud",
+      "price": 2500000,
+      "rarity": "Ultimate",
+      "sourceId": "29",
+      "updatedAt": "2026-11-28T09:06:27.222Z"
     }
   },
   "history": {
@@ -35554,6 +35561,20 @@
           "rarity": "Ultimate",
           "sourceId": "30",
           "updatedAt": "2026-11-28T09:06:23.261Z"
+        }
+      }
+    ],
+    "golden_horse_armor:829": [
+      {
+        "at": "2026-11-28T09:06:27.222Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Зонт SweetyCloud",
+          "price": 2500000,
+          "rarity": "Ultimate",
+          "sourceId": "29",
+          "updatedAt": "2026-11-28T09:06:27.222Z"
         }
       }
     ]
