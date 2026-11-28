@@ -10930,6 +10930,13 @@
       "rarity": "",
       "sourceId": "38",
       "updatedAt": "2026-11-28T09:22:37.842Z"
+    },
+    "diamond_horse_armor:958": {
+      "name": "Шапка \"Альт\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "37",
+      "updatedAt": "2026-11-28T09:22:41.512Z"
     }
   },
   "history": {
@@ -35890,6 +35897,20 @@
           "rarity": "",
           "sourceId": "38",
           "updatedAt": "2026-11-28T09:22:37.842Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:958": [
+      {
+        "at": "2026-11-28T09:22:41.512Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шапка \"Альт\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "37",
+          "updatedAt": "2026-11-28T09:22:41.512Z"
         }
       }
     ]
