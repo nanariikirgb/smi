@@ -10951,6 +10951,13 @@
       "rarity": "",
       "sourceId": "35",
       "updatedAt": "2026-11-28T09:22:48.451Z"
+    },
+    "diamond_horse_armor:1033": {
+      "name": "Берет \"Жёлудь\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "43",
+      "updatedAt": "2026-11-28T09:24:25.918Z"
     }
   },
   "history": {
@@ -35953,6 +35960,20 @@
           "rarity": "",
           "sourceId": "35",
           "updatedAt": "2026-11-28T09:22:48.451Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:1033": [
+      {
+        "at": "2026-11-28T09:24:25.918Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Берет \"Жёлудь\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "43",
+          "updatedAt": "2026-11-28T09:24:25.918Z"
         }
       }
     ]
