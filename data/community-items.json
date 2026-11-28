@@ -11021,6 +11021,13 @@
       "rarity": "",
       "sourceId": "53",
       "updatedAt": "2026-11-28T12:13:33.020Z"
+    },
+    "flint:54": {
+      "name": "Кальян",
+      "price": null,
+      "rarity": "",
+      "sourceId": "52",
+      "updatedAt": "2026-11-28T12:13:36.858Z"
     }
   },
   "history": {
@@ -36163,6 +36170,20 @@
           "rarity": "",
           "sourceId": "53",
           "updatedAt": "2026-11-28T12:13:33.020Z"
+        }
+      }
+    ],
+    "flint:54": [
+      {
+        "at": "2026-11-28T12:13:36.858Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Кальян",
+          "price": null,
+          "rarity": "",
+          "sourceId": "52",
+          "updatedAt": "2026-11-28T12:13:36.858Z"
         }
       }
     ]
