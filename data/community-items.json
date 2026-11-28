@@ -11014,6 +11014,13 @@
       "rarity": "",
       "sourceId": "54",
       "updatedAt": "2026-11-28T12:13:29.751Z"
+    },
+    "diamond_horse_armor:656": {
+      "name": "Шапка \"АмНям\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "53",
+      "updatedAt": "2026-11-28T12:13:33.020Z"
     }
   },
   "history": {
@@ -36142,6 +36149,20 @@
           "rarity": "",
           "sourceId": "54",
           "updatedAt": "2026-11-28T12:13:29.751Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:656": [
+      {
+        "at": "2026-11-28T12:13:33.020Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шапка \"АмНям\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "53",
+          "updatedAt": "2026-11-28T12:13:33.020Z"
         }
       }
     ]
