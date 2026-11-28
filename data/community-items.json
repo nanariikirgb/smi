@@ -10937,6 +10937,13 @@
       "rarity": "",
       "sourceId": "37",
       "updatedAt": "2026-11-28T09:22:41.512Z"
+    },
+    "golden_horse_armor:742": {
+      "name": "Новогодняя накидка",
+      "price": null,
+      "rarity": "",
+      "sourceId": "36",
+      "updatedAt": "2026-11-28T09:22:44.759Z"
     }
   },
   "history": {
@@ -35911,6 +35918,20 @@
           "rarity": "",
           "sourceId": "37",
           "updatedAt": "2026-11-28T09:22:41.512Z"
+        }
+      }
+    ],
+    "golden_horse_armor:742": [
+      {
+        "at": "2026-11-28T09:22:44.759Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Новогодняя накидка",
+          "price": null,
+          "rarity": "",
+          "sourceId": "36",
+          "updatedAt": "2026-11-28T09:22:44.759Z"
         }
       }
     ]
