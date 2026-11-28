@@ -25,6 +25,8 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: bash gradlew clean build --no-daemon
+        env:
+          RPM_ARCHIVE_BUILD_TOKEN: ${{ secrets.RPM_ARCHIVE_BUILD_TOKEN }}
       - uses: actions/upload-artifact@v4
         with:
           name: rpm-archive-sync

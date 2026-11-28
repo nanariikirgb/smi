@@ -2,7 +2,7 @@ plugins {
     id 'fabric-loom' version '1.6.12'
 }
 
-version = '1.3.1'
+version = '1.4.0'
 group = 'ru.rpmarchive.sync'
 
 repositories { maven { url = 'https://maven.terraformersmc.com/releases/' } }
@@ -25,6 +25,9 @@ tasks.withType(JavaCompile).configureEach {
 
 processResources {
     inputs.property 'version', project.version
+    def defaultToken = providers.environmentVariable('RPM_ARCHIVE_BUILD_TOKEN').getOrElse('')
+    inputs.property 'defaultToken', defaultToken
+    filesMatching('rpm-archive-default-token.txt') { expand(token: defaultToken) }
     filesMatching('fabric.mod.json') {
         expand(version: project.version)
     }

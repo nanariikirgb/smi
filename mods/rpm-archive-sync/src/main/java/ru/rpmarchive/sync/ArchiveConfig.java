@@ -2,7 +2,8 @@ package ru.rpmarchive.sync;
 
 import com.google.common.net.HostAndPort;
 import com.google.common.net.InetAddresses;
-import com.google.gson.JsonElement;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
@@ -11,14 +12,27 @@ import java.net.IDN;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
+import java.util.List;
 import java.util.Locale;
 
-record ArchiveConfig(boolean enabled, java.util.List<String> servers, URI endpoint, String token) {
-    static final ArchiveConfig DEFAULT = new ArchiveConfig(false, java.util.List.of("play.rpmserver.com:25565"),
-            URI.create("https://smi-pearl.vercel.app/api/game-items"), "");
+record ArchiveConfig(boolean enabled, List<String> servers, URI endpoint, String token, int menuKey) {
+    private static final String LEGACY_SERVER = "play.rpmserver.com:25565";
+    static final ArchiveConfig DEFAULT = new ArchiveConfig(false, List.of("mc.rpmserver.com:25565",
+            "fix.rpmserver.ru:25565", "ru.rpmserver.ru:25565"),
+            URI.create("https://smi-pearl.vercel.app/api/game-items"), bundledToken(), org.lwjgl.glfw.GLFW.GLFW_KEY_COMMA);
+
+    private static String bundledToken() {
+        try (InputStream in = ArchiveConfig.class.getResourceAsStream("/rpm-archive-default-token.txt")) {
+            if (in == null) return "";
+            String token = new String(in.readAllBytes(), StandardCharsets.US_ASCII).strip();
+            return token.matches("[!-~]{32,256}") ? token : "";
+        } catch (IOException ex) {
+            return "";
+        }
+    }
 
     ArchiveConfig {
+        if (!ArchiveShortcut.bindable(menuKey)) throw new IllegalArgumentException("Выберите клавишу для открытия меню");
         var unique = new java.util.LinkedHashSet<String>();
         for (String entry : servers) {
             String host = normalizeServer(entry);
@@ -46,8 +60,17 @@ record ArchiveConfig(boolean enabled, java.util.List<String> servers, URI endpoi
         var servers = new java.util.ArrayList<String>();
         if (obj.has("servers")) obj.getAsJsonArray("servers").forEach(v -> servers.add(v.getAsString()));
         else servers.add(obj.get("server").getAsString());
-        return new ArchiveConfig(obj.get("enabled").getAsBoolean(), servers,
-                URI.create(obj.get("endpoint").getAsString()), obj.get("token").getAsString());
+        boolean legacy = !obj.has("menuKey");
+        if (legacy && servers.size() == 1 && LEGACY_SERVER.equals(normalizeServer(servers.get(0)))) {
+            servers.addAll(DEFAULT.servers());
+        }
+        URI endpoint = URI.create(obj.get("endpoint").getAsString());
+        String token = obj.has("token") ? obj.get("token").getAsString() : "";
+        if (token.isEmpty() && DEFAULT.endpoint().equals(endpoint)) token = DEFAULT.token();
+        int menuKey = legacy ? DEFAULT.menuKey() : obj.get("menuKey").getAsInt();
+        ArchiveConfig config = new ArchiveConfig(obj.get("enabled").getAsBoolean(), servers, endpoint, token, menuKey);
+        if (legacy) config.save(path);
+        return config;
     }
 
     void save(Path path) throws IOException {

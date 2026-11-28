@@ -40,8 +40,10 @@ public final class ArchiveSyncClient implements ClientModInitializer {
 
     static void save(ArchiveConfig next) throws IOException {
         next.save(FabricLoader.getInstance().getConfigDir().resolve("rpm-archive-sync.json"));
+        boolean reconnect = next.enabled() != config.enabled() || !next.servers().equals(config.servers())
+                || !next.token().equals(config.token()) || !next.endpoint().equals(config.endpoint());
         config = next;
-        joined(MinecraftClient.getInstance().getNetworkHandler());
+        if (reconnect) joined(MinecraftClient.getInstance().getNetworkHandler());
     }
 
     public static void joined(ClientPlayNetworkHandler handler) {

@@ -44,6 +44,7 @@ public final class ArchiveQueue implements AutoCloseable {
     private static final int RESPONSE_LIMIT = 4096;
 
     private record Snapshot(int version, List<ArchiveItem> pending, List<String> confirmed) {}
+    private final String server;
     private final Path directory;
     private final URI endpoint;
     private final String token;
@@ -69,7 +70,9 @@ public final class ArchiveQueue implements AutoCloseable {
     private boolean flushScheduled;
     private boolean active;
     private volatile String status = "";
-    private volatile int cached;
+    // Published by the disk worker only after a successful read or atomic save.
+    private volatile List<ArchiveItem> cachedItems;
+    private volatile boolean cacheReadFailed;
     private volatile boolean sending;
     private int remaining;
     private int sent;
@@ -77,7 +80,8 @@ public final class ArchiveQueue implements AutoCloseable {
     private CompletableFuture<HttpResponse<byte[]>> inFlight;
 
     public ArchiveQueue(Path dataDir, String server, URI endpoint, String token) {
-        this.directory = dataDir.resolve(digest(server + "\n" + endpoint.toASCIIString()));
+        this.server = server;
+        this.directory = directory(dataDir, server, endpoint);
         this.endpoint = endpoint;
         this.token = token;
         worker.setExecuteExistingDelayedTasksAfterShutdownPolicy(false);
@@ -100,7 +104,13 @@ public final class ArchiveQueue implements AutoCloseable {
     }
 
     String status() { return status; }
-    int cached() { return cached; }
+    String server() { return server; }
+    List<ArchiveItem> cachedItems() { return cachedItems; }
+    boolean cacheReadFailed() { return cacheReadFailed; }
+    int cached() {
+        var items = cachedItems;
+        return items == null ? 0 : items.size();
+    }
     boolean sending() { return sending; }
 
     synchronized void sendCached() {
@@ -205,9 +215,11 @@ public final class ArchiveQueue implements AutoCloseable {
                 dirty = true;
             }
             if (dirty) save();
-            cached = pending.size();
+            if (cachedItems == null) cachedItems = List.copyOf(pending.values());
+            cacheReadFailed = false;
             return true;
         } catch (IOException | RuntimeException e) {
+            cacheReadFailed = true;
             storageRetryAt = System.nanoTime() + TimeUnit.SECONDS.toNanos(5);
             warn("Cannot read or write the archive queue. Check disk space, state.json and other running game instances.");
             return false;
@@ -220,36 +232,55 @@ public final class ArchiveQueue implements AutoCloseable {
                 StandardOpenOption.WRITE, StandardOpenOption.CREATE);
         if (lock == null) lock = lockChannel.tryLock();
         if (lock == null) throw new IOException("Queue is busy");
-        Path file = directory.resolve("state.json");
-        if (Files.exists(file)) {
-            if (Files.size(file) > 16 * 1024 * 1024) throw new IOException("Queue too large");
-            Snapshot state;
-            try (BufferedReader input = Files.newBufferedReader(file)) {
-                state = JSON.fromJson(input, Snapshot.class);
-            }
-            if (state == null || state.version != 1 || state.confirmed == null || state.pending == null
-                    || state.confirmed.size() > LIMIT || state.pending.size() > LIMIT
-                    || state.confirmed.stream().anyMatch(s -> s == null || s.length() != 64)
-                    || state.pending.stream().anyMatch(i -> i == null || i.name() == null || i.material() == null)) {
-                throw new IOException("Invalid queue");
-            }
-            confirmed.addAll(state.confirmed);
-            for (ArchiveItem item : state.pending) {
-                if (CatalogModels.contains(item.material(), item.customModelData())) pending.put(digest(JSON.toJson(item)), item);
-                else dirty = true;
-            }
+        Snapshot state = readSnapshot(directory);
+        confirmed.addAll(state.confirmed);
+        for (ArchiveItem item : state.pending) {
+            if (CatalogModels.contains(item.material(), item.customModelData())) pending.put(digest(JSON.toJson(item)), item);
+            else dirty = true;
         }
         loaded = true;
     }
 
+    private static Path directory(Path dataDir, String server, URI endpoint) {
+        return dataDir.resolve(digest(server + "\n" + endpoint.toASCIIString()));
+    }
+
+    // The writer atomically replaces state.json, so readers never need to take its file lock.
+    static List<ArchiveItem> readCachedItems(Path dataDir, String server, URI endpoint) throws IOException {
+        return readSnapshot(directory(dataDir, server, endpoint)).pending.stream()
+                .filter(i -> CatalogModels.contains(i.material(), i.customModelData())).distinct().toList();
+    }
+
+    private static Snapshot readSnapshot(Path directory) throws IOException {
+        Path file = directory.resolve("state.json");
+        Snapshot state;
+        try {
+            if (Files.size(file) > 16 * 1024 * 1024) throw new IOException("Queue too large");
+            try (BufferedReader input = Files.newBufferedReader(file)) {
+                state = JSON.fromJson(input, Snapshot.class);
+            }
+        } catch (java.nio.file.NoSuchFileException missing) {
+            return new Snapshot(1, List.of(), List.of());
+        }
+        if (state == null || state.version != 1 || state.confirmed == null || state.pending == null
+                || state.confirmed.size() > LIMIT || state.pending.size() > LIMIT
+                || state.confirmed.stream().anyMatch(s -> s == null || s.length() != 64)
+                || state.pending.stream().anyMatch(i -> i == null || i.name() == null || i.material() == null)) {
+            throw new IOException("Invalid queue");
+        }
+        return state;
+    }
+
     private void save() throws IOException {
         Path temporary = directory.resolve("state.tmp");
+        var items = List.copyOf(pending.values());
         try (BufferedWriter output = Files.newBufferedWriter(temporary)) {
-            JSON.toJson(new Snapshot(1, List.copyOf(pending.values()), List.copyOf(confirmed)), output);
+            JSON.toJson(new Snapshot(1, items, List.copyOf(confirmed)), output);
         }
         try (FileChannel file = FileChannel.open(temporary, StandardOpenOption.WRITE)) { file.force(true); }
         Files.move(temporary, directory.resolve("state.json"), StandardCopyOption.REPLACE_EXISTING,
                 StandardCopyOption.ATOMIC_MOVE);
+        cachedItems = items;
         dirty = false;
     }
 
