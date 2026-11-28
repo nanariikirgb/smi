@@ -10860,6 +10860,13 @@
       "rarity": "Basic",
       "sourceId": "24",
       "updatedAt": "2026-11-28T09:06:47.601Z"
+    },
+    "golden_horse_armor:789": {
+      "name": "Сигареты Camel",
+      "price": 400,
+      "rarity": "Basic",
+      "sourceId": "23",
+      "updatedAt": "2026-11-28T09:06:51.493Z"
     }
   },
   "history": {
@@ -35680,6 +35687,20 @@
           "rarity": "Basic",
           "sourceId": "24",
           "updatedAt": "2026-11-28T09:06:47.601Z"
+        }
+      }
+    ],
+    "golden_horse_armor:789": [
+      {
+        "at": "2026-11-28T09:06:51.493Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Сигареты Camel",
+          "price": 400,
+          "rarity": "Basic",
+          "sourceId": "23",
+          "updatedAt": "2026-11-28T09:06:51.493Z"
         }
       }
     ]
