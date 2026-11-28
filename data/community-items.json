@@ -10846,6 +10846,13 @@
       "rarity": "Basic",
       "sourceId": "26",
       "updatedAt": "2026-11-28T09:06:40.048Z"
+    },
+    "golden_horse_armor:792": {
+      "name": "Odens Cold Dry",
+      "price": 1700,
+      "rarity": "Basic",
+      "sourceId": "25",
+      "updatedAt": "2026-11-28T09:06:43.264Z"
     }
   },
   "history": {
@@ -35638,6 +35645,20 @@
           "rarity": "Basic",
           "sourceId": "26",
           "updatedAt": "2026-11-28T09:06:40.048Z"
+        }
+      }
+    ],
+    "golden_horse_armor:792": [
+      {
+        "at": "2026-11-28T09:06:43.264Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Odens Cold Dry",
+          "price": 1700,
+          "rarity": "Basic",
+          "sourceId": "25",
+          "updatedAt": "2026-11-28T09:06:43.264Z"
         }
       }
     ]
