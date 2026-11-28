@@ -10923,6 +10923,13 @@
       "rarity": "",
       "sourceId": "39",
       "updatedAt": "2026-11-28T09:22:34.710Z"
+    },
+    "diamond_horse_armor:959": {
+      "name": "Маска \"Новогодний Спайди\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "38",
+      "updatedAt": "2026-11-28T09:22:37.842Z"
     }
   },
   "history": {
@@ -35869,6 +35876,20 @@
           "rarity": "",
           "sourceId": "39",
           "updatedAt": "2026-11-28T09:22:34.710Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:959": [
+      {
+        "at": "2026-11-28T09:22:37.842Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маска \"Новогодний Спайди\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "38",
+          "updatedAt": "2026-11-28T09:22:37.842Z"
         }
       }
     ]
