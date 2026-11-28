@@ -10944,6 +10944,13 @@
       "rarity": "",
       "sourceId": "36",
       "updatedAt": "2026-11-28T09:22:44.759Z"
+    },
+    "golden_horse_armor:746": {
+      "name": "Маскарадный костюм \"Подарок\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "35",
+      "updatedAt": "2026-11-28T09:22:48.451Z"
     }
   },
   "history": {
@@ -35932,6 +35939,20 @@
           "rarity": "",
           "sourceId": "36",
           "updatedAt": "2026-11-28T09:22:44.759Z"
+        }
+      }
+    ],
+    "golden_horse_armor:746": [
+      {
+        "at": "2026-11-28T09:22:48.451Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маскарадный костюм \"Подарок\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "35",
+          "updatedAt": "2026-11-28T09:22:48.451Z"
         }
       }
     ]
