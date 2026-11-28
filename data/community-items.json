@@ -11042,6 +11042,13 @@
       "rarity": "Basic",
       "sourceId": "50",
       "updatedAt": "2026-11-28T12:13:43.742Z"
+    },
+    "golden_horse_armor:195": {
+      "name": "Студийный свет",
+      "price": 45000,
+      "rarity": "Basic",
+      "sourceId": "49",
+      "updatedAt": "2026-11-28T12:13:47.402Z"
     }
   },
   "history": {
@@ -36226,6 +36233,20 @@
           "rarity": "Basic",
           "sourceId": "50",
           "updatedAt": "2026-11-28T12:13:43.742Z"
+        }
+      }
+    ],
+    "golden_horse_armor:195": [
+      {
+        "at": "2026-11-28T12:13:47.402Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Студийный свет",
+          "price": 45000,
+          "rarity": "Basic",
+          "sourceId": "49",
+          "updatedAt": "2026-11-28T12:13:47.402Z"
         }
       }
     ]
