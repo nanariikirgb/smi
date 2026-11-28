@@ -10867,6 +10867,13 @@
       "rarity": "Basic",
       "sourceId": "23",
       "updatedAt": "2026-11-28T09:06:51.493Z"
+    },
+    "golden_horse_armor:344": {
+      "name": "HQD Виноград",
+      "price": 2500,
+      "rarity": "Basic",
+      "sourceId": "22",
+      "updatedAt": "2026-11-28T09:06:55.306Z"
     }
   },
   "history": {
@@ -35701,6 +35708,20 @@
           "rarity": "Basic",
           "sourceId": "23",
           "updatedAt": "2026-11-28T09:06:51.493Z"
+        }
+      }
+    ],
+    "golden_horse_armor:344": [
+      {
+        "at": "2026-11-28T09:06:55.306Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "HQD Виноград",
+          "price": 2500,
+          "rarity": "Basic",
+          "sourceId": "22",
+          "updatedAt": "2026-11-28T09:06:55.306Z"
         }
       }
     ]
