@@ -11028,6 +11028,13 @@
       "rarity": "",
       "sourceId": "52",
       "updatedAt": "2026-11-28T12:13:36.858Z"
+    },
+    "ink_sac:39": {
+      "name": "Раздевалка",
+      "price": null,
+      "rarity": "",
+      "sourceId": "51",
+      "updatedAt": "2026-11-28T12:13:40.115Z"
     }
   },
   "history": {
@@ -36184,6 +36191,20 @@
           "rarity": "",
           "sourceId": "52",
           "updatedAt": "2026-11-28T12:13:36.858Z"
+        }
+      }
+    ],
+    "ink_sac:39": [
+      {
+        "at": "2026-11-28T12:13:40.115Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Раздевалка",
+          "price": null,
+          "rarity": "",
+          "sourceId": "51",
+          "updatedAt": "2026-11-28T12:13:40.115Z"
         }
       }
     ]
