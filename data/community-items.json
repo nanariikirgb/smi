@@ -11049,6 +11049,13 @@
       "rarity": "Basic",
       "sourceId": "49",
       "updatedAt": "2026-11-28T12:13:47.402Z"
+    },
+    "golden_horse_armor:40": {
+      "name": "CinePro Studio X",
+      "price": 50000,
+      "rarity": "Basic",
+      "sourceId": "48",
+      "updatedAt": "2026-11-28T12:13:51.118Z"
     }
   },
   "history": {
@@ -36247,6 +36254,20 @@
           "rarity": "Basic",
           "sourceId": "49",
           "updatedAt": "2026-11-28T12:13:47.402Z"
+        }
+      }
+    ],
+    "golden_horse_armor:40": [
+      {
+        "at": "2026-11-28T12:13:51.118Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "CinePro Studio X",
+          "price": 50000,
+          "rarity": "Basic",
+          "sourceId": "48",
+          "updatedAt": "2026-11-28T12:13:51.118Z"
         }
       }
     ]
