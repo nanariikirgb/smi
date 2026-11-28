@@ -10839,6 +10839,13 @@
       "rarity": "Limited",
       "sourceId": "27",
       "updatedAt": "2026-11-28T09:06:35.960Z"
+    },
+    "golden_horse_armor:793": {
+      "name": "Corvus Extreme Red",
+      "price": 1300,
+      "rarity": "Basic",
+      "sourceId": "26",
+      "updatedAt": "2026-11-28T09:06:40.048Z"
     }
   },
   "history": {
@@ -35617,6 +35624,20 @@
           "rarity": "Limited",
           "sourceId": "27",
           "updatedAt": "2026-11-28T09:06:35.960Z"
+        }
+      }
+    ],
+    "golden_horse_armor:793": [
+      {
+        "at": "2026-11-28T09:06:40.048Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Corvus Extreme Red",
+          "price": 1300,
+          "rarity": "Basic",
+          "sourceId": "26",
+          "updatedAt": "2026-11-28T09:06:40.048Z"
         }
       }
     ]
