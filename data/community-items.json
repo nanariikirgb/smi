@@ -10811,6 +10811,13 @@
       "price": 750000,
       "sourceId": "game-928a9ab16111437ff7a69f0bb3b1513c94ce8391b92fb1677b3f11b5086bf61b",
       "updatedAt": "2026-11-27T15:21:52.664Z"
+    },
+    "golden_horse_armor:830": {
+      "name": "Катана SweetyCloud",
+      "price": 2500000,
+      "rarity": "Ultimate",
+      "sourceId": "30",
+      "updatedAt": "2026-11-28T09:06:23.261Z"
     }
   },
   "history": {
@@ -35533,6 +35540,20 @@
           "price": 750000,
           "sourceId": "game-928a9ab16111437ff7a69f0bb3b1513c94ce8391b92fb1677b3f11b5086bf61b",
           "updatedAt": "2026-11-27T15:21:52.664Z"
+        }
+      }
+    ],
+    "golden_horse_armor:830": [
+      {
+        "at": "2026-11-28T09:06:23.261Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Катана SweetyCloud",
+          "price": 2500000,
+          "rarity": "Ultimate",
+          "sourceId": "30",
+          "updatedAt": "2026-11-28T09:06:23.261Z"
         }
       }
     ]
