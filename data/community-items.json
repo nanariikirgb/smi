@@ -10902,6 +10902,13 @@
       "rarity": "Basic",
       "sourceId": "34",
       "updatedAt": "2026-11-28T09:11:36.032Z"
+    },
+    "golden_horse_armor:824": {
+      "name": "Пояс с инструментами",
+      "price": 20000,
+      "rarity": "Basic",
+      "sourceId": "33",
+      "updatedAt": "2026-11-28T09:11:39.731Z"
     }
   },
   "history": {
@@ -35806,6 +35813,20 @@
           "rarity": "Basic",
           "sourceId": "34",
           "updatedAt": "2026-11-28T09:11:36.032Z"
+        }
+      }
+    ],
+    "golden_horse_armor:824": [
+      {
+        "at": "2026-11-28T09:11:39.731Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Пояс с инструментами",
+          "price": 20000,
+          "rarity": "Basic",
+          "sourceId": "33",
+          "updatedAt": "2026-11-28T09:11:39.731Z"
         }
       }
     ]
