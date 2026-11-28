@@ -10958,6 +10958,13 @@
       "rarity": "",
       "sourceId": "43",
       "updatedAt": "2026-11-28T09:24:25.918Z"
+    },
+    "diamond_horse_armor:989": {
+      "name": "Колпак BloodyJoker",
+      "price": null,
+      "rarity": "",
+      "sourceId": "42",
+      "updatedAt": "2026-11-28T09:24:29.182Z"
     }
   },
   "history": {
@@ -35974,6 +35981,20 @@
           "rarity": "",
           "sourceId": "43",
           "updatedAt": "2026-11-28T09:24:25.918Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:989": [
+      {
+        "at": "2026-11-28T09:24:29.182Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Колпак BloodyJoker",
+          "price": null,
+          "rarity": "",
+          "sourceId": "42",
+          "updatedAt": "2026-11-28T09:24:29.182Z"
         }
       }
     ]
