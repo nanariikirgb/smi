@@ -11000,6 +11000,13 @@
       "rarity": "Ultimate",
       "sourceId": "44",
       "updatedAt": "2026-11-28T09:26:34.518Z"
+    },
+    "sugar:170": {
+      "name": "Фигурка \"Темный Чао\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "47",
+      "updatedAt": "2026-11-28T09:26:59.832Z"
     }
   },
   "history": {
@@ -36100,6 +36107,20 @@
           "rarity": "Ultimate",
           "sourceId": "44",
           "updatedAt": "2026-11-28T09:26:34.518Z"
+        }
+      }
+    ],
+    "sugar:170": [
+      {
+        "at": "2026-11-28T09:26:59.832Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Фигурка \"Темный Чао\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "47",
+          "updatedAt": "2026-11-28T09:26:59.832Z"
         }
       }
     ]
