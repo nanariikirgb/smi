@@ -10972,6 +10972,13 @@
       "rarity": "",
       "sourceId": "41",
       "updatedAt": "2026-11-28T09:24:32.121Z"
+    },
+    "diamond_horse_armor:962": {
+      "name": "Маска \"Светлый Чао\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "40",
+      "updatedAt": "2026-11-28T09:24:35.375Z"
     }
   },
   "history": {
@@ -36016,6 +36023,20 @@
           "rarity": "",
           "sourceId": "41",
           "updatedAt": "2026-11-28T09:24:32.121Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:962": [
+      {
+        "at": "2026-11-28T09:24:35.375Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Маска \"Светлый Чао\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "40",
+          "updatedAt": "2026-11-28T09:24:35.375Z"
         }
       }
     ]
