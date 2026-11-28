@@ -10993,6 +10993,13 @@
       "rarity": "Ultimate",
       "sourceId": "45",
       "updatedAt": "2026-11-28T09:26:31.310Z"
+    },
+    "shulker_shell:53": {
+      "name": "IPHONE 18 Sweety Cloud",
+      "price": null,
+      "rarity": "Ultimate",
+      "sourceId": "44",
+      "updatedAt": "2026-11-28T09:26:34.518Z"
     }
   },
   "history": {
@@ -36079,6 +36086,20 @@
           "rarity": "Ultimate",
           "sourceId": "45",
           "updatedAt": "2026-11-28T09:26:31.310Z"
+        }
+      }
+    ],
+    "shulker_shell:53": [
+      {
+        "at": "2026-11-28T09:26:34.518Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "IPHONE 18 Sweety Cloud",
+          "price": null,
+          "rarity": "Ultimate",
+          "sourceId": "44",
+          "updatedAt": "2026-11-28T09:26:34.518Z"
         }
       }
     ]
