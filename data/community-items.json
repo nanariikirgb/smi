@@ -10832,6 +10832,13 @@
       "rarity": "Ultimate",
       "sourceId": "28",
       "updatedAt": "2026-11-28T09:06:30.333Z"
+    },
+    "golden_horse_armor:816": {
+      "name": "Шарф \"Жёлудь\"",
+      "price": 100000,
+      "rarity": "Limited",
+      "sourceId": "27",
+      "updatedAt": "2026-11-28T09:06:35.960Z"
     }
   },
   "history": {
@@ -35596,6 +35603,20 @@
           "rarity": "Ultimate",
           "sourceId": "28",
           "updatedAt": "2026-11-28T09:06:30.333Z"
+        }
+      }
+    ],
+    "golden_horse_armor:816": [
+      {
+        "at": "2026-11-28T09:06:35.960Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Шарф \"Жёлудь\"",
+          "price": 100000,
+          "rarity": "Limited",
+          "sourceId": "27",
+          "updatedAt": "2026-11-28T09:06:35.960Z"
         }
       }
     ]
