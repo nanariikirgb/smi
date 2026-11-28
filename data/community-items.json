@@ -10881,6 +10881,13 @@
       "rarity": "Basic",
       "sourceId": "21",
       "updatedAt": "2026-11-28T09:06:58.324Z"
+    },
+    "golden_horse_armor:342": {
+      "name": "Elfbar Pink Lemonade",
+      "price": 2300,
+      "rarity": "Basic",
+      "sourceId": "20",
+      "updatedAt": "2026-11-28T09:07:02.152Z"
     }
   },
   "history": {
@@ -35743,6 +35750,20 @@
           "rarity": "Basic",
           "sourceId": "21",
           "updatedAt": "2026-11-28T09:06:58.324Z"
+        }
+      }
+    ],
+    "golden_horse_armor:342": [
+      {
+        "at": "2026-11-28T09:07:02.152Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Elfbar Pink Lemonade",
+          "price": 2300,
+          "rarity": "Basic",
+          "sourceId": "20",
+          "updatedAt": "2026-11-28T09:07:02.152Z"
         }
       }
     ]
