@@ -10895,6 +10895,13 @@
       "rarity": "Ultimate",
       "sourceId": "31",
       "updatedAt": "2026-11-28T09:07:10.916Z"
+    },
+    "golden_horse_armor:825": {
+      "name": "Ящик с инструментами",
+      "price": 20000,
+      "rarity": "Basic",
+      "sourceId": "34",
+      "updatedAt": "2026-11-28T09:11:36.032Z"
     }
   },
   "history": {
@@ -35785,6 +35792,20 @@
           "rarity": "Ultimate",
           "sourceId": "31",
           "updatedAt": "2026-11-28T09:07:10.916Z"
+        }
+      }
+    ],
+    "golden_horse_armor:825": [
+      {
+        "at": "2026-11-28T09:11:36.032Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Ящик с инструментами",
+          "price": 20000,
+          "rarity": "Basic",
+          "sourceId": "34",
+          "updatedAt": "2026-11-28T09:11:36.032Z"
         }
       }
     ]
