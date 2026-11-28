@@ -11007,6 +11007,13 @@
       "rarity": "",
       "sourceId": "47",
       "updatedAt": "2026-11-28T09:26:59.832Z"
+    },
+    "diamond_horse_armor:885": {
+      "name": "Набор \"Скрытность\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "54",
+      "updatedAt": "2026-11-28T12:13:29.751Z"
     }
   },
   "history": {
@@ -36121,6 +36128,20 @@
           "rarity": "",
           "sourceId": "47",
           "updatedAt": "2026-11-28T09:26:59.832Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:885": [
+      {
+        "at": "2026-11-28T12:13:29.751Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Набор \"Скрытность\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "54",
+          "updatedAt": "2026-11-28T12:13:29.751Z"
         }
       }
     ]
