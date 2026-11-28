@@ -10853,6 +10853,13 @@
       "rarity": "Basic",
       "sourceId": "25",
       "updatedAt": "2026-11-28T09:06:43.264Z"
+    },
+    "golden_horse_armor:791": {
+      "name": "Сигареты Captain Black",
+      "price": 800,
+      "rarity": "Basic",
+      "sourceId": "24",
+      "updatedAt": "2026-11-28T09:06:47.601Z"
     }
   },
   "history": {
@@ -35659,6 +35666,20 @@
           "rarity": "Basic",
           "sourceId": "25",
           "updatedAt": "2026-11-28T09:06:43.264Z"
+        }
+      }
+    ],
+    "golden_horse_armor:791": [
+      {
+        "at": "2026-11-28T09:06:47.601Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Сигареты Captain Black",
+          "price": 800,
+          "rarity": "Basic",
+          "sourceId": "24",
+          "updatedAt": "2026-11-28T09:06:47.601Z"
         }
       }
     ]
