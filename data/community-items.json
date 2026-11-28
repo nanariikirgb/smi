@@ -10965,6 +10965,13 @@
       "rarity": "",
       "sourceId": "42",
       "updatedAt": "2026-11-28T09:24:29.182Z"
+    },
+    "diamond_horse_armor:964": {
+      "name": "Аксессуар \"Крышка от подарка\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "41",
+      "updatedAt": "2026-11-28T09:24:32.121Z"
     }
   },
   "history": {
@@ -35995,6 +36002,20 @@
           "rarity": "",
           "sourceId": "42",
           "updatedAt": "2026-11-28T09:24:29.182Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:964": [
+      {
+        "at": "2026-11-28T09:24:32.121Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Аксессуар \"Крышка от подарка\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "41",
+          "updatedAt": "2026-11-28T09:24:32.121Z"
         }
       }
     ]
