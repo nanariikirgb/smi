@@ -10916,6 +10916,13 @@
       "rarity": "Basic",
       "sourceId": "32",
       "updatedAt": "2026-11-28T09:11:43.089Z"
+    },
+    "diamond_horse_armor:961": {
+      "name": "Головной убор \"Звезда\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "39",
+      "updatedAt": "2026-11-28T09:22:34.710Z"
     }
   },
   "history": {
@@ -35848,6 +35855,20 @@
           "rarity": "Basic",
           "sourceId": "32",
           "updatedAt": "2026-11-28T09:11:43.089Z"
+        }
+      }
+    ],
+    "diamond_horse_armor:961": [
+      {
+        "at": "2026-11-28T09:22:34.710Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Головной убор \"Звезда\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "39",
+          "updatedAt": "2026-11-28T09:22:34.710Z"
         }
       }
     ]
