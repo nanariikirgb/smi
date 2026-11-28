@@ -10874,6 +10874,13 @@
       "rarity": "Basic",
       "sourceId": "22",
       "updatedAt": "2026-11-28T09:06:55.306Z"
+    },
+    "golden_horse_armor:343": {
+      "name": "Elfbar Кола",
+      "price": 2300,
+      "rarity": "Basic",
+      "sourceId": "21",
+      "updatedAt": "2026-11-28T09:06:58.324Z"
     }
   },
   "history": {
@@ -35722,6 +35729,20 @@
           "rarity": "Basic",
           "sourceId": "22",
           "updatedAt": "2026-11-28T09:06:55.306Z"
+        }
+      }
+    ],
+    "golden_horse_armor:343": [
+      {
+        "at": "2026-11-28T09:06:58.324Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Elfbar Кола",
+          "price": 2300,
+          "rarity": "Basic",
+          "sourceId": "21",
+          "updatedAt": "2026-11-28T09:06:58.324Z"
         }
       }
     ]
