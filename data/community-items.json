@@ -10979,6 +10979,13 @@
       "rarity": "",
       "sourceId": "40",
       "updatedAt": "2026-11-28T09:24:35.375Z"
+    },
+    "sugar:169": {
+      "name": "Фигурка \"Светлый Чао\"",
+      "price": null,
+      "rarity": "",
+      "sourceId": "46",
+      "updatedAt": "2026-11-28T09:26:28.227Z"
     }
   },
   "history": {
@@ -36037,6 +36044,20 @@
           "rarity": "",
           "sourceId": "40",
           "updatedAt": "2026-11-28T09:24:35.375Z"
+        }
+      }
+    ],
+    "sugar:169": [
+      {
+        "at": "2026-11-28T09:26:28.227Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Фигурка \"Светлый Чао\"",
+          "price": null,
+          "rarity": "",
+          "sourceId": "46",
+          "updatedAt": "2026-11-28T09:26:28.227Z"
         }
       }
     ]
