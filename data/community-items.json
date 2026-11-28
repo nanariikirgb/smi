@@ -10909,6 +10909,13 @@
       "rarity": "Basic",
       "sourceId": "33",
       "updatedAt": "2026-11-28T09:11:39.731Z"
+    },
+    "golden_horse_armor:822": {
+      "name": "Молоток",
+      "price": 5000,
+      "rarity": "Basic",
+      "sourceId": "32",
+      "updatedAt": "2026-11-28T09:11:43.089Z"
     }
   },
   "history": {
@@ -35827,6 +35834,20 @@
           "rarity": "Basic",
           "sourceId": "33",
           "updatedAt": "2026-11-28T09:11:39.731Z"
+        }
+      }
+    ],
+    "golden_horse_armor:822": [
+      {
+        "at": "2026-11-28T09:11:43.089Z",
+        "action": "approve",
+        "before": null,
+        "after": {
+          "name": "Молоток",
+          "price": 5000,
+          "rarity": "Basic",
+          "sourceId": "32",
+          "updatedAt": "2026-11-28T09:11:43.089Z"
         }
       }
     ]
